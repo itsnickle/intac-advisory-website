@@ -330,18 +330,68 @@
     .testimonials {
       background: var(--white);
     }
-    .t-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    .t-carousel { position: relative; margin-top: 48px; }
+    .t-track {
+      display: flex;
       gap: 24px;
-      margin-top: 48px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 4px 0 24px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
     }
+    .t-track::-webkit-scrollbar { display: none; }
     .t-card {
       background: var(--cream);
       border-radius: var(--radius);
       padding: 32px;
       display: flex;
       flex-direction: column;
+      flex: 0 0 calc((100% - 3 * 24px) / 4);
+      scroll-snap-align: start;
+      min-width: 0;
+    }
+    .t-arrow {
+      position: absolute;
+      top: 50%;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 1px solid var(--ink-100);
+      box-shadow: var(--shadow);
+      color: var(--teal-900);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      padding: 0;
+      z-index: 2;
+      transform: translateY(-50%);
+      transition: all 0.2s var(--ease);
+    }
+    .t-arrow:hover { background: var(--teal-900); color: var(--cream); border-color: var(--teal-900); transform: translateY(-50%) scale(1.05); }
+    .t-arrow--prev { left: -20px; }
+    .t-arrow--next { right: -20px; }
+    .t-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .t-dots button {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      border: 0;
+      background: var(--ink-200);
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.25s var(--ease), width 0.25s var(--ease), border-radius 0.25s var(--ease);
+    }
+    .t-dots button:hover { background: var(--ink-400); }
+    .t-dots button.is-active {
+      background: var(--coral-500);
+      width: 22px;
+      border-radius: 4px;
     }
     .t-stars { color: var(--coral-500); margin-bottom: 16px; letter-spacing: 2px; }
     .t-card blockquote {
@@ -387,7 +437,9 @@
     @media (max-width: 900px) {
       .hero-home { padding-top: 32px; }
       .hero-home__grid, .why-grid, .cta-band__grid, .section-head { grid-template-columns: 1fr; gap: 32px; }
-      .product-grid, .how-steps, .t-grid { grid-template-columns: 1fr; }
+      .product-grid, .how-steps { grid-template-columns: 1fr; }
+      .t-arrow { display: none; }
+      .t-track .t-card { flex: 0 0 calc((100% - 24px) / 2); }
       .hero-home__stats { flex-wrap: wrap; gap: 24px; margin-top: 32px; padding-top: 24px; }
       .hero-home__stats .stat .num { font-size: 32px; }
       .hero-home h1 { font-size: clamp(36px, 9vw, 52px); margin-bottom: 16px; }
@@ -430,13 +482,16 @@
       .how-step::before { font-size: 36px; margin-bottom: 12px; }
 
       /* Testimonials */
-      .t-grid { margin-top: 28px; }
+      .t-carousel { margin-top: 28px; }
       .t-card { padding: 24px; }
       .t-card blockquote { font-size: 18px; margin-bottom: 20px; }
 
       /* CTA band */
       .cta-band__grid > div:last-child { align-items: stretch !important; }
       .cta-band__grid > div:last-child .btn { justify-content: center; width: 100%; }
+    }
+    @media (max-width: 560px) {
+      .t-track .t-card { flex: 0 0 86%; }
     }
     .hero-home__quote-card--static {
       position: static;
@@ -637,34 +692,79 @@
         </div>
         <p class="lead">4.9 out of 5 across Google, Facebook, and Yelp — from over 600 reviews.</p>
       </div>
-      <div class="t-grid">
-        <div class="t-card">
-          <div class="t-stars">★★★★★</div>
-          <blockquote>"Our fleet renewal came in at $47K. INtac re-shopped across 12 carriers and brought it down to $31K - same coverage. They've saved us $16K every year since."</blockquote>
-          <div class="who">
-            <div><div class="nm">Ray D.</div><div class="meta">Houston · Trucking</div></div>
+      <div class="t-carousel" data-carousel>
+        <div class="t-track">
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"Our fleet renewal came in at $47K. Intac re-shopped across 12 carriers and brought it down to $31K — same coverage. They've saved us $16K every year since."</blockquote>
+            <div class="who"><div><div class="nm">Ray D.</div><div class="meta">Houston · Trucking</div></div></div>
+          </div>
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"I was paying $218/mo with a big carrier. They got me to $141 with better coverage. I told everyone I know."</blockquote>
+            <div class="who"><div><div class="nm">Priya S.</div><div class="meta">Cedar Park · Auto</div></div></div>
+          </div>
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"I came to Intac for my shop's insurance. A year later they're running my accounting, taxes, and my marketing campaigns. One team, one invoice — and my premiums dropped twice along the way."</blockquote>
+            <div class="who"><div><div class="nm">Frank M.</div><div class="meta">Houston · Industrial Supplies</div></div></div>
+          </div>
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"I was two years behind on my books when I called Intac. They caught me up in a month, filed both tax returns, and now handle everything monthly. I wish I'd called sooner."</blockquote>
+            <div class="who"><div><div class="nm">Casie L.</div><div class="meta">Austin · Creative Services</div></div></div>
+          </div>
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"Workers' comp premium jumped 38% at renewal. Intac had three quotes in my inbox by end of week — all lower than last year. First time I've actually dropped a premium after a year."</blockquote>
+            <div class="who"><div><div class="nm">Daniel O.</div><div class="meta">Sugar Land · Construction</div></div></div>
+          </div>
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"We were stuck with the same carrier for 11 years because I didn't know any better. First year with Intac, they shopped every policy — saved $8,400 across GL, cyber, and auto. They check every renewal without me asking."</blockquote>
+            <div class="who"><div><div class="nm">Rebecca L.</div><div class="meta">Plano · Medical Practice</div></div></div>
+          </div>
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"I haul chemicals across four states. Most brokers hung up when they heard 'hazmat.' Intac found a carrier that actually wanted the business and got me proper coverage at a rate that works."</blockquote>
+            <div class="who"><div><div class="nm">Jason W.</div><div class="meta">The Woodlands · Trucking</div></div></div>
+          </div>
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"My old agent let my homeowners premium climb for six years straight. Intac re-shopped at renewal, cut it by $1,100, and wrote me a life policy the same month. Finally feels like someone's on my side."</blockquote>
+            <div class="who"><div><div class="nm">Amanda R.</div><div class="meta">Katy · Home &amp; Life</div></div></div>
+          </div>
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"They write my insurance, do my taxes, and run my email campaigns. One email, one phone number when something breaks. I don't know how I did it across three firms before."</blockquote>
+            <div class="who"><div><div class="nm">Diego R.</div><div class="meta">East Austin · Restaurant Group</div></div></div>
+          </div>
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"Our E&amp;O carrier dropped us with no warning. Intac had three alternatives binding in 48 hours — one of them cheaper than what we had. 'Responsive' doesn't begin to cover it."</blockquote>
+            <div class="who"><div><div class="nm">Stephanie K.</div><div class="meta">Dallas · Law Firm</div></div></div>
+          </div>
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"Hail season hit our barn roof three years running. Intac was on the phone with the adjuster before I could get my boots off. Claims actually paid — no fights, no tricks."</blockquote>
+            <div class="who"><div><div class="nm">Ben H.</div><div class="meta">Fort Worth · Ranch</div></div></div>
+          </div>
+          <div class="t-card">
+            <div class="t-stars">★★★★★</div>
+            <blockquote>"Bundled everything — home, two cars, umbrella — and saved about $1,600 a year vs. my previous carrier. The real test was a broken water main last winter. Intac had an adjuster at the house the next morning."</blockquote>
+            <div class="who"><div><div class="nm">Mark D.</div><div class="meta">Sugar Land · Home &amp; Auto</div></div></div>
           </div>
         </div>
-        <div class="t-card">
-          <div class="t-stars">★★★★★</div>
-          <blockquote>"I was paying $218/mo with a big carrier. They got me to $141 with better coverage. I told everyone I know."</blockquote>
-          <div class="who">
-            <div><div class="nm">Priya S.</div><div class="meta">Cedar Park · Auto</div></div>
-          </div>
-        </div>
-        <div class="t-card">
-          <div class="t-stars">★★★★★</div>
-          <blockquote>"I came to Intac for my shop's insurance. A year later they are running my accounting, taxes, and my marketing campaigns. One team, one invoice - and my premiums dropped twice along the way."</blockquote>
-          <div class="who">
-            <div><div class="nm">Frank M.</div><div class="meta">Houston · Industrial Supplies</div></div>
-          </div>
-        </div>
-        <div class="t-card">
-          <div class="t-stars">★★★★★</div>
-          <blockquote>"I was two years behind on my books when I called Intac. They caught me up in a month, filed both tax returns, and now handle everything monthly. I wish I'd called sooner."</blockquote>
-          <div class="who">
-            <div><div class="nm">Casie L.</div><div class="meta">Austin · Creative Services</div></div>
-          </div>
+        <button type="button" class="t-arrow t-arrow--prev" aria-label="Previous page">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <button type="button" class="t-arrow t-arrow--next" aria-label="Next page">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+        <div class="t-dots" role="tablist" aria-label="Testimonial pages">
+          <button type="button" class="is-active" aria-label="Page 1"></button>
+          <button type="button" aria-label="Page 2"></button>
+          <button type="button" aria-label="Page 3"></button>
         </div>
       </div>
     </div>
@@ -690,5 +790,70 @@
 
   <div data-slot="footer"></div>
   <script src="assets/site.js?v=8"></script>
+  <script>
+    (function() {
+      const carousel = document.querySelector('[data-carousel]');
+      if (!carousel) return;
+      const track = carousel.querySelector('.t-track');
+      const cards = track.querySelectorAll('.t-card');
+      const dots = carousel.querySelectorAll('.t-dots button');
+      const prev = carousel.querySelector('.t-arrow--prev');
+      const next = carousel.querySelector('.t-arrow--next');
+      const pageSize = 4;
+      const pageCount = dots.length;
+      let page = 0;
+      let autoTimer = null;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function go(p) {
+        page = ((p % pageCount) + pageCount) % pageCount;
+        const targetCard = cards[page * pageSize];
+        if (targetCard) {
+          const left = targetCard.offsetLeft - track.offsetLeft;
+          track.scrollTo({ left, behavior: reduceMotion ? 'auto' : 'smooth' });
+        }
+        dots.forEach((d, i) => d.classList.toggle('is-active', i === page));
+      }
+
+      function startAuto() {
+        if (reduceMotion) return;
+        autoTimer = setInterval(() => go(page + 1), 6000);
+      }
+      function stopAuto() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
+      function resetAuto() { stopAuto(); startAuto(); }
+
+      prev && prev.addEventListener('click', () => { go(page - 1); resetAuto(); });
+      next && next.addEventListener('click', () => { go(page + 1); resetAuto(); });
+      dots.forEach((d, i) => d.addEventListener('click', () => { go(i); resetAuto(); }));
+
+      // Sync dots when user manually scrolls/swipes
+      let scrollDebounce;
+      track.addEventListener('scroll', () => {
+        clearTimeout(scrollDebounce);
+        scrollDebounce = setTimeout(() => {
+          const scrollLeft = track.scrollLeft;
+          let closest = 0, closestDist = Infinity;
+          for (let i = 0; i < pageCount; i++) {
+            const card = cards[i * pageSize];
+            if (!card) continue;
+            const dist = Math.abs((card.offsetLeft - track.offsetLeft) - scrollLeft);
+            if (dist < closestDist) { closestDist = dist; closest = i; }
+          }
+          if (closest !== page) {
+            page = closest;
+            dots.forEach((d, i) => d.classList.toggle('is-active', i === page));
+          }
+        }, 120);
+      });
+
+      carousel.addEventListener('mouseenter', stopAuto);
+      carousel.addEventListener('mouseleave', startAuto);
+      carousel.addEventListener('touchstart', stopAuto, { passive: true });
+      carousel.addEventListener('focusin', stopAuto);
+      carousel.addEventListener('focusout', startAuto);
+
+      startAuto();
+    })();
+  </script>
 </body>
 </html>
