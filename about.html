@@ -39,8 +39,16 @@
     .stat-big .lbl { color: #b8cccc; font-size: 15px; margin-top: 12px; }
     @media (max-width: 900px) {
       .about-hero, .story-grid { grid-template-columns: 1fr; gap: 32px; }
-      .values-grid, .stats-grid { grid-template-columns: 1fr 1fr; }
-      .team-grid { grid-template-columns: 1fr 1fr; }
+      .values-grid, .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+      .team-grid { grid-template-columns: 1fr 1fr; gap: 20px 16px; margin-top: 32px; }
+      .value-card { padding: 24px; }
+      .value-card h3 { font-size: 24px; }
+      .value-card .num { font-size: 32px; margin-bottom: 10px; }
+      .stat-big .num { font-size: 48px; }
+    }
+    @media (max-width: 560px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>

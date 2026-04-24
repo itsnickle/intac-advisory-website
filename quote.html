@@ -79,8 +79,18 @@
     .success__summary dd:last-child { margin-bottom: 0; }
 
     @media (max-width: 900px) {
-      .quote-wrap { grid-template-columns: 1fr; }
+      .quote-wrap { grid-template-columns: 1fr; gap: 32px; }
       .lines { grid-template-columns: 1fr 1fr; }
+      .quote-intro h1 { font-size: clamp(32px, 8vw, 44px); }
+      .quote-form { padding: 24px; border-radius: var(--radius); }
+      .step h2 { font-size: 26px; margin-bottom: 20px; }
+      .success h2 { font-size: 32px; }
+      .form-actions { flex-wrap: wrap; }
+      .form-actions .meta { order: 3; width: 100%; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .lines { grid-template-columns: 1fr; }
+      .line-opt { padding: 14px; }
     }
   </style>
 </head>

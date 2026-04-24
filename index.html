@@ -385,9 +385,58 @@
     .cta-band .btn--ghost:hover { background: var(--white); color: var(--coral-600); border-color: var(--white); }
 
     @media (max-width: 900px) {
+      .hero-home { padding-top: 32px; }
       .hero-home__grid, .why-grid, .cta-band__grid, .section-head { grid-template-columns: 1fr; gap: 32px; }
       .product-grid, .how-steps, .t-grid { grid-template-columns: 1fr; }
-      .hero-home__stats { flex-wrap: wrap; gap: 24px; }
+      .hero-home__stats { flex-wrap: wrap; gap: 24px; margin-top: 32px; padding-top: 24px; }
+      .hero-home__stats .stat .num { font-size: 32px; }
+      .hero-home h1 { font-size: clamp(36px, 9vw, 52px); margin-bottom: 16px; }
+      .hero-home .sub { font-size: 16px; margin-bottom: 24px; }
+      .hero-home__cta .btn { flex: 1 1 auto; justify-content: center; }
+
+      /* Stacked hero visual — no overlap */
+      .hero-home__visual { aspect-ratio: auto; }
+      .hero-home__photo { position: relative; aspect-ratio: 4/3; inset: auto; }
+      .hero-home__badge {
+        position: absolute; top: 16px; right: 12px; transform: none;
+        padding: 10px 14px; font-size: 12px;
+      }
+      .hero-home__badge strong { font-size: 20px; }
+      .hero-home__quote-card {
+        position: static; max-width: 100%;
+        margin-top: 16px;
+        left: 0; bottom: 0;
+        box-shadow: var(--shadow);
+      }
+
+      /* Carriers */
+      .carriers { padding: 32px 0 48px; }
+      .carriers__logos { gap: 20px 28px; }
+      .carrier-logo { font-size: 18px; }
+
+      /* Products */
+      .product-card { min-height: 0; padding: 24px; }
+      .product-card h3 { font-size: 24px; }
+
+      /* Why */
+      .why-grid { gap: 28px; }
+      .why-list { margin-top: 16px; }
+      .why-list li { padding: 16px 0; gap: 14px; }
+      .why-list .num { font-size: 28px; min-width: 36px; }
+
+      /* How */
+      .how-steps { margin-top: 32px; gap: 14px; }
+      .how-step { padding: 22px; }
+      .how-step::before { font-size: 36px; margin-bottom: 12px; }
+
+      /* Testimonials */
+      .t-grid { margin-top: 28px; }
+      .t-card { padding: 24px; }
+      .t-card blockquote { font-size: 18px; margin-bottom: 20px; }
+
+      /* CTA band */
+      .cta-band__grid > div:last-child { align-items: stretch !important; }
+      .cta-band__grid > div:last-child .btn { justify-content: center; width: 100%; }
     }
     .hero-home__quote-card--static {
       position: static;

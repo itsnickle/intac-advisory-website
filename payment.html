@@ -32,8 +32,15 @@
     .pay-opt p { font-size: 14px; color: var(--ink-500); margin: 0; }
 
     @media (max-width: 900px) {
-      .carrier-tile-grid { grid-template-columns: 1fr 1fr; }
+      .pay-hero h1 { font-size: clamp(32px, 8vw, 44px); }
+      .carrier-tile-grid { grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 32px; }
+      .carrier-tile { padding: 20px 16px; }
+      .carrier-tile .nm { font-size: 20px; }
+      .carrier-tile .web { word-break: break-word; font-size: 12px; }
       .pay-options { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .carrier-tile-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>

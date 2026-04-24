@@ -32,8 +32,11 @@
     }
     .service-block__cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
     @media (max-width: 900px) {
-      .service-block__row, .service-block:nth-child(even) .service-block__row { grid-template-columns: 1fr; direction: ltr; }
-      .service-block__list { grid-template-columns: 1fr; }
+      .services-hero h1 { font-size: clamp(32px, 8vw, 48px); }
+      .service-block { padding: 48px 0; }
+      .service-block__row, .service-block:nth-child(even) .service-block__row { grid-template-columns: 1fr; direction: ltr; gap: 24px; }
+      .service-block h2 { font-size: clamp(26px, 7vw, 36px); }
+      .service-block__list { grid-template-columns: 1fr; margin: 16px 0; }
     }
   </style>
 </head>

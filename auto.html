@@ -36,7 +36,16 @@
     .discount-item .how { color: #9db3b3; font-size: 13px; margin-top: 4px; }
     @media (max-width: 900px) {
       .product-hero, .faq-grid { grid-template-columns: 1fr; gap: 32px; }
-      .coverage-grid, .discount-grid { grid-template-columns: 1fr 1fr; }
+      .product-hero h1 { font-size: clamp(32px, 8vw, 48px); }
+      .coverage-grid { grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 32px; }
+      .coverage-item { padding: 22px; }
+      .discount-grid { grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 32px; }
+      .discount-item { padding: 20px; }
+      .discount-item .pct { font-size: 32px; }
+      .faq-item summary { font-size: 16px; gap: 16px; }
+    }
+    @media (max-width: 480px) {
+      .coverage-grid, .discount-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>

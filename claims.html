@@ -37,7 +37,16 @@
 
     @media (max-width: 900px) {
       .claims-hero { grid-template-columns: 1fr; gap: 32px; }
-      .steps-grid, .carrier-grid { grid-template-columns: 1fr 1fr; }
+      .claims-hero h1 { font-size: clamp(32px, 8vw, 44px); }
+      .steps-grid { grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+      .carrier-grid { grid-template-columns: 1fr; gap: 10px; margin-top: 32px; }
+      .claim-step { padding: 22px; }
+      .urgent-card { padding: 22px; }
+      .urgent-card .big-num { font-size: 28px; word-break: break-word; }
+      .carrier-row { padding: 16px; flex-wrap: wrap; gap: 6px 14px; }
+    }
+    @media (max-width: 480px) {
+      .steps-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>

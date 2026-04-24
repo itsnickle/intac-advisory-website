@@ -36,9 +36,12 @@
     .map-pin .pulse { position: absolute; inset: -10px; border-radius: 50%; border: 2px solid var(--coral-500); animation: pulse 2s var(--ease) infinite; }
     @keyframes pulse { 0% { transform: scale(0.7); opacity: 1; } 100% { transform: scale(2.2); opacity: 0; } }
     @media (max-width: 900px) {
-      .contact-wrap, .map-grid { grid-template-columns: 1fr; }
-      .map-text { padding: 48px 24px; }
-      .map-visual { min-height: 280px; }
+      .contact-wrap, .map-grid { grid-template-columns: 1fr; gap: 32px; }
+      .contact-intro h1 { font-size: clamp(32px, 8vw, 44px); }
+      .contact-form { padding: 24px; border-radius: var(--radius); }
+      .channel { gap: 14px; padding: 16px 0; }
+      .map-text { padding: 40px 20px; }
+      .map-visual { min-height: 260px; }
     }
   </style>
 </head>

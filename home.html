@@ -33,7 +33,13 @@
     .faq-item p { margin: 14px 0 0; color: var(--ink-500); font-size: 15px; }
     @media (max-width: 900px) {
       .product-hero, .faq-grid, .covered-grid { grid-template-columns: 1fr; gap: 32px; }
-      .policy-types { grid-template-columns: 1fr 1fr; }
+      .product-hero h1 { font-size: clamp(32px, 8vw, 48px); }
+      .policy-types { grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 32px; }
+      .policy-card { padding: 22px; }
+      .faq-item summary { font-size: 16px; gap: 16px; }
+    }
+    @media (max-width: 480px) {
+      .policy-types { grid-template-columns: 1fr; }
     }
   </style>
 </head>
