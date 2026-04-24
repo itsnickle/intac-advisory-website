@@ -469,7 +469,7 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
   section { padding: clamp(48px, 10vw, 72px) 0; }
 
   /* --- Page header --- */
-  .page-head { padding: 56px 0 40px; }
+  .page-head { padding: 88px 0 40px; }
 
   /* --- Typography --- */
   h1 { font-size: clamp(32px, 9vw, 44px); }
