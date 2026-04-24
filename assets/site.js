@@ -4,8 +4,6 @@
     { href: "index.html", label: "Home" },
     { href: "about.html", label: "About" },
     { href: "services.html", label: "Services" },
-    { href: "claims.html", label: "Claims" },
-    { href: "payment.html", label: "Payments" },
     { href: "blog.html", label: "Resources" },
     { href: "contact.html", label: "Contact" },
   ];
@@ -70,7 +68,7 @@
               <ul>
                 <li><a href="services.html#commercial">Commercial Lines</a></li>
                 <li><a href="services.html#personal">Personal Lines</a></li>
-                <li><a href="https://www.kenwoodpc.com/" target="_blank" rel="noopener">Business Growth Services</a></li>
+                <li><a href="https://sentryxp.com" target="_blank" rel="noopener">Business Growth Services</a></li>
                 <li><a href="https://georgeadamsinsurance.com/" target="_blank" rel="noopener">Surety</a></li>
                 <li><a href="services.html">All services</a></li>
               </ul>
@@ -87,9 +85,8 @@
             <div>
               <h4>Customer care</h4>
               <ul>
-                <li><a href="claims.html">File a claim</a></li>
-                <li><a href="payment.html">Make a payment</a></li>
                 <li><a href="quote.html">Get a quote</a></li>
+                <li><a href="contact.html">Contact us</a></li>
                 <li><a href="tel:+18772378167">(877) 237‑8167</a></li>
               </ul>
             </div>
