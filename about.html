@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us — Intac Advisory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=8" />
+  <style>
+    .about-hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
+    .about-hero h1 { font-size: clamp(48px, 5.5vw, 76px); line-height: 1.02; margin-bottom: 20px; }
+    .about-hero h1 em { font-style: italic; color: var(--coral-600); }
+    .about-hero .ph { aspect-ratio: 4/5; min-height: 0; border-radius: var(--radius-lg); }
+    .story { background: var(--white); }
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .story p { font-size: 17px; line-height: 1.65; }
+    .story h2 em { font-style: italic; color: var(--coral-600); }
+    .values { background: var(--cream); }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .value-card { background: var(--white); padding: 36px; border-radius: var(--radius); border: 1px solid var(--ink-100); }
+    .value-card h3 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 30px; margin-bottom: 12px; }
+    .value-card h3 em { font-style: italic; color: var(--coral-600); }
+    .value-card p { color: var(--ink-500); font-size: 15px; margin: 0; }
+    .value-card .num { font-family: "Instrument Serif", serif; font-size: 40px; color: var(--coral-500); line-height: 1; display: block; margin-bottom: 16px; }
+    .team { background: var(--white); }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 24px; margin-top: 48px; }
+    .team-card { }
+    .team-card .photo { aspect-ratio: 4/5; border-radius: var(--radius); overflow: hidden; margin-bottom: 16px; background: var(--ink-100); box-shadow: var(--shadow-sm); }
+    .team-card .photo img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.95); transition: transform .6s ease, filter .3s ease; }
+    .team-card:hover .photo img { transform: scale(1.03); filter: saturate(1.05); }
+    .team-card h4 { font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; margin: 0 0 2px; font-weight: 600; color: var(--ink-900); }
+    .team-card .role { font-size: 14px; color: var(--coral-500); margin: 0; font-weight: 500; }
+    .stats-band { background: var(--teal-900); color: var(--cream); }
+    .stats-band h2 { color: var(--cream); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 48px; }
+    .stat-big .num { font-family: "Instrument Serif", serif; font-size: 72px; color: var(--coral-500); line-height: 1; }
+    .stat-big .lbl { color: #b8cccc; font-size: 15px; margin-top: 12px; }
+    @media (max-width: 900px) {
+      .about-hero, .story-grid { grid-template-columns: 1fr; gap: 32px; }
+      .values-grid, .stats-grid { grid-template-columns: 1fr 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body data-page="about">
+  <div data-slot="header"></div>
+
+  <section class="page-head">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> <span>›</span> <span>About</span></div>
+      <div class="about-hero">
+        <div>
+          <span class="eyebrow">Our story</span>
+          <h1 style="margin-top:12px">A family business protecting <em>other</em> Texas families.</h1>
+          <p class="lead">Intac Advisory started at a kitchen table in 2004 when Ray and Teresa Moreno decided there had to be a better way to sell insurance than cold calls and commission quotas. Twenty‑two years later, we're still here — now with a team of 14 and clients in all 254 Texas counties.</p>
+          <div style="display:flex; gap:12px; margin-top:32px; flex-wrap:wrap">
+            <a href="contact.html" class="btn btn--dark">Visit us in Sugar Land</a>
+            <a href="quote.html" class="btn btn--ghost">Get a quote</a>
+          </div>
+        </div>
+        <div class="ph"><span class="ph__label">Founder portrait</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="container">
+      <div class="story-grid">
+        <div>
+          <span class="eyebrow">How we got here</span>
+          <h2 style="margin-top:12px">Built on a simple <em>idea</em>.</h2>
+        </div>
+        <div>
+          <p>Ray Moreno spent eight years at a big captive carrier before he left to start something different. His complaint was simple: he could only ever recommend one company's product to his clients — even when a competitor had a better rate or better coverage. That didn't feel like advice. It felt like sales.</p>
+          <p>So in 2004, he and Teresa opened Intac as an independent agency with exactly three carrier contracts. Today we have 40+. What hasn't changed is the promise: when we pick up the phone, we're working for you.</p>
+          <p>We've handled claims through hurricanes, ice storms, hailstorms, and at least one truly spectacular kitchen fire. We've watched clients' kids grow up, buy their first homes, start businesses. We've insured all of it — because that's the fun part of the job.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values">
+    <div class="container">
+      <div style="text-align:center; max-width:680px; margin: 0 auto">
+        <span class="eyebrow">What we believe</span>
+        <h2 style="margin-top:12px">Three things we never <em>compromise</em> on.</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <span class="num">01</span>
+          <h3>Honest <em>advice</em></h3>
+          <p>If your current policy is already the best deal, we'll tell you. If you're underinsured, we'll tell you that too. No commission target has ever made us recommend something we wouldn't buy ourselves.</p>
+        </div>
+        <div class="value-card">
+          <span class="num">02</span>
+          <h3>Human <em>response</em></h3>
+          <p>Every client has a named agent. When you call, text, or email, you reach a person who knows your policy — not a ticket queue in a data center on the other side of the world.</p>
+        </div>
+        <div class="value-card">
+          <span class="num">03</span>
+          <h3>Showing <em>up</em></h3>
+          <p>When a claim hits, we answer the phone. Evenings, weekends, during hurricanes. We've met clients at accident scenes and hospital waiting rooms. That's the job.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">The team</span>
+          <h2 style="margin-top:12px">Meet the people<br/>behind the policy.</h2>
+        </div>
+        <p class="lead">A close‑knit team of licensed producers, advisors, and specialists — covering personal, commercial, life &amp; health, and surety across the country.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card"><div class="photo"><img src="assets/team/jessica-cox.jpg" alt="Jessica Cox" loading="lazy"/></div><h4>Jessica Cox</h4><p class="role">CEO, Managing Partner</p></div>
+        <div class="team-card"><div class="photo"><img src="assets/team/charlie-adams.jpg" alt="Charlie Adams" loading="lazy"/></div><h4>Charlie Adams</h4><p class="role">CFO, Managing Partner</p></div>
+        <div class="team-card"><div class="photo"><img src="assets/team/angela-soderquist.jpg" alt="Angela Soderquist" loading="lazy"/></div><h4>Angela Soderquist</h4><p class="role">Compliance Officer</p></div>
+        <div class="team-card"><div class="photo"><img src="assets/team/danny-bruder.jpg" alt="Danny Bruder" loading="lazy"/></div><h4>Danny Bruder</h4><p class="role">Mid‑Market Commercial Lines Producer</p></div>
+        <div class="team-card"><div class="photo"><img src="assets/team/ronda-curtis.jpg" alt="Ronda Curtis" loading="lazy"/></div><h4>Ronda Curtis</h4><p class="role">Personal Lines Producer</p></div>
+        <div class="team-card"><div class="photo"><img src="assets/team/bill-cox.jpg" alt="Bill Cox" loading="lazy"/></div><h4>Bill Cox</h4><p class="role">Life &amp; Health Account Producer</p></div>
+        <div class="team-card"><div class="photo"><img src="assets/team/davon-stovall.jpg" alt="Da'Von Stovall" loading="lazy"/></div><h4>Da'Von Stovall</h4><p class="role">Sales Associate</p></div>
+        <div class="team-card"><div class="photo"><img src="assets/team/kim-ludy.jpg" alt="Kim Ludy" loading="lazy"/></div><h4>Kim Ludy</h4><p class="role">Sales Associate</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-band">
+    <div class="container">
+      <div style="max-width:620px">
+        <span class="eyebrow">By the numbers</span>
+        <h2 style="margin-top:12px">Twenty‑two years, a lot of claims, and still showing up.</h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-big"><div class="num">8,200+</div><div class="lbl">Active policies in force</div></div>
+        <div class="stat-big"><div class="num">$94M</div><div class="lbl">In claims paid to clients</div></div>
+        <div class="stat-big"><div class="num">40+</div><div class="lbl">Carrier partners</div></div>
+        <div class="stat-big"><div class="num">4.9★</div><div class="lbl">Across 600+ reviews</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div data-slot="footer"></div>
+  <script src="assets/site.js?v=8"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Insurance Services — Intac Advisory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=8" />
+  <style>
+    .services-hero h1 { font-size: clamp(44px, 5vw, 72px); max-width: 18ch; }
+    .services-hero h1 em { font-style: italic; color: var(--coral-600); }
+    .service-block { padding: 72px 0; border-bottom: 1px solid var(--ink-100); }
+    .service-block:last-child { border-bottom: 0; }
+    .service-block__row {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .service-block:nth-child(even) .service-block__row { grid-template-columns: 1.2fr 1fr; direction: rtl; }
+    .service-block:nth-child(even) .service-block__row > * { direction: ltr; }
+    .service-block .ph { aspect-ratio: 5/4; border-radius: var(--radius-lg); min-height: 0; }
+    .service-block h2 { font-size: clamp(36px, 4vw, 52px); margin-bottom: 12px; }
+    .service-block h2 em { font-style: italic; color: var(--coral-600); }
+    .service-block__list { list-style: none; padding: 0; margin: 24px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
+    .service-block__list li { font-size: 14px; color: var(--ink-700); padding-left: 24px; position: relative; line-height: 1.5; }
+    .service-block__list li::before {
+      content: ""; position: absolute; left: 0; top: 8px;
+      width: 14px; height: 2px; background: var(--coral-500); border-radius: 2px;
+    }
+    .service-block__cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    @media (max-width: 900px) {
+      .service-block__row, .service-block:nth-child(even) .service-block__row { grid-template-columns: 1fr; direction: ltr; }
+      .service-block__list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-page="services">
+  <div data-slot="header"></div>
+
+  <section class="page-head">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> <span>›</span> <span>Services</span></div>
+      <div class="services-hero">
+        <span class="eyebrow">What we do</span>
+        <h1 style="margin-top:12px">Four services. <em>One</em> team.</h1>
+        <p class="lead" style="margin-top:20px">Insurance, tax, accounting, and surety — all under one roof, so you only have one phone number to call when things get complicated.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="service-block" id="commercial">
+      <div class="service-block__row">
+        <div class="ph"><span class="ph__label">Commercial · business &amp; operations</span></div>
+        <div>
+          <span class="tag">Commercial Lines</span>
+          <h2 style="margin-top:12px">We fight <em>for you.</em></h2>
+          <p class="lead"><strong>Hundreds of markets. One fight — yours.</strong> We shop the entire carrier landscape for your business. A captive Allstate agent can only shop Allstate. We're not captive to anyone but you.</p>
+          <p>Texas is one of the hardest states in the country to insure — natural disasters, carrier volatility, rates that swing 30% overnight. That's why our team re‑quotes your policy <strong>every single year</strong>. The carrier that gave you the best rate last year might be the one jacking it up this year. We catch that before renewal, not after.</p>
+          <p style="margin-top:20px; font-weight:600; color:var(--ink-900)">Hard industries are our specialty:</p>
+          <ul class="service-block__list">
+            <li>Trucking &amp; transportation</li>
+            <li>Construction &amp; contractors</li>
+            <li>Workers' compensation</li>
+            <li>General liability</li>
+            <li>Commercial property</li>
+            <li>Commercial auto &amp; fleet</li>
+            <li>Business owner policies (BOP)</li>
+            <li>Cyber, E&amp;O, EPLI</li>
+          </ul>
+          <div class="service-block__cta">
+            <a href="quote.html?line=commercial" class="btn btn--primary">Put us in your corner →</a>
+            <a href="contact.html" class="btn btn--ghost">Talk to an advisor</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-block" id="personal">
+      <div class="service-block__row">
+        <div class="ph"><span class="ph__label">Personal · home &amp; family</span></div>
+        <div>
+          <span class="tag">Personal Lines</span>
+          <h2 style="margin-top:12px">Personal <em>lines</em></h2>
+          <p class="lead">Auto, home, and everything in between — built for individuals and families. We shop the carrier landscape and build coverage around how you actually live, not a canned package.</p>
+          <ul class="service-block__list">
+            <li>Auto &amp; classic auto</li>
+            <li>Homeowners (HO‑3, HO‑5)</li>
+            <li>Condo &amp; renters</li>
+            <li>Landlord / rental property</li>
+            <li>Umbrella &amp; excess liability</li>
+            <li>Flood (NFIP &amp; private)</li>
+            <li>Life &amp; health</li>
+            <li>Boat, RV &amp; specialty</li>
+          </ul>
+          <div class="service-block__cta">
+            <a href="quote.html?line=personal" class="btn btn--primary">Get a personal quote →</a>
+            <a href="contact.html" class="btn btn--ghost">Talk to an advisor</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-block" id="business-growth">
+      <div class="service-block__row">
+        <div class="ph" style="background-image:url('assets/houston-skyline.webp'); background-size: cover; background-position: center;"></div>
+        <div>
+          <span class="tag">Business Growth Services</span>
+          <h2 style="margin-top:12px">It doesn't have to be <em>this hard.</em></h2>
+          <p class="lead">You hate taxes. You're behind on the books. You're scared of the IRS. <strong>We fix all three</strong> — and everything the accountant down the street doesn't touch.</p>
+          <p>Real story: we caught a client up on <strong>two years of books in one month</strong>. That's the job. Clean books, a tax strategy that doesn't start in April, and the systems to run your business without flying blind — cash flow, marketing, platforms, all of it.</p>
+          <ul class="service-block__list">
+            <li>Bookkeeping &amp; catch‑up work</li>
+            <li>Cash flow forecasting</li>
+            <li>Tax prep &amp; planning</li>
+            <li>Marketing campaigns (email, ads, automation)</li>
+            <li>Platform &amp; tech integrations (QBO, Shopify, Klaviyo)</li>
+            <li>Entity setup &amp; IRS representation</li>
+          </ul>
+          <p style="font-size:13px; color:var(--ink-500); margin-top:16px">Delivered through our partner <strong>Kenwood</strong>.</p>
+          <div class="service-block__cta">
+            <a href="https://www.kenwoodpc.com/" target="_blank" rel="noopener" class="btn btn--primary">Visit Kenwood →</a>
+            <a href="contact.html" class="btn btn--ghost">Talk to us first</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-block" id="surety">
+      <div class="service-block__row">
+        <div class="ph"><span class="ph__label">Surety · contractor on‑site</span></div>
+        <div>
+          <span class="tag">Surety</span>
+          <h2 style="margin-top:12px">Surety <em>bonds</em></h2>
+          <p class="lead">Performance, payment, bid, license and permit bonds — issued fast so you don't lose the job waiting on paperwork. Delivered through our partner <strong>George Adams Insurance</strong>, working with A‑rated sureties for standard and hard‑to‑place risks.</p>
+          <ul class="service-block__list">
+            <li>Performance &amp; payment bonds</li>
+            <li>Bid bonds</li>
+            <li>License &amp; permit bonds</li>
+            <li>Court &amp; fiduciary bonds</li>
+            <li>Contract surety programs</li>
+            <li>Commercial &amp; specialty bonds</li>
+          </ul>
+          <div class="service-block__cta">
+            <a href="https://georgeadamsinsurance.com/" target="_blank" rel="noopener" class="btn btn--primary">Visit George Adams →</a>
+            <a href="contact.html" class="btn btn--ghost">Ask about it</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section style="background: var(--cream); padding: 80px 0">
+    <div class="container" style="text-align:center; max-width: 720px">
+      <span class="eyebrow">Not sure where to start?</span>
+      <h2 style="margin:12px 0 20px">We'll figure it out together.</h2>
+      <p class="lead" style="margin: 0 auto 28px">Call, email, or start a quote — we'll ask the right questions and recommend coverage that fits. No script, no upsell.</p>
+      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap">
+        <a href="quote.html" class="btn btn--primary btn--lg">Start a quote</a>
+        <a href="contact.html" class="btn btn--ghost btn--lg">Contact an agent</a>
+      </div>
+    </div>
+  </section>
+
+  <div data-slot="footer"></div>
+  <script src="assets/site.js?v=8"></script>
+</body>
+</html>

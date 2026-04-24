@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resources — Intac Advisory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=8" />
+  <style>
+    .blog-hero h1 { font-size: clamp(40px, 5vw, 68px); max-width: 18ch; }
+    .blog-hero h1 em { font-style: italic; color: var(--coral-600); }
+    .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 32px; }
+    .filter { padding: 8px 16px; border-radius: var(--radius-pill); background: var(--white); border: 1px solid var(--ink-200); font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s var(--ease); }
+    .filter:hover { border-color: var(--teal-800); color: var(--teal-900); }
+    .filter.active { background: var(--teal-900); color: var(--cream); border-color: var(--teal-900); }
+
+    .post-featured {
+      display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px;
+      background: var(--white); border: 1px solid var(--ink-100);
+      border-radius: var(--radius-lg); overflow: hidden;
+      margin-top: 48px;
+    }
+    .post-featured .ph { aspect-ratio: 4/3; min-height: 0; border-radius: 0; }
+    .post-featured__text { padding: 48px; display: flex; flex-direction: column; justify-content: center; }
+    .post-featured h2 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: clamp(28px, 3vw, 40px); margin: 12px 0 16px; line-height: 1.1; }
+    .post-featured p { color: var(--ink-500); font-size: 16px; }
+
+    .post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 64px; }
+    .post-card { display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+    .post-card .ph { aspect-ratio: 4/3; min-height: 0; border-radius: var(--radius); margin-bottom: 16px; }
+    .post-card .meta { font-size: 12px; color: var(--ink-500); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .post-card h3 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 24px; margin: 0 0 10px; line-height: 1.15; }
+    .post-card p { font-size: 14px; color: var(--ink-500); margin: 0; }
+    .post-card:hover h3 { color: var(--coral-600); }
+
+    .newsletter { background: var(--teal-900); color: var(--cream); border-radius: var(--radius-lg); padding: 56px; margin-top: 80px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+    .newsletter h2 { color: var(--cream); margin: 0 0 12px; }
+    .newsletter p { color: #b8cccc; margin: 0; }
+    .newsletter form { display: flex; gap: 8px; }
+    .newsletter input { flex: 1; padding: 14px 16px; border-radius: var(--radius-pill); border: 0; font-family: inherit; }
+
+    @media (max-width: 900px) {
+      .post-featured, .newsletter { grid-template-columns: 1fr; }
+      .post-featured__text { padding: 28px; }
+      .newsletter { padding: 32px; }
+      .post-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-page="blog">
+  <div data-slot="header"></div>
+
+  <section class="page-head">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> <span>›</span> <span>Resources</span></div>
+      <div class="blog-hero">
+        <span class="eyebrow">Resources & guides</span>
+        <h1 style="margin-top:12px">Straight talk about <em>insurance</em>.</h1>
+        <p class="lead" style="margin-top: 20px">Plain‑English explainers on coverage, claims, and common questions. Written by agents who've actually filed the claims they're writing about.</p>
+        <div class="filters">
+          <button class="filter active">All topics</button>
+          <button class="filter">Auto</button>
+          <button class="filter">Home</button>
+          <button class="filter">Accounting &amp; Tax</button>
+          <button class="filter">Surety</button>
+          <button class="filter">Claims</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0">
+    <div class="container">
+      <a href="#" class="post-featured" style="text-decoration: none; color: inherit">
+        <div class="ph"><span class="ph__label">Featured article</span></div>
+        <div class="post-featured__text">
+          <div style="display:flex; gap: 8px; align-items: center">
+            <span class="tag">Texas‑specific</span>
+            <span style="font-size: 13px; color: var(--ink-500)">April 12, 2026 · 7 min read</span>
+          </div>
+          <h2>The 2026 Texas wind & hail deductible guide: what changed and what it means for your premium.</h2>
+          <p>After the 2025 reset, most carriers now use a percentage deductible on wind/hail claims. Here's how to read your dec page — and how to decide between 1%, 2%, and 5%.</p>
+          <div style="display:flex; gap: 12px; align-items: center; margin-top: 24px">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--teal-100), var(--coral-100))"></div>
+            <div>
+              <div style="font-size: 14px; font-weight: 600">Ray Moreno</div>
+              <div style="font-size: 13px; color: var(--ink-500)">Founder & Principal Agent</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <div class="post-grid">
+        <a href="#" class="post-card">
+          <div class="ph"><span class="ph__label">Article</span></div>
+          <div class="meta">Auto · 5 min</div>
+          <h3>What "full coverage" actually means (and why it's usually not enough).</h3>
+          <p>Liability, collision, and comprehensive — the breakdown of what each covers and when you really need each.</p>
+        </a>
+        <a href="#" class="post-card">
+          <div class="ph"><span class="ph__label">Article</span></div>
+          <div class="meta">Home · 8 min</div>
+          <h3>Replacement cost vs. actual cash value: the $200K difference in one word.</h3>
+          <p>Your policy says one or the other. Here's how to check yours — and why it matters if your roof gets hit by hail.</p>
+        </a>
+        <a href="#" class="post-card">
+          <div class="ph"><span class="ph__label">Article</span></div>
+          <div class="meta">Accounting &amp; Tax · 5 min</div>
+          <h3>Quarterly estimated taxes: who owes them, how much, and when.</h3>
+          <p>If you freelance, run a business, or have rental income, the IRS wants payment four times a year — not just in April. Here's how to calculate it.</p>
+        </a>
+        <a href="#" class="post-card">
+          <div class="ph"><span class="ph__label">Article</span></div>
+          <div class="meta">Surety · 6 min</div>
+          <h3>Performance vs. payment bonds: what every contractor should know.</h3>
+          <p>Most public projects require both. Here's what each one actually protects against — and why your credit matters more than you'd think.</p>
+        </a>
+        <a href="#" class="post-card">
+          <div class="ph"><span class="ph__label">Article</span></div>
+          <div class="meta">Claims · 6 min</div>
+          <h3>Before you file: should you actually file this claim?</h3>
+          <p>A $1,200 fender‑bender with a $1,000 deductible might cost you more than paying out of pocket. Here's the math.</p>
+        </a>
+        <a href="#" class="post-card">
+          <div class="ph"><span class="ph__label">Article</span></div>
+          <div class="meta">Texas‑specific · 5 min</div>
+          <h3>Hurricane prep: the one insurance step most homeowners miss.</h3>
+          <p>Flood insurance has a 30‑day waiting period. Which means if you're thinking about it when the storm forms, you're already too late.</p>
+        </a>
+        <a href="#" class="post-card">
+          <div class="ph"><span class="ph__label">Article</span></div>
+          <div class="meta">Auto · 3 min</div>
+          <h3>Teen drivers are expensive. Here's how to soften the hit.</h3>
+          <p>Good‑student discounts, defensive driving courses, telematics. How we typically get teen rates down by 30–40%.</p>
+        </a>
+        <a href="#" class="post-card">
+          <div class="ph"><span class="ph__label">Article</span></div>
+          <div class="meta">Home · 5 min</div>
+          <h3>Your home is worth more than you think. Check your coverage limit.</h3>
+          <p>Construction costs are up 40% since 2020. If you haven't re‑evaluated your dwelling limit, you're probably underinsured.</p>
+        </a>
+        <a href="#" class="post-card">
+          <div class="ph"><span class="ph__label">Article</span></div>
+          <div class="meta">Business · 7 min</div>
+          <h3>Cyber liability for small business: when is it actually worth it?</h3>
+          <p>It's no longer just a big‑company problem. Here's when a cyber policy makes sense — and when it's a waste of money.</p>
+        </a>
+      </div>
+
+      <div class="newsletter">
+        <div>
+          <span class="eyebrow" style="color: var(--coral-500)">The newsletter</span>
+          <h2 style="margin-top: 10px">One email a month. Worth reading.</h2>
+          <p>Coverage tips, Texas‑specific alerts, and the occasional story from a claim we just handled. No spam — we hate it too.</p>
+        </div>
+        <form onsubmit="event.preventDefault(); this.querySelector('.msg').style.display='block'; this.querySelector('input').value='';">
+          <input type="email" placeholder="you@example.com" required />
+          <button class="btn btn--primary" type="submit" style="background: var(--coral-500); color: white">Subscribe</button>
+          <div class="msg" style="display:none; font-size: 13px; color: #9db3b3; margin-top: 12px; flex-basis: 100%">✓ Subscribed. First issue arrives next month.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div data-slot="footer"></div>
+  <script src="assets/site.js?v=8"></script>
+  <script>
+    document.querySelectorAll('.filter').forEach(f => {
+      f.addEventListener('click', () => {
+        document.querySelectorAll('.filter').forEach(x => x.classList.remove('active'));
+        f.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

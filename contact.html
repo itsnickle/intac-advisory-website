@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Intac Advisory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=8" />
+  <style>
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; }
+    .contact-intro h1 { font-size: clamp(40px, 4.5vw, 64px); line-height: 1.05; margin-bottom: 16px; }
+    .contact-intro h1 em { font-style: italic; color: var(--coral-600); }
+    .channels { margin-top: 32px; }
+    .channel { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--ink-100); }
+    .channel:last-child { border-bottom: 0; }
+    .channel__icon { width: 44px; height: 44px; border-radius: 12px; background: var(--teal-50); color: var(--teal-900); display: grid; place-items: center; flex-shrink: 0; }
+    .channel h3 { font-size: 16px; margin: 0 0 4px; font-family: "Plus Jakarta Sans", sans-serif; font-weight: 600; }
+    .channel p { font-size: 14px; color: var(--ink-500); margin: 0; }
+    .channel a { font-weight: 500; }
+    .contact-form { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow); }
+    .hours { margin-top: 24px; padding: 20px; background: var(--cream); border-radius: var(--radius); font-size: 14px; }
+    .hours h4 { margin: 0 0 10px; font-size: 14px; font-family: "Plus Jakarta Sans", sans-serif; font-weight: 600; }
+    .hours .row { display: flex; justify-content: space-between; padding: 4px 0; color: var(--ink-700); }
+    .map-band { background: var(--teal-900); color: var(--cream); padding: 0; }
+    .map-grid { display: grid; grid-template-columns: 1fr 1.3fr; align-items: stretch; min-height: 420px; }
+    .map-text { padding: 64px 56px; display: flex; flex-direction: column; justify-content: center; }
+    .map-text h2 { color: var(--cream); }
+    .map-text p { color: #b8cccc; }
+    .map-visual { background: linear-gradient(135deg, var(--teal-700), var(--teal-800) 50%, var(--teal-900)); position: relative; overflow: hidden; }
+    .map-visual::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0); background-size: 24px 24px; }
+    .map-pin { position: absolute; left: 55%; top: 45%; transform: translate(-50%, -100%); }
+    .map-pin .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--coral-500); border: 3px solid var(--cream); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    .map-pin .label { position: absolute; top: -48px; left: 50%; transform: translateX(-50%); background: var(--cream); color: var(--teal-900); padding: 8px 14px; border-radius: var(--radius-pill); white-space: nowrap; font-size: 13px; font-weight: 600; box-shadow: var(--shadow); }
+    .map-pin .pulse { position: absolute; inset: -10px; border-radius: 50%; border: 2px solid var(--coral-500); animation: pulse 2s var(--ease) infinite; }
+    @keyframes pulse { 0% { transform: scale(0.7); opacity: 1; } 100% { transform: scale(2.2); opacity: 0; } }
+    @media (max-width: 900px) {
+      .contact-wrap, .map-grid { grid-template-columns: 1fr; }
+      .map-text { padding: 48px 24px; }
+      .map-visual { min-height: 280px; }
+    }
+  </style>
+</head>
+<body data-page="contact">
+  <div data-slot="header"></div>
+
+  <section class="page-head">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> <span>›</span> <span>Contact</span></div>
+    </div>
+  </section>
+
+  <section style="padding: 40px 0 96px; background: linear-gradient(180deg, var(--cream-deep) 0%, var(--white) 50%)">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-intro">
+          <span class="eyebrow">Reach us</span>
+          <h1 style="margin-top:12px">A human will <em>answer</em>.</h1>
+          <p class="lead">Questions, claims, billing, or just not sure where to start — here's how to get to the right person fast.</p>
+
+          <div class="channels">
+            <div class="channel">
+              <div class="channel__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div><h3>Call us</h3><p><a href="tel:+18772378167">(877) 237‑8167</a> · Mon–Fri 8a–6p · Sat 9a–1p</p></div>
+            </div>
+            <div class="channel">
+              <div class="channel__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+              <div><h3>Email</h3><p><a href="mailto:cases@intacadvisory.com">cases@intacadvisory.com</a> · Usually an answer within the hour</p></div>
+            </div>
+            <div class="channel">
+              <div class="channel__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+              <div><h3>Text</h3><p>Text <strong>(877) 237‑8167</strong> · Good for quick questions</p></div>
+            </div>
+            <div class="channel">
+              <div class="channel__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><h3>Office</h3><p>14090 Southwest Fwy · Sugar Land, TX 77478</p></div>
+            </div>
+            <div class="channel">
+              <div class="channel__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+              <div><h3>Filing a claim?</h3><p>Use our <a href="claims.html">claims center</a> for fastest response.</p></div>
+            </div>
+          </div>
+
+          <div class="hours">
+            <h4>Office hours</h4>
+            <div class="row"><span>Monday – Friday</span><span>8:00 am – 6:00 pm</span></div>
+            <div class="row"><span>Saturday</span><span>9:00 am – 1:00 pm</span></div>
+            <div class="row"><span>Sunday</span><span>Closed (emergency claims answered 24/7)</span></div>
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.sent').style.display='block'; this.querySelectorAll('.field, button').forEach(el => el.style.display='none');">
+          <h2 style="font-family: 'Instrument Serif', serif; font-size: 32px; margin: 0 0 8px; font-weight: 400;">Send us a message</h2>
+          <p style="font-size: 14px; color: var(--ink-500); margin: 0 0 24px">Not a claim or quote? Use this form. We answer every message personally.</p>
+          <div class="field-row">
+            <div class="field"><label for="cname">Name</label><input id="cname" required></div>
+            <div class="field"><label for="cemail">Email</label><input id="cemail" type="email" required></div>
+          </div>
+          <div class="field"><label for="cphone">Phone (optional)</label><input id="cphone" type="tel"></div>
+          <div class="field"><label for="ctopic">What's this about?</label>
+            <select id="ctopic">
+              <option>General question</option>
+              <option>Policy question (existing customer)</option>
+              <option>Billing</option>
+              <option>Partnership / press</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field"><label for="cmsg">Message</label><textarea id="cmsg" rows="5" required></textarea></div>
+          <button class="btn btn--primary" style="width: 100%; justify-content: center" type="submit">Send message →</button>
+          <div class="sent" style="display:none; padding: 24px; text-align:center; background: var(--teal-50); border-radius: var(--radius); color: var(--teal-900);">
+            <strong>Got it — thanks.</strong><br/><span style="font-size: 14px; color: var(--ink-700)">We'll be in touch within one business day.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-band">
+    <div class="map-grid">
+      <div class="map-text">
+        <span class="eyebrow">Come say hi</span>
+        <h2 style="margin: 12px 0">Stop by the office.</h2>
+        <p>We're right on the Southwest Freeway, easy on/off from 59. Plenty of parking on-site. Walk‑ins welcome — but an appointment usually means no wait.</p>
+        <p style="color: var(--cream); font-weight: 500">14090 Southwest Fwy<br/>Sugar Land, TX 77478</p>
+        <div style="margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap">
+          <a href="#" class="btn btn--primary">Get directions →</a>
+          <a href="#" class="btn btn--ghost" style="color: var(--cream); border-color: rgba(255,255,255,0.3)">Book an appointment</a>
+        </div>
+      </div>
+      <div class="map-visual">
+        <div class="map-pin">
+          <div class="label">Intac Advisory</div>
+          <div class="dot"></div>
+          <div class="pulse"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div data-slot="footer"></div>
+  <script src="assets/site.js?v=8"></script>
+</body>
+</html>

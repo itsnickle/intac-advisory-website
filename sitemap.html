@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Site Map — Intac Advisory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=8" />
+  <style>
+    .sm-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 48px; }
+    .sm-card { background: var(--white); border: 1px solid var(--ink-100); border-radius: var(--radius); padding: 24px; text-decoration: none; color: inherit; transition: all 0.2s var(--ease); }
+    .sm-card:hover { border-color: var(--teal-100); transform: translateY(-2px); box-shadow: var(--shadow); }
+    .sm-card h3 { font-family: "Instrument Serif", serif; font-size: 26px; font-weight: 400; margin: 0 0 8px; }
+    .sm-card p { font-size: 13px; color: var(--ink-500); margin: 0 0 12px; }
+    .sm-card .go { font-size: 13px; color: var(--coral-600); font-weight: 600; }
+    .sm-group { margin-top: 48px; }
+    .sm-group h2 { font-size: 20px; font-family: "Plus Jakarta Sans", sans-serif; font-weight: 600; margin-bottom: 8px; }
+    .sm-group .sub { font-size: 14px; color: var(--ink-500); }
+    @media (max-width: 900px) { .sm-grid { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body data-page="sitemap">
+  <div data-slot="header"></div>
+
+  <section class="page-head">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Home</a> <span>›</span> <span>Site Map</span></div>
+      <span class="eyebrow">Preview index</span>
+      <h1 style="font-size: clamp(40px, 5vw, 64px); margin-top:12px">All pages in this <em style="font-style:italic; color:var(--coral-600)">preview</em>.</h1>
+      <p class="lead" style="margin-top: 16px">For internal review. Click any card to jump to that page — leave comments on individual pages before we hand off to Claude Code for build.</p>
+    </div>
+  </section>
+
+  <section style="background: var(--cream)">
+    <div class="container">
+      <div class="sm-group">
+        <h2>Core pages</h2>
+        <p class="sub">The main entry points for visitors.</p>
+        <div class="sm-grid">
+          <a href="index.html" class="sm-card"><h3>Home</h3><p>Hero, product overview, carrier strip, testimonials, CTA band.</p><div class="go">View →</div></a>
+          <a href="about.html" class="sm-card"><h3>About</h3><p>Story, values, team, stats band.</p><div class="go">View →</div></a>
+          <a href="services.html" class="sm-card"><h3>Services</h3><p>Overview of all product lines with alternating hero blocks.</p><div class="go">View →</div></a>
+          <a href="contact.html" class="sm-card"><h3>Contact</h3><p>Contact channels, hours, message form, office map.</p><div class="go">View →</div></a>
+        </div>
+      </div>
+
+      <div class="sm-group">
+        <h2>Product pages</h2>
+        <p class="sub">Dedicated pages for each insurance line.</p>
+        <div class="sm-grid">
+          <a href="auto.html" class="sm-card"><h3>Auto</h3><p>Coverages, discounts, FAQ accordion.</p><div class="go">View →</div></a>
+          <a href="home.html" class="sm-card"><h3>Home</h3><p>Policy types (HO‑3/5/6/4), covered vs not, FAQ.</p><div class="go">View →</div></a>
+          <a href="services.html" class="sm-card"><h3>Accounting &amp; Tax</h3><p>Books, tax prep &amp; planning, entity setup.</p><div class="go">View →</div></a>
+          <a href="services.html" class="sm-card"><h3>Surety</h3><p>Performance, payment, bid &amp; license bonds.</p><div class="go">View →</div></a>
+        </div>
+      </div>
+
+      <div class="sm-group">
+        <h2>Conversion & service</h2>
+        <p class="sub">The interactive & transactional pages.</p>
+        <div class="sm-grid">
+          <a href="quote.html" class="sm-card"><h3>Get a Quote</h3><p>4‑step multi‑page form with progress bar & success state.</p><div class="go">View →</div></a>
+          <a href="claims.html" class="sm-card"><h3>Claims</h3><p>4‑step guidance, online claim form, carrier direct lines.</p><div class="go">View →</div></a>
+          <a href="payment.html" class="sm-card"><h3>Payments</h3><p>Carrier tiles with pay‑portal links + payment methods.</p><div class="go">View →</div></a>
+          <a href="blog.html" class="sm-card"><h3>Resources</h3><p>Featured post, 9‑article grid, filter tabs, newsletter.</p><div class="go">View →</div></a>
+        </div>
+      </div>
+
+      <div class="sm-group">
+        <h2>Legal</h2>
+        <p class="sub">Boilerplate pages.</p>
+        <div class="sm-grid">
+          <a href="privacy.html" class="sm-card"><h3>Privacy Policy</h3><p>Sticky TOC + 8 sections of standard privacy policy copy.</p><div class="go">View →</div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div data-slot="footer"></div>
+  <script src="assets/site.js?v=8"></script>
+</body>
+</html>
