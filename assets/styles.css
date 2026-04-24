@@ -389,6 +389,9 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
     radial-gradient(circle at 80% 80%, rgba(32, 32, 48,0.15), transparent 50%);
   pointer-events: none;
 }
+/* When a real photo is dropped in, hide the placeholder gradient overlay */
+.ph[style*="background-image"]::before { display: none; }
+.ph[style*="background-image"] { background: none; }
 .ph__label {
   position: relative;
   background: rgba(255,255,255,0.75);
