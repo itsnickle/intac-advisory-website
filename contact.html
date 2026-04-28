@@ -97,16 +97,17 @@
           </div>
         </div>
 
-        <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.sent').style.display='block'; this.querySelectorAll('.field, button').forEach(el => el.style.display='none');">
+        <form class="contact-form" action="https://formspree.io/f/xyklqlqv" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="form_type" value="contact">
           <h2 style="font-family: 'Instrument Serif', serif; font-size: 32px; margin: 0 0 8px; font-weight: 400;">Send us a message</h2>
           <p style="font-size: 14px; color: var(--ink-500); margin: 0 0 24px">Not a claim or quote? Use this form. We answer every message personally.</p>
           <div class="field-row">
-            <div class="field"><label for="cname">Name</label><input id="cname" required></div>
-            <div class="field"><label for="cemail">Email</label><input id="cemail" type="email" required></div>
+            <div class="field"><label for="cname">Name</label><input id="cname" name="name" required></div>
+            <div class="field"><label for="cemail">Email</label><input id="cemail" name="email" type="email" required></div>
           </div>
-          <div class="field"><label for="cphone">Phone (optional)</label><input id="cphone" type="tel"></div>
+          <div class="field"><label for="cphone">Phone (optional)</label><input id="cphone" name="phone" type="tel"></div>
           <div class="field"><label for="ctopic">What's this about?</label>
-            <select id="ctopic">
+            <select id="ctopic" name="topic">
               <option>General question</option>
               <option>Policy question (existing customer)</option>
               <option>Billing</option>
@@ -114,11 +115,9 @@
               <option>Something else</option>
             </select>
           </div>
-          <div class="field"><label for="cmsg">Message</label><textarea id="cmsg" rows="5" required></textarea></div>
+          <div class="field"><label for="cmsg">Message</label><textarea id="cmsg" name="message" rows="5" required></textarea></div>
+          <div class="field"><label for="cfile">Attach a file (optional)</label><input id="cfile" name="file" type="file" accept="image/*,.pdf,.doc,.docx" style="padding: 8px 0;"><span style="font-size: 12px; color: var(--ink-500);">Photo, PDF, or doc · up to 10 MB</span></div>
           <button class="btn btn--primary" style="width: 100%; justify-content: center" type="submit">Send message →</button>
-          <div class="sent" style="display:none; padding: 24px; text-align:center; background: var(--teal-50); border-radius: var(--radius); color: var(--teal-900);">
-            <strong>Got it — thanks.</strong><br/><span style="font-size: 14px; color: var(--ink-700)">An agent will be in touch.</span>
-          </div>
         </form>
       </div>
     </div>

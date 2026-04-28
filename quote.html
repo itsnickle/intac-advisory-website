@@ -189,6 +189,47 @@
     </div>
   </section>
 
+  <section style="background: var(--cream); padding: 80px 0;">
+    <div class="container">
+      <div style="max-width: 720px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 48px;">
+          <span class="eyebrow">Already insured?</span>
+          <h2 style="margin-top: 12px;">Skip the form. Send us your current policy.</h2>
+          <p class="lead" style="margin-top: 16px;">Upload your declarations page (or a phone photo of it) and we'll quote you against the same coverage. Faster than re-typing everything you already have.</p>
+        </div>
+
+        <form action="https://formspree.io/f/xyklqlqv" method="POST" enctype="multipart/form-data" style="background: var(--white); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow);">
+          <input type="hidden" name="form_type" value="quote">
+          <div class="field-row">
+            <div class="field"><label>Full name</label><input name="full_name" required></div>
+            <div class="field"><label>Phone</label><input name="phone" type="tel" required></div>
+          </div>
+          <div class="field"><label>Email</label><input name="email" type="email" required></div>
+          <div class="field-row">
+            <div class="field"><label>Current carrier (optional)</label><input name="current_carrier" placeholder="e.g. Progressive, State Farm"></div>
+            <div class="field"><label>Renewal date (if you know it)</label><input name="renewal_date" type="date"></div>
+          </div>
+          <div class="field"><label>Coverage you want quoted</label>
+            <select name="coverage_type">
+              <option>Commercial — auto / fleet</option>
+              <option>Commercial — general liability</option>
+              <option>Commercial — property</option>
+              <option>Commercial — workers' comp</option>
+              <option>Personal — auto</option>
+              <option>Personal — home</option>
+              <option>Personal — umbrella</option>
+              <option>Other / not sure</option>
+            </select>
+          </div>
+          <div class="field"><label>Upload your current policy (dec page is enough)</label><input name="file" type="file" accept="image/*,.pdf" required style="padding: 8px 0;"><span style="font-size: 12px; color: var(--ink-500);">PDF or photo — up to 10 MB. Just the dec page is plenty.</span></div>
+          <div class="field"><label>Anything else we should know? (optional)</label><textarea name="message" rows="3" placeholder="e.g. I had a claim in 2023, looking for better roadside coverage, etc."></textarea></div>
+          <button class="btn btn--primary" type="submit" style="width: 100%; justify-content: center;">Send my policy for review →</button>
+          <p style="font-size: 12px; color: var(--ink-500); text-align: center; margin: 16px 0 0;">An agent calls you back, usually same business day. Two or three best options inside 48 hours.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <div data-slot="footer"></div>
   <script src="assets/site.js?v=8"></script>
 </body>
