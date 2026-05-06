@@ -1,11 +1,11 @@
 // Shared header + footer for Intac Advisory site
 (function () {
   const pages = [
-    { href: "index.html", label: "Home" },
-    { href: "about.html", label: "About" },
-    { href: "services.html", label: "Services" },
-    { href: "blog.html", label: "Resources" },
-    { href: "contact.html", label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "about", label: "About" },
+    { href: "services", label: "Services" },
+    { href: "blog", label: "Resources" },
+    { href: "contact", label: "Contact" },
   ];
 
   const current = (document.body.dataset.page || "").toLowerCase();
@@ -20,7 +20,7 @@
     return `
       <header class="site-header">
         <div class="container site-header__bar">
-          <a href="index.html" class="brand" aria-label="Intac Advisory home">
+          <a href="/" class="brand" aria-label="Intac Advisory home">
             <img src="assets/intac-logo-horizontal.png" alt="Intac Advisory" class="brand__logo" />
           </a>
           <nav class="nav nav--desktop" id="primary-nav-desktop" aria-label="Primary">
@@ -31,7 +31,7 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <span class="header-cta__phone-text">(877) 237‑8167</span>
             </a>
-            <a href="quote.html" class="btn btn--primary btn--sm header-cta__quote">Get a quote <span class="arr">→</span></a>
+            <a href="quote" class="btn btn--primary btn--sm header-cta__quote">Get a quote <span class="arr">→</span></a>
             <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
               <svg class="nav-toggle__open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
               <svg class="nav-toggle__close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M6 18L18 6"/></svg>
@@ -53,7 +53,7 @@
         <div class="container">
           <div class="footer-grid">
             <div class="footer-brand">
-              <a href="index.html" class="brand brand--footer">
+              <a href="/" class="brand brand--footer">
                 <img src="assets/intac-logo-full.png" alt="Intac Advisory" class="brand__logo-stacked" />
               </a>
               <p>Independent advisory and insurance brokerage. We shop the market on your behalf, so you get the right coverage at the right price — from people you can actually reach.</p>
@@ -64,34 +64,34 @@
             <div>
               <h4>Insurance</h4>
               <ul>
-                <li><a href="services.html#commercial">Commercial Lines</a></li>
-                <li><a href="services.html#personal">Personal Lines</a></li>
+                <li><a href="services#commercial">Commercial Lines</a></li>
+                <li><a href="services#personal">Personal Lines</a></li>
                 <li><a href="https://sentryxp.com" target="_blank" rel="noopener">Business Growth Services</a></li>
                 <li><a href="https://georgeadamsinsurance.com/" target="_blank" rel="noopener">Surety</a></li>
-                <li><a href="services.html">All services</a></li>
+                <li><a href="services">All services</a></li>
               </ul>
             </div>
             <div>
               <h4>Company</h4>
               <ul>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="blog.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="about">About us</a></li>
+                <li><a href="blog">Resources</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li><a href="privacy">Privacy</a></li>
               </ul>
             </div>
             <div>
               <h4>Customer care</h4>
               <ul>
-                <li><a href="quote.html">Get a quote</a></li>
-                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="quote">Get a quote</a></li>
+                <li><a href="contact">Contact us</a></li>
                 <li><a href="tel:+18772378167">(877) 237‑8167</a></li>
               </ul>
             </div>
           </div>
           <div class="footer-bottom">
             <div>© 2026 Intac Advisory · License #TX‑2184772</div>
-            <div><a href="privacy.html">Privacy</a> · <a href="#">Accessibility</a></div>
+            <div><a href="privacy">Privacy</a> · <a href="#">Accessibility</a></div>
           </div>
         </div>
       </footer>
