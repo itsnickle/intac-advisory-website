@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <title>Get a Quote — Danny Bruder · Intac Advisory</title>
+  <meta name="description" content="Independent coverage that has your back. Get a personalized quote from Danny Bruder at Intac Advisory.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css?v=8" />
+  <style>
+    /* Producer-page-specific styles — leans on global tokens from styles.css */
+    .producer-hero { padding: 24px 0 48px; text-align: center; }
+    .producer-hero img { max-height: 110px; width: auto; display: inline-block; }
+    @media (max-width: 540px) { .producer-hero img { max-height: 88px; } }
+    .producer-hero h1 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      color: var(--ink-900);
+      margin: 32px 0 16px;
+      max-width: 18ch;
+      margin-left: auto;
+      margin-right: auto;
+      text-wrap: balance;
+    }
+    .producer-hero h1 em { font-family: "Instrument Serif", Georgia, serif; font-style: italic; color: var(--coral-500); }
+    .producer-hero .lead {
+      max-width: 56ch;
+      margin: 0 auto;
+      font-size: 18px;
+      color: var(--ink-500);
+    }
+
+    .producer-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      border: 1px solid var(--ink-100);
+    }
+    .producer-photo {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 18%;
+      flex-shrink: 0;
+      border: 3px solid var(--coral-100);
+    }
+    .producer-info { flex: 1; min-width: 0; }
+    .producer-info .greeting {
+      font-size: 12px;
+      color: var(--ink-500);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .producer-info h2 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: var(--ink-900);
+      line-height: 1;
+      margin: 0 0 6px;
+    }
+    .producer-info .role {
+      font-size: 14px;
+      color: var(--ink-500);
+      margin-bottom: 12px;
+    }
+    .producer-contact {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    .producer-contact a {
+      color: var(--coral-500);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .producer-contact a:hover { color: var(--coral-600); text-decoration: underline; }
+    @media (max-width: 540px) {
+      .producer-card { flex-direction: column; text-align: center; gap: 16px; padding: 24px; }
+      .producer-contact { justify-content: center; }
+    }
+
+    .form-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--ink-100);
+    }
+    .form-card .form-section { margin-bottom: 36px; }
+    .form-card .form-section:last-of-type { margin-bottom: 0; }
+    .form-card .form-section h3 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--ink-900);
+      margin: 0 0 6px;
+      line-height: 1.1;
+    }
+    .form-card .section-hint {
+      font-size: 14px;
+      color: var(--ink-500);
+      margin: 0 0 20px;
+    }
+
+    .field-grid { display: grid; gap: 16px; }
+    .field-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+    @media (max-width: 540px) { .field-grid.cols-2 { grid-template-columns: 1fr; } }
+
+    .form-card .field { margin: 0; }
+    .form-card .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-700);
+      margin-bottom: 8px;
+    }
+    .form-card .field label .req { color: var(--coral-500); }
+    .form-card .field input[type="text"],
+    .form-card .field input[type="email"],
+    .form-card .field input[type="tel"],
+    .form-card .field input[type="date"],
+    .form-card .field select,
+    .form-card .field textarea {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 15px;
+      font-family: inherit;
+      color: var(--ink-900);
+      background: var(--cream);
+      border: 1px solid var(--ink-100);
+      border-radius: var(--radius-sm);
+      transition: all 0.2s var(--ease);
+    }
+    .form-card .field input::placeholder, .form-card .field textarea::placeholder { color: var(--ink-400); }
+    .form-card .field input:focus, .form-card .field select:focus, .form-card .field textarea:focus {
+      outline: none;
+      border-color: var(--coral-500);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(105, 29, 48, 0.08);
+    }
+    .form-card .field textarea { min-height: 110px; resize: vertical; }
+
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .coverage-option { position: relative; }
+    .coverage-option input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .coverage-option label {
+      display: block;
+      padding: 18px 14px;
+      text-align: center;
+      border: 1px solid var(--ink-100);
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink-700);
+      background: var(--cream);
+      transition: all 0.2s var(--ease);
+      user-select: none;
+      line-height: 1.3;
+    }
+    .coverage-option label:hover {
+      border-color: var(--coral-500);
+      background: var(--white);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+    .coverage-option input:checked + label {
+      border-color: var(--coral-500);
+      background: var(--coral-100);
+      color: var(--coral-600);
+      font-weight: 600;
+    }
+
+    .file-upload {
+      position: relative;
+      border: 1px dashed var(--ink-200);
+      border-radius: var(--radius);
+      padding: 32px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+      background: var(--cream);
+    }
+    .file-upload:hover { border-color: var(--coral-500); background: var(--white); }
+    .file-upload.has-file {
+      border-color: var(--coral-500);
+      background: var(--coral-100);
+      border-style: solid;
+    }
+    .file-upload input[type="file"] {
+      position: absolute; opacity: 0;
+      width: 100%; height: 100%;
+      top: 0; left: 0;
+      cursor: pointer;
+    }
+    .file-upload-label { pointer-events: none; }
+    .file-upload-label .primary {
+      font-weight: 600;
+      color: var(--ink-900);
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .file-upload-label .secondary { font-size: 13px; color: var(--ink-500); }
+    .file-upload.has-file .file-upload-label .primary { color: var(--coral-600); }
+
+    .submit-section {
+      margin-top: 40px;
+      padding-top: 28px;
+      border-top: 1px solid var(--ink-100);
+    }
+    .submit-section .privacy-note {
+      margin-top: 16px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--ink-500);
+    }
+  </style>
+</head>
+<body data-page="quote">
+  <div data-slot="header"></div>
+
+  <section class="page-head" style="padding-bottom: 0">
+    <div class="container">
+      <div class="crumbs"><a href="/">Home</a> <span>›</span> <a href="quote">Get a quote</a> <span>›</span> <span>Danny Bruder</span></div>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(180deg, var(--cream-deep) 0%, var(--white) 60%); padding: 24px 0 96px">
+    <div class="container" style="max-width: 880px;">
+
+      <div class="producer-hero">
+        <img src="/assets/intac-logo-horizontal.png" alt="Intac Advisory">
+        <h1>Independent coverage that has <em>your</em> back.</h1>
+        <p class="lead">Drop a few details and your current declarations page if you've got it. Danny will be in touch within one business day with a tailored quote — no obligation.</p>
+      </div>
+
+      <div class="producer-card">
+        <img src="/assets/team/danny-bruder.jpg" alt="Danny Bruder" class="producer-photo">
+        <div class="producer-info">
+          <div class="greeting">You're working with</div>
+          <h2>Danny Bruder</h2>
+          <div class="role">Mid-Market Commercial Lines Producer · Intac Advisory</div>
+          <div class="producer-contact">
+            <a href="tel:+12813710052">(281) 371-0052</a>
+            <a href="mailto:danny@intacadvisory.com">danny@intacadvisory.com</a>
+          </div>
+        </div>
+      </div>
+
+      <form action="https://formspree.io/f/xyklqlqv" method="POST" enctype="multipart/form-data" class="form-card" id="quoteForm">
+
+        <!-- Formspree control fields -->
+        <input type="hidden" name="_subject" value="New quote request via /quote/danny">
+        <input type="hidden" name="_next" value="https://intacadvisory.com/thank-you">
+        <input type="hidden" name="_cc" value="danny@intacadvisory.com">
+
+        <!-- Producer + tracking metadata -->
+        <input type="hidden" name="form_type" value="producer_intake">
+        <input type="hidden" name="producer_name" value="Danny Bruder">
+        <input type="hidden" name="producer_email" value="danny@intacadvisory.com">
+        <input type="hidden" name="producer_phone" value="+12813710052">
+        <input type="hidden" name="source_url" value="intacadvisory.com/quote/danny">
+        <!-- Future Momentum integration: replace with real AgencyID before wiring native webhook -->
+        <input type="hidden" name="agency_id" value="">
+
+        <!-- Honeypot — bots fill this, humans don't -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+
+        <div class="form-section">
+          <h3>About you</h3>
+          <p class="section-hint">The basics so Danny can reach you.</p>
+          <div class="field-grid cols-2">
+            <div class="field">
+              <label for="first_name">First name <span class="req">*</span></label>
+              <input type="text" id="first_name" name="first_name" required autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="last_name">Last name <span class="req">*</span></label>
+              <input type="text" id="last_name" name="last_name" required autocomplete="family-name">
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(555) 555-5555">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>What coverage are you looking for?</h3>
+          <p class="section-hint">Pick the closest match — we can refine on the call.</p>
+          <div class="coverage-grid">
+            <div class="coverage-option"><input type="radio" id="cov-auto" name="coverage_type" value="Personal Auto"><label for="cov-auto">Personal Auto</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-home" name="coverage_type" value="Home / Renters"><label for="cov-home">Home / Renters</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-trucking" name="coverage_type" value="Trucking / Commercial Auto"><label for="cov-trucking">Trucking / Commercial Auto</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-gl" name="coverage_type" value="General Liability / BOP"><label for="cov-gl">General Liability / BOP</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-wc" name="coverage_type" value="Workers Compensation"><label for="cov-wc">Workers Compensation</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-cyber" name="coverage_type" value="Cyber Liability"><label for="cov-cyber">Cyber Liability</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-bond" name="coverage_type" value="Surety Bond"><label for="cov-bond">Surety Bond</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-group" name="coverage_type" value="Group Health / Benefits"><label for="cov-group">Group Health / Benefits</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-other" name="coverage_type" value="Other / Not sure"><label for="cov-other">Other / Not sure</label></div>
+          </div>
+        </div>
+
+        <div class="form-section" id="businessSection" style="display:none;">
+          <h3>About your business</h3>
+          <p class="section-hint">Helps Danny match you with the right carriers.</p>
+          <div class="field-grid">
+            <div class="field">
+              <label for="business_name">Business name</label>
+              <input type="text" id="business_name" name="business_name" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="industry">What does your business do?</label>
+              <input type="text" id="industry" name="industry" placeholder="e.g., long-haul trucking, residential construction">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Your current coverage</h3>
+          <p class="section-hint">Optional. Skip if you don't currently have a policy.</p>
+          <div class="field-grid cols-2">
+            <div class="field">
+              <label for="current_carrier">Current carrier</label>
+              <input type="text" id="current_carrier" name="current_carrier" placeholder="e.g. Progressive, State Farm">
+            </div>
+            <div class="field">
+              <label for="renewal_date">Policy expiration date</label>
+              <input type="date" id="renewal_date" name="renewal_date">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Drop your current declarations page</h3>
+          <p class="section-hint">If you've got a PDF or a photo of it, this saves a lot of back-and-forth. Optional.</p>
+          <div class="file-upload" id="fileUploadZone">
+            <input type="file" id="policy_upload" name="file" accept=".pdf,.jpg,.jpeg,.png,.heic">
+            <div class="file-upload-label">
+              <div class="primary">Drop a file or tap to upload</div>
+              <div class="secondary">PDF or photo · up to 10 MB</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Anything else?</h3>
+          <p class="section-hint">Specific concerns, claims history, deadlines — anything Danny should know.</p>
+          <div class="field">
+            <textarea id="message" name="message" placeholder="Optional"></textarea>
+          </div>
+        </div>
+
+        <div class="submit-section">
+          <button type="submit" class="btn btn--primary" id="submitBtn" style="width: 100%; justify-content: center;">Send to Danny →</button>
+          <p class="privacy-note">Your information is private and secure. We'll only use it to prepare your quote.</p>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <div data-slot="footer"></div>
+  <script src="/assets/site.js?v=8"></script>
+  <script>
+    // Show/hide business section based on commercial coverage selection
+    const commercialTypes = ['Trucking / Commercial Auto', 'General Liability / BOP', 'Workers Compensation', 'Cyber Liability', 'Surety Bond', 'Group Health / Benefits'];
+    document.querySelectorAll('input[name="coverage_type"]').forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        document.getElementById('businessSection').style.display = commercialTypes.includes(e.target.value) ? '' : 'none';
+      });
+    });
+
+    // File upload visual feedback
+    const fileInput = document.getElementById('policy_upload');
+    const fileZone = document.getElementById('fileUploadZone');
+    const fileLabel = fileZone.querySelector('.file-upload-label');
+    const originalLabelHTML = fileLabel.innerHTML;
+    fileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        fileZone.classList.add('has-file');
+        fileLabel.innerHTML = `<div class="primary">${file.name}</div><div class="secondary">${(file.size/1024).toFixed(0)} KB · Tap to change</div>`;
+      } else {
+        fileZone.classList.remove('has-file');
+        fileLabel.innerHTML = originalLabelHTML;
+      }
+    });
+
+    // Phone formatter
+    document.getElementById('phone').addEventListener('input', (e) => {
+      let v = e.target.value.replace(/\D/g, '').slice(0, 10);
+      if (v.length >= 7) v = `(${v.slice(0,3)}) ${v.slice(3,6)}-${v.slice(6)}`;
+      else if (v.length >= 4) v = `(${v.slice(0,3)}) ${v.slice(3)}`;
+      else if (v.length >= 1) v = `(${v}`;
+      e.target.value = v;
+    });
+  </script>
+</body>
+</html>
