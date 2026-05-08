@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <title>Get a Quote — Ronda Curtis · Intac Advisory</title>
+  <meta name="description" content="Independent coverage that has your back. Get a personalized quote from Ronda Curtis at Intac Advisory.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css?v=8" />
+  <style>
+    .producer-hero { padding: 24px 0 48px; text-align: center; }
+    .producer-hero img { max-height: 110px; width: auto; display: inline-block; }
+    @media (max-width: 540px) { .producer-hero img { max-height: 88px; } }
+    .producer-hero h1 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      color: var(--ink-900);
+      margin: 32px auto 16px;
+      max-width: 18ch;
+      text-wrap: balance;
+    }
+    .producer-hero h1 em { font-family: "Instrument Serif", Georgia, serif; font-style: italic; color: var(--coral-500); }
+    .producer-hero .lead { max-width: 56ch; margin: 0 auto; font-size: 18px; color: var(--ink-500); }
+
+    .producer-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      border: 1px solid var(--ink-100);
+    }
+    .producer-photo {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 18%;
+      flex-shrink: 0;
+      border: 3px solid var(--coral-100);
+    }
+    .producer-info { flex: 1; min-width: 0; }
+    .producer-info .greeting { font-size: 12px; color: var(--ink-500); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; margin-bottom: 6px; }
+    .producer-info h2 { font-family: "Instrument Serif", Georgia, serif; font-size: 32px; font-weight: 400; color: var(--ink-900); line-height: 1; margin: 0 0 6px; }
+    .producer-info .role { font-size: 14px; color: var(--ink-500); margin-bottom: 12px; }
+    .producer-contact { display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px; }
+    .producer-contact a { color: var(--coral-500); text-decoration: none; font-weight: 500; }
+    .producer-contact a:hover { color: var(--coral-600); text-decoration: underline; }
+    @media (max-width: 540px) {
+      .producer-card { flex-direction: column; text-align: center; gap: 16px; padding: 24px; }
+      .producer-contact { justify-content: center; }
+    }
+
+    .form-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--ink-100);
+    }
+    .form-card .form-section { margin-bottom: 36px; }
+    .form-card .form-section:last-of-type { margin-bottom: 0; }
+    .form-card .form-section h3 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--ink-900);
+      margin: 0 0 6px;
+      line-height: 1.1;
+    }
+    .form-card .section-hint { font-size: 14px; color: var(--ink-500); margin: 0 0 20px; }
+
+    .field-grid { display: grid; gap: 16px; }
+    .field-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+    .field-grid.cols-3 { grid-template-columns: 2fr 1fr 1fr; }
+    .field-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+    @media (max-width: 540px) {
+      .field-grid.cols-2, .field-grid.cols-3, .field-grid.cols-4 { grid-template-columns: 1fr; }
+    }
+
+    .form-card .field { margin: 0; }
+    .form-card .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-700);
+      margin-bottom: 8px;
+    }
+    .form-card .field label .req { color: var(--coral-500); }
+    .form-card .field input[type="text"],
+    .form-card .field input[type="email"],
+    .form-card .field input[type="tel"],
+    .form-card .field input[type="date"],
+    .form-card .field input[type="number"],
+    .form-card .field input[type="url"],
+    .form-card .field select,
+    .form-card .field textarea {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 15px;
+      font-family: inherit;
+      color: var(--ink-900);
+      background: var(--cream);
+      border: 1px solid var(--ink-100);
+      border-radius: var(--radius-sm);
+      transition: all 0.2s var(--ease);
+    }
+    .form-card .field input::placeholder, .form-card .field textarea::placeholder { color: var(--ink-400); }
+    .form-card .field input:focus, .form-card .field select:focus, .form-card .field textarea:focus {
+      outline: none;
+      border-color: var(--coral-500);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(105, 29, 48, 0.08);
+    }
+    .form-card .field textarea { min-height: 90px; resize: vertical; }
+
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .coverage-option { position: relative; }
+    .coverage-option input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+    .coverage-option label {
+      display: block;
+      padding: 18px 14px;
+      text-align: center;
+      border: 1px solid var(--ink-100);
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink-700);
+      background: var(--cream);
+      transition: all 0.2s var(--ease);
+      user-select: none;
+      line-height: 1.3;
+    }
+    .coverage-option label:hover { border-color: var(--coral-500); background: var(--white); transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+    .coverage-option input:checked + label {
+      border-color: var(--coral-500);
+      background: var(--coral-100);
+      color: var(--coral-600);
+      font-weight: 600;
+    }
+
+    /* Yes/No question rows for driving history */
+    .yesno-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 16px;
+      border: 1px solid var(--ink-100);
+      border-radius: var(--radius-sm);
+      background: var(--cream);
+      margin-bottom: 8px;
+    }
+    .yesno-row .question {
+      font-size: 14px;
+      color: var(--ink-700);
+      line-height: 1.4;
+    }
+    .yesno-toggle { display: inline-flex; gap: 6px; }
+    .yesno-toggle input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+    .yesno-toggle label {
+      display: inline-block;
+      padding: 6px 14px;
+      border: 1px solid var(--ink-200);
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink-500);
+      background: var(--white);
+      transition: all 0.15s var(--ease);
+      user-select: none;
+    }
+    .yesno-toggle input:checked + label {
+      border-color: var(--coral-500);
+      background: var(--coral-500);
+      color: var(--white);
+    }
+
+    /* Checkbox grid for home features */
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 8px;
+    }
+    .check-grid label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border: 1px solid var(--ink-100);
+      border-radius: var(--radius-sm);
+      background: var(--cream);
+      cursor: pointer;
+      font-size: 14px;
+      color: var(--ink-700);
+      transition: all 0.15s var(--ease);
+      font-weight: 500;
+      margin: 0;
+    }
+    .check-grid label:hover { border-color: var(--coral-500); background: var(--white); }
+    .check-grid input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--coral-500);
+      cursor: pointer;
+    }
+    .check-grid input[type="checkbox"]:checked + span { color: var(--coral-600); font-weight: 600; }
+
+    .file-upload {
+      position: relative;
+      border: 1px dashed var(--ink-200);
+      border-radius: var(--radius);
+      padding: 32px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+      background: var(--cream);
+    }
+    .file-upload:hover { border-color: var(--coral-500); background: var(--white); }
+    .file-upload.has-file { border-color: var(--coral-500); background: var(--coral-100); border-style: solid; }
+    .file-upload input[type="file"] { position: absolute; opacity: 0; width: 100%; height: 100%; top: 0; left: 0; cursor: pointer; }
+    .file-upload-label { pointer-events: none; }
+    .file-upload-label .primary { font-weight: 600; color: var(--ink-900); font-size: 15px; margin-bottom: 4px; }
+    .file-upload-label .secondary { font-size: 13px; color: var(--ink-500); }
+    .file-upload.has-file .file-upload-label .primary { color: var(--coral-600); }
+
+    /* Privacy callout */
+    .privacy-callout {
+      background: var(--cream);
+      border: 1px solid var(--ink-100);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      font-size: 13px;
+      color: var(--ink-500);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .privacy-callout strong { color: var(--ink-900); font-weight: 600; }
+    .privacy-callout .ico {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--coral-500);
+      margin-top: 1px;
+    }
+
+    .submit-section { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--ink-100); }
+    .submit-section .privacy-note { margin-top: 16px; text-align: center; font-size: 13px; color: var(--ink-500); }
+
+    /* Conditional sections — hidden by default, shown via JS */
+    .conditional { display: none; }
+  </style>
+</head>
+<body data-page="quote">
+  <div data-slot="header"></div>
+
+  <section class="page-head" style="padding-bottom: 0">
+    <div class="container">
+      <div class="crumbs"><a href="/">Home</a> <span>›</span> <a href="/quote">Get a quote</a> <span>›</span> <span>Ronda Curtis</span></div>
+    </div>
+  </section>
+
+  <section style="background: linear-gradient(180deg, var(--cream-deep) 0%, var(--white) 60%); padding: 24px 0 96px">
+    <div class="container" style="max-width: 880px;">
+
+      <div class="producer-hero">
+        <img src="/assets/intac-logo-horizontal.png" alt="Intac Advisory">
+        <h1>Independent coverage that has <em>your</em> back.</h1>
+        <p class="lead">Drop a few details and your current declarations page if you've got it. Ronda will be in touch within one business day with a tailored quote — no obligation.</p>
+      </div>
+
+      <div class="producer-card">
+        <img src="/assets/team/ronda-curtis.jpg" alt="Ronda Curtis" class="producer-photo">
+        <div class="producer-info">
+          <div class="greeting">You're working with</div>
+          <h2>Ronda Curtis</h2>
+          <div class="role">Personal Lines Producer · Intac Advisory</div>
+          <div class="producer-contact">
+            <a href="tel:+18772378167">(877) 237-8167</a>
+            <a href="mailto:ronda@intacadvisory.com">ronda@intacadvisory.com</a>
+          </div>
+        </div>
+      </div>
+
+      <form action="https://formspree.io/f/xyklqlqv" method="POST" enctype="multipart/form-data" class="form-card" id="quoteForm">
+
+        <input type="hidden" name="_subject" value="New quote request via /quote/ronda">
+        <input type="hidden" name="_next" value="https://intacadvisory.com/thank-you">
+        <input type="hidden" name="_cc" value="ronda@intacadvisory.com">
+
+        <input type="hidden" name="form_type" value="producer_intake">
+        <input type="hidden" name="producer_name" value="Ronda Curtis">
+        <input type="hidden" name="producer_email" value="ronda@intacadvisory.com">
+        <input type="hidden" name="producer_phone" value="+18772378167">
+        <input type="hidden" name="source_url" value="intacadvisory.com/quote/ronda">
+        <input type="hidden" name="agency_id" value="">
+
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+
+        <!-- 1. About you -->
+        <div class="form-section">
+          <h3>About you</h3>
+          <p class="section-hint">The basics so Ronda can reach you.</p>
+          <div class="field-grid cols-2">
+            <div class="field">
+              <label for="first_name">First name <span class="req">*</span></label>
+              <input type="text" id="first_name" name="first_name" required autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="last_name">Last name <span class="req">*</span></label>
+              <input type="text" id="last_name" name="last_name" required autocomplete="family-name">
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(555) 555-5555">
+            </div>
+            <div class="field">
+              <label for="dob">Date of birth</label>
+              <input type="date" id="dob" name="dob" autocomplete="bday">
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Coverage Type -->
+        <div class="form-section">
+          <h3>What coverage are you looking for?</h3>
+          <p class="section-hint">Pick the closest match — we can refine on the call.</p>
+          <div class="coverage-grid">
+            <div class="coverage-option"><input type="radio" id="cov-auto" name="coverage_type" value="Personal Auto"><label for="cov-auto">Personal Auto</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-home" name="coverage_type" value="Home / Renters"><label for="cov-home">Home / Renters</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-trucking" name="coverage_type" value="Trucking / Commercial Auto"><label for="cov-trucking">Trucking / Commercial Auto</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-gl" name="coverage_type" value="General Liability / BOP"><label for="cov-gl">General Liability / BOP</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-wc" name="coverage_type" value="Workers Compensation"><label for="cov-wc">Workers Compensation</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-cyber" name="coverage_type" value="Cyber Liability"><label for="cov-cyber">Cyber Liability</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-bond" name="coverage_type" value="Surety Bond"><label for="cov-bond">Surety Bond</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-group" name="coverage_type" value="Group Health / Benefits"><label for="cov-group">Group Health / Benefits</label></div>
+            <div class="coverage-option"><input type="radio" id="cov-other" name="coverage_type" value="Other / Not sure"><label for="cov-other">Other / Not sure</label></div>
+          </div>
+        </div>
+
+        <!-- 3. Address (always shown) -->
+        <div class="form-section">
+          <h3>Where are you?</h3>
+          <p class="section-hint">Property or mailing address.</p>
+          <div class="field-grid">
+            <div class="field">
+              <label for="address_street">Street address</label>
+              <input type="text" id="address_street" name="address_street" autocomplete="street-address">
+            </div>
+            <div class="field-grid cols-3">
+              <div class="field">
+                <label for="address_city">City</label>
+                <input type="text" id="address_city" name="address_city" autocomplete="address-level2">
+              </div>
+              <div class="field">
+                <label for="address_state">State</label>
+                <input type="text" id="address_state" name="address_state" autocomplete="address-level1" placeholder="TX">
+              </div>
+              <div class="field">
+                <label for="address_zip">ZIP</label>
+                <input type="text" id="address_zip" name="address_zip" autocomplete="postal-code" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Home details (conditional) -->
+        <div class="form-section conditional" id="homeSection">
+          <h3>About your home</h3>
+          <p class="section-hint">A few quick details so we can quote you accurately.</p>
+          <div class="field-grid cols-2">
+            <div class="field">
+              <label for="home_sqft">Square footage</label>
+              <input type="number" id="home_sqft" name="home_sqft" placeholder="e.g. 2,400" min="0">
+            </div>
+            <div class="field">
+              <label for="home_year_built">Year built</label>
+              <input type="number" id="home_year_built" name="home_year_built" placeholder="e.g. 1998" min="1800" max="2030">
+            </div>
+          </div>
+          <div style="margin-top: 16px;">
+            <label style="display: block; font-size: 13px; font-weight: 600; color: var(--ink-700); margin-bottom: 12px;">Year of recent improvements (leave blank if not updated)</label>
+            <div class="field-grid cols-4">
+              <div class="field">
+                <label for="home_roof_year" style="font-size: 12px; font-weight: 500; color: var(--ink-500);">Roof</label>
+                <input type="number" id="home_roof_year" name="home_roof_year" placeholder="Year" min="1900" max="2030">
+              </div>
+              <div class="field">
+                <label for="home_electrical_year" style="font-size: 12px; font-weight: 500; color: var(--ink-500);">Electrical</label>
+                <input type="number" id="home_electrical_year" name="home_electrical_year" placeholder="Year" min="1900" max="2030">
+              </div>
+              <div class="field">
+                <label for="home_hvac_year" style="font-size: 12px; font-weight: 500; color: var(--ink-500);">HVAC</label>
+                <input type="number" id="home_hvac_year" name="home_hvac_year" placeholder="Year" min="1900" max="2030">
+              </div>
+              <div class="field">
+                <label for="home_plumbing_year" style="font-size: 12px; font-weight: 500; color: var(--ink-500);">Plumbing</label>
+                <input type="number" id="home_plumbing_year" name="home_plumbing_year" placeholder="Year" min="1900" max="2030">
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 20px;">
+            <label style="display: block; font-size: 13px; font-weight: 600; color: var(--ink-700); margin-bottom: 12px;">Any of these on the property?</label>
+            <div class="check-grid">
+              <label><input type="checkbox" name="home_features" value="Pets"><span>Pets</span></label>
+              <label><input type="checkbox" name="home_features" value="Trampoline"><span>Trampoline</span></label>
+              <label><input type="checkbox" name="home_features" value="Pool"><span>Pool</span></label>
+              <label><input type="checkbox" name="home_features" value="Fence"><span>Fence</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Vehicles (conditional) -->
+        <div class="form-section conditional" id="vehiclesSection">
+          <h3>About your vehicles</h3>
+          <p class="section-hint">List each vehicle: year, make, model, VIN <span class="vehicles-commercial-hint" style="display:none;">— and garage location for commercial</span>.</p>
+          <div class="field">
+            <label for="vehicles">Vehicles</label>
+            <textarea id="vehicles" name="vehicles" placeholder="One vehicle per line. Example:
+2020 Ford F-150 — VIN 1FTFW1ET5DKE12345
+2018 Honda Civic — VIN 2HGFC2F69JH567890"></textarea>
+          </div>
+        </div>
+
+        <!-- 6. Business details (conditional) -->
+        <div class="form-section conditional" id="businessSection">
+          <h3>About your business</h3>
+          <p class="section-hint">Helps Ronda match you with the right carriers.</p>
+          <div class="field-grid cols-2">
+            <div class="field">
+              <label for="business_legal_name">Legal name of business</label>
+              <input type="text" id="business_legal_name" name="business_legal_name" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="business_fein">FEIN</label>
+              <input type="text" id="business_fein" name="business_fein" placeholder="XX-XXXXXXX">
+            </div>
+            <div class="field">
+              <label for="business_website">Website</label>
+              <input type="url" id="business_website" name="business_website" placeholder="https://">
+            </div>
+            <div class="field">
+              <label for="business_started">When did the business start?</label>
+              <input type="date" id="business_started" name="business_started">
+            </div>
+            <div class="field" style="grid-column: 1 / -1;">
+              <label for="business_nature">Nature of business</label>
+              <input type="text" id="business_nature" name="business_nature" placeholder="e.g. long-haul trucking, residential construction, IT consulting">
+            </div>
+            <div class="field">
+              <label for="business_employees">Number of employees</label>
+              <input type="number" id="business_employees" name="business_employees" min="0">
+            </div>
+            <div class="field">
+              <label for="business_revenue">Annual revenue</label>
+              <input type="text" id="business_revenue" name="business_revenue" placeholder="e.g. $2.5M">
+            </div>
+            <div class="field">
+              <label for="business_locations">Number of locations</label>
+              <input type="number" id="business_locations" name="business_locations" min="0">
+            </div>
+            <div class="field">
+              <label for="business_sqft">Total square footage</label>
+              <input type="number" id="business_sqft" name="business_sqft" placeholder="e.g. 12,000" min="0">
+            </div>
+            <div class="field" style="grid-column: 1 / -1;">
+              <label for="business_payroll">Payroll breakdown</label>
+              <textarea id="business_payroll" name="business_payroll" placeholder="e.g. 12 office staff @ $60k avg, 8 drivers @ $75k avg, 2 owners @ $150k"></textarea>
+            </div>
+            <div class="field" style="grid-column: 1 / -1;">
+              <label for="mailing_address">Mailing address (if different from above)</label>
+              <input type="text" id="mailing_address" name="mailing_address" placeholder="Street, city, state, ZIP">
+            </div>
+            <div class="field business-gl-bop conditional-gl-bop" style="grid-column: 1 / -1;">
+              <label for="coverage_limits">Requested coverage limits</label>
+              <input type="text" id="coverage_limits" name="coverage_limits" placeholder="e.g. $1M / $2M aggregate">
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Driving / claims history (conditional on auto coverage) -->
+        <div class="form-section conditional" id="drivingSection">
+          <h3>Driving and claims history</h3>
+          <p class="section-hint">Yes/No — we ask everyone, regardless of fault.</p>
+          <div class="yesno-row">
+            <div class="question">Any accidents in the last 5 years?</div>
+            <div class="yesno-toggle">
+              <input type="radio" id="acc5_yes" name="accidents_5yr" value="Yes"><label for="acc5_yes">Yes</label>
+              <input type="radio" id="acc5_no" name="accidents_5yr" value="No"><label for="acc5_no">No</label>
+            </div>
+          </div>
+          <div class="yesno-row">
+            <div class="question">Any accidents involving someone not on your policy in the last 5 years?</div>
+            <div class="yesno-toggle">
+              <input type="radio" id="acc5u_yes" name="accidents_unlisted_5yr" value="Yes"><label for="acc5u_yes">Yes</label>
+              <input type="radio" id="acc5u_no" name="accidents_unlisted_5yr" value="No"><label for="acc5u_no">No</label>
+            </div>
+          </div>
+          <div class="yesno-row">
+            <div class="question">Any tickets in the last 5 years?</div>
+            <div class="yesno-toggle">
+              <input type="radio" id="tk5_yes" name="tickets_5yr" value="Yes"><label for="tk5_yes">Yes</label>
+              <input type="radio" id="tk5_no" name="tickets_5yr" value="No"><label for="tk5_no">No</label>
+            </div>
+          </div>
+          <div class="yesno-row">
+            <div class="question">Any theft or vandalism in the last 5 years?</div>
+            <div class="yesno-toggle">
+              <input type="radio" id="tv5_yes" name="theft_vandalism_5yr" value="Yes"><label for="tv5_yes">Yes</label>
+              <input type="radio" id="tv5_no" name="theft_vandalism_5yr" value="No"><label for="tv5_no">No</label>
+            </div>
+          </div>
+          <div class="yesno-row dui-row" style="display: none;">
+            <div class="question">Any DUIs in the last 10 years?</div>
+            <div class="yesno-toggle">
+              <input type="radio" id="dui_yes" name="dui_10yr" value="Yes"><label for="dui_yes">Yes</label>
+              <input type="radio" id="dui_no" name="dui_10yr" value="No"><label for="dui_no">No</label>
+            </div>
+          </div>
+          <div class="yesno-row susp-row" style="display: none;">
+            <div class="question">Any license suspensions or revocations in the last 10 years?</div>
+            <div class="yesno-toggle">
+              <input type="radio" id="susp_yes" name="suspension_10yr" value="Yes"><label for="susp_yes">Yes</label>
+              <input type="radio" id="susp_no" name="suspension_10yr" value="No"><label for="susp_no">No</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Current coverage -->
+        <div class="form-section">
+          <h3>Your current coverage</h3>
+          <p class="section-hint">Optional. Skip if you don't currently have a policy.</p>
+          <div class="field-grid cols-2">
+            <div class="field">
+              <label for="current_carrier">Current carrier</label>
+              <input type="text" id="current_carrier" name="current_carrier" placeholder="e.g. Progressive, State Farm">
+            </div>
+            <div class="field">
+              <label for="renewal_date">Policy expiration date</label>
+              <input type="date" id="renewal_date" name="renewal_date">
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. File upload -->
+        <div class="form-section">
+          <h3>Drop your current declarations page</h3>
+          <p class="section-hint">PDF or photo of your dec page saves a lot of back-and-forth. Optional.</p>
+          <div class="file-upload" id="fileUploadZone">
+            <input type="file" id="policy_upload" name="file" accept=".pdf,.jpg,.jpeg,.png,.heic">
+            <div class="file-upload-label">
+              <div class="primary">Drop a file or tap to upload</div>
+              <div class="secondary">PDF or photo · up to 10 MB</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Anything else -->
+        <div class="form-section">
+          <h3>Anything else?</h3>
+          <p class="section-hint">Specific concerns, claims history details, deadlines — anything Ronda should know.</p>
+          <div class="field">
+            <textarea id="message" name="message" placeholder="Optional"></textarea>
+          </div>
+        </div>
+
+        <!-- Privacy callout for SSN/DL -->
+        <div class="form-section">
+          <div class="privacy-callout">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <div><strong>About sensitive details:</strong> We'll collect your SSN and driver's license details on our follow-up call (or via a secure portal) — never through this form. Keeps your information safe.</div>
+          </div>
+        </div>
+
+        <div class="submit-section">
+          <button type="submit" class="btn btn--primary" id="submitBtn" style="width: 100%; justify-content: center;">Send to Ronda →</button>
+          <p class="privacy-note">Your information is private and secure. We'll only use it to prepare your quote.</p>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <div data-slot="footer"></div>
+  <script src="/assets/site.js?v=8"></script>
+  <script>
+    // Conditional sections per coverage type
+    const visibility = {
+      homeSection:    ['Home / Renters'],
+      vehiclesSection:['Personal Auto', 'Trucking / Commercial Auto'],
+      businessSection:['Trucking / Commercial Auto', 'General Liability / BOP', 'Workers Compensation', 'Cyber Liability', 'Surety Bond', 'Group Health / Benefits'],
+      drivingSection: ['Personal Auto', 'Trucking / Commercial Auto']
+    };
+
+    const personalOnly = ['Personal Auto'];
+    const commercialAutoTypes = ['Trucking / Commercial Auto'];
+    const glBopTypes = ['General Liability / BOP'];
+
+    function applyVisibility(coverageType) {
+      Object.entries(visibility).forEach(([id, types]) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.style.display = types.includes(coverageType) ? 'block' : 'none';
+      });
+
+      // DUI + suspension rows show only for personal auto (driver-history specific)
+      document.querySelectorAll('.dui-row, .susp-row').forEach(row => {
+        row.style.display = personalOnly.includes(coverageType) ? 'grid' : 'none';
+      });
+
+      // Commercial auto vehicle hint
+      const commercialHint = document.querySelector('.vehicles-commercial-hint');
+      if (commercialHint) {
+        commercialHint.style.display = commercialAutoTypes.includes(coverageType) ? 'inline' : 'none';
+      }
+
+      // GL/BOP coverage limits field
+      document.querySelectorAll('.conditional-gl-bop').forEach(el => {
+        el.style.display = glBopTypes.includes(coverageType) ? 'block' : 'none';
+      });
+    }
+
+    document.querySelectorAll('input[name="coverage_type"]').forEach(radio => {
+      radio.addEventListener('change', (e) => applyVisibility(e.target.value));
+    });
+
+    // File upload visual feedback
+    const fileInput = document.getElementById('policy_upload');
+    const fileZone = document.getElementById('fileUploadZone');
+    const fileLabel = fileZone.querySelector('.file-upload-label');
+    const originalLabelHTML = fileLabel.innerHTML;
+    fileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        fileZone.classList.add('has-file');
+        fileLabel.innerHTML = `<div class="primary">${file.name}</div><div class="secondary">${(file.size/1024).toFixed(0)} KB · Tap to change</div>`;
+      } else {
+        fileZone.classList.remove('has-file');
+        fileLabel.innerHTML = originalLabelHTML;
+      }
+    });
+
+    // Phone formatter
+    document.getElementById('phone').addEventListener('input', (e) => {
+      let v = e.target.value.replace(/\D/g, '').slice(0, 10);
+      if (v.length >= 7) v = `(${v.slice(0,3)}) ${v.slice(3,6)}-${v.slice(6)}`;
+      else if (v.length >= 4) v = `(${v.slice(0,3)}) ${v.slice(3)}`;
+      else if (v.length >= 1) v = `(${v}`;
+      e.target.value = v;
+    });
+  </script>
+</body>
+</html>
