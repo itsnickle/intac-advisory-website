@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /index-print
+
+Sitemap: https://intacadvisory.com/sitemap.xml
