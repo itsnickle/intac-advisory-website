@@ -27,18 +27,24 @@
       border-radius: var(--radius-lg); overflow: hidden;
       margin-top: 48px;
     }
-    .post-featured .ph { aspect-ratio: 4/3; min-height: 0; border-radius: 0; }
+    .post-featured .post-thumb { aspect-ratio: 4/3; min-height: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
     .post-featured__text { padding: 48px; display: flex; flex-direction: column; justify-content: center; }
     .post-featured h2 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: clamp(28px, 3vw, 40px); margin: 12px 0 16px; line-height: 1.1; }
     .post-featured p { color: var(--ink-500); font-size: 16px; }
 
     .post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 64px; }
     .post-card { display: flex; flex-direction: column; text-decoration: none; color: inherit; }
-    .post-card .ph { aspect-ratio: 4/3; min-height: 0; border-radius: var(--radius); margin-bottom: 16px; }
+    .post-card .post-thumb { aspect-ratio: 4/3; width: 100%; object-fit: cover; border-radius: var(--radius); margin-bottom: 16px; transition: transform 0.4s var(--ease); }
+    .post-card:hover .post-thumb { transform: scale(1.02); }
     .post-card .meta { font-size: 12px; color: var(--ink-500); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
     .post-card h3 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 24px; margin: 0 0 10px; line-height: 1.15; }
     .post-card p { font-size: 14px; color: var(--ink-500); margin: 0; }
     .post-card:hover h3 { color: var(--coral-600); }
+    .post-card--upcoming { cursor: default; }
+    .post-card--upcoming .post-thumb { opacity: 0.55; filter: grayscale(20%); }
+    .post-card--upcoming:hover .post-thumb { transform: none; }
+    .post-card--upcoming:hover h3 { color: inherit; }
+    .post-card--upcoming .meta .badge { display: inline-block; padding: 2px 8px; background: var(--cream-deep); color: var(--coral-500); border-radius: var(--radius-pill); font-weight: 700; letter-spacing: 0.08em; margin-left: 6px; }
 
     .newsletter { background: var(--teal-900); color: var(--cream); border-radius: var(--radius-lg); padding: 56px; margin-top: 80px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
     .newsletter h2 { color: var(--cream); margin: 0 0 12px; }
@@ -85,7 +91,7 @@
   <section style="padding-top: 0">
     <div class="container">
       <a href="/blog/texas-wind-hail-deductible-guide" class="post-featured" style="text-decoration: none; color: inherit">
-        <div class="ph"><span class="ph__label">Featured article</span></div>
+        <img src="assets/family-home.jpg" alt="Texas suburban home — wind and hail deductible guide" class="post-thumb" loading="eager" />
         <div class="post-featured__text">
           <div style="display:flex; gap: 8px; align-items: center">
             <span class="tag">Texas‑specific · Personal</span>
@@ -104,60 +110,70 @@
       </a>
 
       <div class="post-grid">
+
         <a href="/blog/texas-non-subscriber-vs-workers-comp" class="post-card">
-          <div class="ph"><span class="ph__label">Article</span></div>
+          <img src="assets/surety-contractors.jpg" alt="Texas commercial workers — non-subscriber vs workers comp" class="post-thumb" loading="lazy" />
           <div class="meta">Texas‑specific · Commercial · 9 min</div>
           <h3>Texas Non-Subscriber vs. Workers' Comp: the decision every TX employer has to make.</h3>
           <p>Texas is the only state where workers' comp is optional. About 22% of employers opt out. Here's the honest trade-off between subscribing, going non-subscriber, and using occupational accident insurance.</p>
         </a>
-        <a href="#" class="post-card">
-          <div class="ph"><span class="ph__label">Article</span></div>
-          <div class="meta">Home · 8 min</div>
-          <h3>Replacement cost vs. actual cash value: the $200K difference in one word.</h3>
-          <p>Your policy says one or the other. Here's how to check yours — and why it matters if your roof gets hit by hail.</p>
-        </a>
-        <a href="#" class="post-card">
-          <div class="ph"><span class="ph__label">Article</span></div>
-          <div class="meta">Accounting &amp; Tax · 5 min</div>
-          <h3>Quarterly estimated taxes: who owes them, how much, and when.</h3>
-          <p>If you freelance, run a business, or have rental income, the IRS wants payment four times a year — not just in April. Here's how to calculate it.</p>
-        </a>
-        <a href="#" class="post-card">
-          <div class="ph"><span class="ph__label">Article</span></div>
-          <div class="meta">Surety · 6 min</div>
-          <h3>Performance vs. payment bonds: what every contractor should know.</h3>
-          <p>Most public projects require both. Here's what each one actually protects against — and why your credit matters more than you'd think.</p>
-        </a>
-        <a href="#" class="post-card">
-          <div class="ph"><span class="ph__label">Article</span></div>
-          <div class="meta">Claims · 6 min</div>
-          <h3>Before you file: should you actually file this claim?</h3>
-          <p>A $1,200 fender‑bender with a $1,000 deductible might cost you more than paying out of pocket. Here's the math.</p>
-        </a>
-        <a href="#" class="post-card">
-          <div class="ph"><span class="ph__label">Article</span></div>
-          <div class="meta">Texas‑specific · 5 min</div>
-          <h3>Hurricane prep: the one insurance step most homeowners miss.</h3>
-          <p>Flood insurance has a 30‑day waiting period. Which means if you're thinking about it when the storm forms, you're already too late.</p>
-        </a>
-        <a href="#" class="post-card">
-          <div class="ph"><span class="ph__label">Article</span></div>
-          <div class="meta">Auto · 3 min</div>
-          <h3>Teen drivers are expensive. Here's how to soften the hit.</h3>
-          <p>Good‑student discounts, defensive driving courses, telematics. How we typically get teen rates down by 30–40%.</p>
-        </a>
-        <a href="#" class="post-card">
-          <div class="ph"><span class="ph__label">Article</span></div>
-          <div class="meta">Home · 5 min</div>
-          <h3>Your home is worth more than you think. Check your coverage limit.</h3>
-          <p>Construction costs are up 40% since 2020. If you haven't re‑evaluated your dwelling limit, you're probably underinsured.</p>
-        </a>
-        <a href="#" class="post-card">
-          <div class="ph"><span class="ph__label">Article</span></div>
-          <div class="meta">Business · 7 min</div>
-          <h3>Cyber liability for small business: when is it actually worth it?</h3>
-          <p>It's no longer just a big‑company problem. Here's when a cyber policy makes sense — and when it's a waste of money.</p>
-        </a>
+
+        <div class="post-card post-card--upcoming" data-slug="hot-shot-trucking-insurance-texas">
+          <img src="assets/hero-trucking.jpg" alt="Texas hot shot trucking" class="post-thumb" loading="lazy" />
+          <div class="meta">Texas‑specific · Commercial<span class="badge">Coming May 11</span></div>
+          <h3>Hot Shot Trucking Insurance in Texas: 2026 requirements, cost ranges, and coverage gaps.</h3>
+          <p>The 10,001 lb GVWR threshold, FMCSA $750K liability rule, and the cargo limits brokers actually require — versus what's legally mandated.</p>
+        </div>
+
+        <div class="post-card post-card--upcoming" data-slug="hvac-contractor-insurance-texas">
+          <img src="assets/commercial-truck.jpg" alt="Texas HVAC contractor service truck" class="post-thumb" loading="lazy" />
+          <div class="meta">Texas‑specific · Commercial<span class="badge">Coming May 13</span></div>
+          <h3>Class A vs. Class B HVAC contractor insurance in Texas: which license needs what coverage.</h3>
+          <p>TDLR Class A requires $300K/$600K GL. Class B requires $100K/$200K. Here's what state minimums actually buy you — and where commercial customers typically push you to $1M.</p>
+        </div>
+
+        <div class="post-card post-card--upcoming" data-slug="sugar-land-fort-bend-flood-insurance">
+          <img src="assets/houston-skyline.webp" alt="Houston metro — Fort Bend flood insurance" class="post-thumb" loading="lazy" />
+          <div class="meta">Texas‑specific · Personal<span class="badge">Coming May 15</span></div>
+          <h3>Sugar Land + Fort Bend flood insurance: the FBCLID-2 discount most homeowners miss.</h3>
+          <p>FBCLID-2 unlocks up to 20% off NFIP premiums as of April 2025. Here's how to check your zone, claim the discount, and what Harvey taught Zone X homeowners about "low-risk."</p>
+        </div>
+
+        <div class="post-card post-card--upcoming" data-slug="re-quote-texas-business-insurance-annually">
+          <img src="assets/hero-family.jpg" alt="Texas business owner reviewing insurance quotes" class="post-thumb" loading="lazy" />
+          <div class="meta">Texas‑specific · Commercial<span class="badge">Coming May 17</span></div>
+          <h3>Why Texas businesses should re-quote their insurance every single year.</h3>
+          <p>Carrier appetite shifts annually — especially in trucking, construction, and coastal property. Why most agents only re-quote at large dollar thresholds, and what that costs you.</p>
+        </div>
+
+        <div class="post-card post-card--upcoming" data-slug="occupational-accident-vs-workers-comp-texas">
+          <img src="assets/team-meeting.jpg" alt="Texas employer reviewing occupational accident plan" class="post-thumb" loading="lazy" />
+          <div class="meta">Texas‑specific · Commercial<span class="badge">Coming May 19</span></div>
+          <h3>Occupational accident vs. workers' comp in Texas: when the 30% premium saving actually works.</h3>
+          <p>The deeper companion piece: ERISA plan structure, scheduled benefit caps, the 1099 trap, and where occ-acc breaks down on catastrophic claims.</p>
+        </div>
+
+        <div class="post-card post-card--upcoming" data-slug="commercial-general-liability-texas-contractors">
+          <img src="assets/surety-contractors.jpg" alt="Texas contractor general liability insurance" class="post-thumb" loading="lazy" />
+          <div class="meta">Texas‑specific · Commercial<span class="badge">Coming May 21</span></div>
+          <h3>Commercial general liability for Texas contractors: what $300K vs. $1M actually buys you.</h3>
+          <p>Per-occurrence vs aggregate limits, products & completed ops, additional insured endorsements (CG 20 10 vs 20 37), and the customer COI requirements that drive most coverage decisions.</p>
+        </div>
+
+        <div class="post-card post-card--upcoming" data-slug="hired-non-owned-auto-texas">
+          <img src="assets/commercial-truck.jpg" alt="Texas hired and non-owned auto coverage" class="post-thumb" loading="lazy" />
+          <div class="meta">Commercial<span class="badge">Coming May 23</span></div>
+          <h3>Hired & non-owned auto coverage: why every Texas service business needs it.</h3>
+          <p>Even if "nobody drives for work," your employees do — Costco runs, client visits, supply pickups. The personal auto policy gap that subrogates back to the employer.</p>
+        </div>
+
+        <div class="post-card post-card--upcoming" data-slug="sugar-land-independent-insurance-agent">
+          <img src="assets/houston-skyline.webp" alt="Sugar Land independent insurance agent" class="post-thumb" loading="lazy" />
+          <div class="meta">Local · Sugar Land<span class="badge">Coming May 25</span></div>
+          <h3>Sugar Land independent insurance agent: how to pick one that actually works for you.</h3>
+          <p>Independent vs captive, carrier-count math, the annual re-quote test, commission disclosure, and the red flags that should disqualify any agent on first contact.</p>
+        </div>
+
       </div>
 
       <div class="newsletter">
