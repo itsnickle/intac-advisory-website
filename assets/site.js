@@ -4,6 +4,7 @@
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
+    { href: "/blog", label: "Resources" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -75,6 +76,7 @@
               <h4>Company</h4>
               <ul>
                 <li><a href="/about">About us</a></li>
+                <li><a href="/blog">Resources</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="/privacy">Privacy</a></li>
               </ul>
