@@ -240,14 +240,17 @@
 
     /* Print rules */
     @media print {
-      body { background: white; }
+      html, body { background: white; min-height: 0; height: auto; }
       .toolbar { display: none !important; }
       .sheet {
         width: 100%;
-        min-height: auto;
+        min-height: 0;
+        height: auto;
         margin: 0;
         box-shadow: none;
         padding: 0.2in 0.15in;
+        page-break-after: avoid;
+        page-break-inside: avoid;
       }
     }
 
