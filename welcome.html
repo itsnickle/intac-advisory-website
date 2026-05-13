@@ -110,36 +110,24 @@
     .hosts {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
-      gap: 24px;
+      gap: 28px;
       align-items: center;
       margin-bottom: 0.3in;
       padding-top: 0.1in;
     }
     .hosts .logo-slot {
-      height: 0.7in;
       display: flex;
       align-items: center;
-      justify-content: center;
     }
     .hosts .logo-slot.intac { justify-content: flex-start; }
     .hosts .logo-slot.stretto { justify-content: flex-end; }
-    .hosts .logo-slot img {
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: contain;
-    }
+    .hosts .logo-slot.intac img { max-height: 0.75in; width: auto; }
+    .hosts .logo-slot.stretto img { max-height: 0.4in; width: auto; }
     .hosts .divider {
       width: 1px;
-      height: 0.45in;
+      height: 0.5in;
       background: var(--gold-soft);
       opacity: 0.6;
-    }
-    .stretto-placeholder {
-      font-family: "Instrument Serif", Georgia, serif;
-      font-size: 32px;
-      color: var(--burgundy-500);
-      font-style: italic;
-      letter-spacing: 0.02em;
     }
 
     /* Eyebrow */
@@ -285,8 +273,7 @@
       </div>
       <div class="divider"></div>
       <div class="logo-slot stretto">
-        <img src="/assets/stretto-logo.png" alt="Stretto"
-             onerror="this.outerHTML='&lt;span class=&quot;stretto-placeholder&quot;&gt;Stretto&lt;/span&gt;'">
+        <img src="/assets/stretto-logo.svg" alt="Stretto">
       </div>
     </div>
 
