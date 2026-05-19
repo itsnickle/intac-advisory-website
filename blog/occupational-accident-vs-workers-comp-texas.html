@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+
+  <title>Occupational Accident vs. Workers' Comp in Texas: When the 30% Premium Saving Actually Works | Intac Advisory</title>
+  <meta name="description" content="The deep companion piece on Texas occupational accident insurance: ERISA plan structure, scheduled benefit caps, the 1099 classification trap, PEO programs, and the employers liability stop-gap that keeps occ-acc safe.">
+  <link rel="canonical" href="https://intacadvisory.com/blog/occupational-accident-vs-workers-comp-texas">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://intacadvisory.com/blog/occupational-accident-vs-workers-comp-texas">
+  <meta property="og:title" content="Occupational Accident vs. Workers' Comp in Texas: When the 30% Premium Saving Actually Works">
+  <meta property="og:description" content="ERISA plan structure, scheduled benefit caps, the 1099 classification trap, and the employers liability stop-gap that keeps Texas occ-acc programs safe.">
+  <meta property="og:site_name" content="Intac Advisory">
+  <meta property="og:image" content="https://intacadvisory.com/assets/team-meeting.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Occupational Accident vs. Workers' Comp in Texas: When the 30% Premium Saving Actually Works">
+  <meta name="twitter:description" content="The deep companion piece on Texas occupational accident insurance — ERISA structure, scheduled caps, the 1099 trap, and the stop-gap that keeps it safe.">
+  <meta name="twitter:image" content="https://intacadvisory.com/assets/team-meeting.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css?v=9" />
+
+  <style>
+    .article-hero { max-width: 760px; margin: 0 auto; }
+    .article-hero h1 { font-size: clamp(36px, 4.5vw, 56px); line-height: 1.05; margin: 16px 0 20px; }
+    .article-hero h1 em { font-style: italic; color: var(--coral-600); }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; font-size: 14px; color: var(--ink-500); margin-top: 28px; }
+    .article-meta .author { display: flex; align-items: center; gap: 10px; }
+    .article-meta .author-bubble { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--teal-100), var(--coral-100)); }
+
+    .article-body { max-width: 760px; margin: 48px auto 0; }
+    .article-body p { font-size: 17px; line-height: 1.7; color: var(--ink-700); margin: 0 0 20px; }
+    .article-body h2 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 32px; line-height: 1.15; margin: 48px 0 16px; color: var(--ink-900); }
+    .article-body h3 { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 600; font-size: 20px; margin: 32px 0 12px; color: var(--ink-900); }
+    .article-body ul, .article-body ol { font-size: 17px; line-height: 1.7; color: var(--ink-700); padding-left: 24px; margin: 0 0 20px; }
+    .article-body li { margin-bottom: 8px; }
+    .article-body a { color: var(--coral-600); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--coral-500); }
+    .article-body strong { color: var(--ink-900); font-weight: 600; }
+    .article-body blockquote { border-left: 3px solid var(--coral-500); padding: 4px 0 4px 20px; margin: 28px 0; color: var(--ink-700); font-size: 18px; font-style: italic; }
+
+    .tldr { background: var(--cream-deep); border-radius: var(--radius); padding: 24px 28px; margin: 32px 0 8px; }
+    .tldr .label { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--coral-500); }
+    .tldr p { font-size: 17px; line-height: 1.6; color: var(--ink-900); margin: 8px 0 0; font-weight: 500; }
+
+    .compare-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; }
+    .compare-table th, .compare-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--ink-100); vertical-align: top; }
+    .compare-table thead th { background: var(--teal-900); color: var(--cream); font-weight: 600; font-size: 13px; letter-spacing: 0.04em; }
+    .compare-table tbody tr:nth-child(even) { background: var(--cream); }
+    .compare-table td:first-child { font-weight: 600; color: var(--ink-900); }
+
+    .callout { background: var(--white); border: 1px solid var(--ink-100); border-left: 4px solid var(--teal-900); border-radius: var(--radius-sm); padding: 20px 24px; margin: 28px 0; }
+    .callout--warning { border-left-color: var(--coral-500); }
+    .callout .label { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-900); }
+    .callout--warning .label { color: var(--coral-500); }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .faq-section { max-width: 760px; margin: 64px auto 0; }
+    .faq-item { border-bottom: 1px solid var(--ink-100); padding: 22px 0; }
+    .faq-item:first-of-type { border-top: 1px solid var(--ink-100); }
+    .faq-item summary { list-style: none; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 18px; color: var(--ink-900); cursor: pointer; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; font-size: 28px; color: var(--coral-500); font-weight: 300; transition: transform 0.2s var(--ease); }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p { margin: 14px 0 0; color: var(--ink-700); font-size: 16px; line-height: 1.6; }
+
+    .author-bio { max-width: 760px; margin: 56px auto 0; padding: 28px; background: var(--cream); border-radius: var(--radius); display: grid; grid-template-columns: 56px 1fr; gap: 18px; align-items: start; }
+    .author-bio__avatar { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--teal-100), var(--coral-100)); }
+    .author-bio h3 { font-size: 17px; font-weight: 600; margin: 0 0 6px; }
+    .author-bio p { margin: 0; color: var(--ink-500); font-size: 14px; line-height: 1.5; }
+
+    @media (max-width: 760px) {
+      .article-body h2 { font-size: 26px; }
+      .compare-table { font-size: 14px; }
+      .compare-table th, .compare-table td { padding: 10px 12px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Occupational Accident vs. Workers' Comp in Texas: When the 30% Premium Saving Actually Works",
+        "description": "The deep companion piece on Texas occupational accident insurance: ERISA plan structure, scheduled benefit caps, the 1099 classification trap, PEO programs, and the employers liability stop-gap that keeps occ-acc safe.",
+        "author": { "@type": "Organization", "name": "Intac Advisory", "url": "https://intacadvisory.com/" },
+        "publisher": { "@type": "Organization", "name": "Intac Advisory", "logo": { "@type": "ImageObject", "url": "https://intacadvisory.com/assets/intac-logo-full.png" } },
+        "datePublished": "2026-05-19",
+        "dateModified": "2026-05-19",
+        "mainEntityOfPage": "https://intacadvisory.com/blog/occupational-accident-vs-workers-comp-texas",
+        "image": "https://intacadvisory.com/assets/team-meeting.jpg",
+        "articleSection": "Commercial",
+        "keywords": "occupational accident insurance texas, texas non-subscriber, erisa occupational accident, occ-acc stop gap, 1099 occupational accident"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://intacadvisory.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://intacadvisory.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Occupational Accident vs. Workers' Comp in Texas" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is occupational accident insurance in Texas?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Occupational accident insurance is an ERISA-governed employee benefit plan that Texas non-subscriber employers buy to cover on-the-job injuries. It pays scheduled benefits for medical care, disability income, and accidental death — typically capped between $500,000 and $1 million per claim. It is not workers' compensation; it does not provide exclusive-remedy lawsuit protection." }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does occupational accident insurance cost compared to workers' comp in Texas?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Industry trade groups and PEO publications report occupational accident plans typically run about 30% less than equivalent Texas workers' compensation premiums. The savings come from three places: scheduled benefit caps (not unlimited medical), ERISA administration (cheaper than state-regulated claims), and no Texas Department of Insurance maintenance tax or Subsequent Injury Fund assessment." }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if an occupational accident claim exceeds the policy limit?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Anything above the scheduled cap is the employer's direct liability. A catastrophic injury — paralysis, severe burns, brain injury — can easily exceed a $1 million occ-acc limit in medical and rehabilitation costs alone. The fix is layering an employers liability (EL) stop-gap policy on top of the occ-acc plan to bridge from the schedule cap to a defensible legal limit (typically $1M to $5M)." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I put 1099 contractors on an occupational accident plan?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, and many owner-operator trucking and field service models do exactly this. But it creates a worker-classification trap: if the IRS or Texas Workforce Commission later reclassifies your 1099s as W-2 employees, the occ-acc plan may not have covered them properly, and you could owe back payroll taxes, unpaid workers' comp premium, and unprotected injury claims. The plan documents need to be drafted carefully for 1099 use and your contracts need to support independent-contractor status independently." }
+          },
+          {
+            "@type": "Question",
+            "name": "Are PEO occupational accident programs better than standalone plans?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sometimes. PEO master plans benefit from group purchasing and centralized administration, which can lower per-employee cost and simplify compliance. But you give up plan-document customization, and the PEO usually controls the carrier relationship. Standalone occ-acc gives you more flexibility on benefit schedules, exclusions, and the ability to add an employers liability stop-gap directly. Comparing both side-by-side is the right move, not defaulting to either." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does ERISA preempt Texas state law on occupational accident claims?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Generally yes — ERISA, the federal employee benefit law, governs how plan disputes are handled and preempts most conflicting state laws. This is why occupational accident administration is cheaper than state-regulated workers' comp. But ERISA preemption does not block an injured worker from filing a separate negligence lawsuit against the employer; that remains a state-law tort claim. The plan pays scheduled benefits; the lawsuit is a separate exposure." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is an employers liability stop-gap policy?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Employers liability stop-gap is a standalone liability policy that pays defense costs and judgments when an injured employee sues a non-subscriber employer for negligence. It is the legal-exposure counterpart to occupational accident insurance — occ-acc pays benefits, stop-gap pays lawsuits. The standard Texas non-subscriber package is occ-acc plus an EL stop-gap limit of $1M to $5M. Buying occ-acc without a stop-gap leaves the negligence side wide open." }
+          },
+          {
+            "@type": "Question",
+            "name": "When does occupational accident make more sense than workers' comp for Texas trucking?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Owner-operator trucking is the single biggest occ-acc market in Texas. When a motor carrier leases on owner-operators classified as 1099 independent contractors, occ-acc plus contingent liability is the standard structure because workers' comp would re-cast those operators as employees. For company drivers on W-2 payroll in trucking, workers' comp is almost always the right call because the catastrophic-injury exposure exceeds typical occ-acc schedule caps." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="blog">
+  <div data-slot="header"></div>
+
+  <section class="page-head">
+    <div class="container">
+      <div class="crumbs"><a href="/">Home</a> <span>›</span> <a href="/blog">Resources</a> <span>›</span> <span>Occupational Accident vs. Workers' Comp in Texas</span></div>
+      <div class="article-hero">
+        <span class="tag">Texas-specific · Commercial</span>
+        <h1>Occupational accident vs. workers' comp in Texas: when the 30% saving <em>actually</em> works.</h1>
+        <p class="lead" style="font-size: 19px; line-height: 1.5;">Occupational accident is the most-misunderstood insurance product in Texas. It's marketed as "workers' comp lite, 30% cheaper." That's half true. Here's the other half — the ERISA plan structure, the scheduled benefit caps, the 1099 classification trap, and the employers liability stop-gap that keeps it from blowing up on you.</p>
+        <div class="article-meta">
+          <div class="author">
+            <div class="author-bubble"></div>
+            <div>
+              <div style="font-weight: 600; color: var(--ink-900); font-size: 14px;">The Intac Advisory Team</div>
+              <div>Independent Texas Insurance Agents</div>
+            </div>
+          </div>
+          <span>·</span>
+          <span>May 19, 2026</span>
+          <span>·</span>
+          <span>10 min read</span>
+        </div>
+        <img src="/assets/team-meeting.jpg" alt="Texas employer reviewing an occupational accident plan" class="article-hero-img" style="width:100%; max-width:760px; aspect-ratio:16/9; object-fit:cover; border-radius: var(--radius-lg); margin: 32px auto 0; display:block;" />
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="container">
+      <article class="article-body">
+
+        <div class="tldr">
+          <div class="label">The short answer</div>
+          <p>Occupational accident insurance is an ERISA-governed benefit plan that Texas non-subscriber employers use to cover on-the-job injuries. It saves about 30% versus workers' comp because benefits are capped (typically $500K–$1M), there's no state assessment, and ERISA administration is cheaper than state-regulated claims. It works for owner-operator trucking, office businesses, and well-documented PEO arrangements. It fails — badly — when a catastrophic claim exceeds the schedule cap, when 1099 contractors get re-classified as W-2 employees, or when there's no employers liability stop-gap layered behind it.</p>
+        </div>
+
+        <p>If you read our piece on <a href="/blog/texas-non-subscriber-vs-workers-comp">Texas non-subscriber vs. workers' comp</a>, you already know the headline: about 22% of Texas employers opt out of workers' comp, and most of them do it by buying occupational accident insurance ("occ-acc") instead.</p>
+
+        <p>That article was the high-altitude version of the decision. This one is the engineering drawing. If you're a Texas employer seriously considering occ-acc — or you're already on a plan and want to know if it's structured correctly — this is the piece for you.</p>
+
+        <h2>What occupational accident insurance actually is</h2>
+
+        <p>The mental model most owners have is that occ-acc is just "workers' comp by another name, sold by different companies." It's not.</p>
+
+        <p>Workers' compensation in Texas is a state-regulated insurance product governed by the Texas Workers' Compensation Act and the <a href="https://www.tdi.texas.gov/wc/" target="_blank" rel="noopener">Texas Department of Insurance's Division of Workers' Compensation</a>. Benefits are statutory. Medical care is unlimited. Wage replacement formulas are fixed by law. Disputes go through the TDI hearing system.</p>
+
+        <p>Occupational accident insurance is something else entirely. It's an <strong>employee benefit plan</strong>, funded by an insurance policy, governed by the federal <a href="https://www.dol.gov/general/topic/health-plans/erisa" target="_blank" rel="noopener">Employee Retirement Income Security Act (ERISA)</a>. The plan document — not state statute — defines what's covered, what's excluded, how much is paid, and how disputes are handled. The carrier sells you a group accident policy. You sponsor an ERISA plan and use the policy to fund it.</p>
+
+        <p>That structural difference is where every other difference comes from.</p>
+
+        <h2>The plan structure: scheduled benefits, not unlimited coverage</h2>
+
+        <p>Workers' comp pays whatever the medical bill is. Occ-acc pays a <strong>scheduled benefit</strong> — a pre-defined dollar amount for each category of loss. Typical plan schedules look like this:</p>
+
+        <table class="compare-table">
+          <thead>
+            <tr><th>Benefit category</th><th>Typical occ-acc schedule</th><th>What workers' comp pays</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Medical expenses</td>
+              <td>$500,000–$1,000,000 lifetime cap</td>
+              <td>Unlimited (subject to fee schedule)</td>
+            </tr>
+            <tr>
+              <td>Temporary total disability</td>
+              <td>~$500–$1,000/week for 104–156 weeks</td>
+              <td>~70% of avg weekly wage, indefinite</td>
+            </tr>
+            <tr>
+              <td>Permanent total disability</td>
+              <td>Lump sum, often $250K–$500K</td>
+              <td>Lifetime weekly benefit</td>
+            </tr>
+            <tr>
+              <td>Accidental death</td>
+              <td>$250,000–$500,000</td>
+              <td>Statutory death benefit + funeral</td>
+            </tr>
+            <tr>
+              <td>Dismemberment / AD&D</td>
+              <td>Scheduled by body part</td>
+              <td>Impairment income benefits</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>The exact numbers vary plan to plan. The point is that <strong>every benefit has a ceiling</strong>. That's not a hidden flaw — it's the design. The schedule is what makes occ-acc cheaper than workers' comp. You're paying for capped, predictable risk rather than the open-ended exposure of statutory benefits.</p>
+
+        <h2>Where the 30% savings actually comes from</h2>
+
+        <p>The headline "occ-acc saves about 30%" gets quoted constantly — including in our own <a href="/blog/texas-non-subscriber-vs-workers-comp">non-subscriber primer</a>. PEO industry sources cite the same figure in their public marketing of <a href="https://peotexas.com/occupational-accident-insurance/" target="_blank" rel="noopener">occupational accident programs</a>. The savings is real, but it's not magic. Three things drive it:</p>
+
+        <h3>1. Capped benefits</h3>
+        <p>The single biggest cost driver in any workers' comp policy is the tail — the rare catastrophic claim that runs into seven figures of lifetime medical. Occ-acc plans pre-cap that tail. The carrier knows the worst-case payout, so they can price the premium for the average claim, not the worst claim. That alone is most of the 30%.</p>
+
+        <h3>2. ERISA administration</h3>
+        <p>State workers' comp claims go through a TDI-regulated dispute process: benefit review conferences, contested case hearings, appeals to the Division. Each step has a defined timeline and a defined cost. ERISA claims go through the plan's internal appeal process and then federal court if appealed. Federal-court litigation is more expensive per case but vastly less frequent, because the ERISA standard of review favors plan administrators. Net administrative cost is lower.</p>
+
+        <h3>3. No state assessment</h3>
+        <p>Texas workers' comp premiums include a maintenance tax and a small Subsequent Injury Fund charge assessed by TDI. Occupational accident premiums don't carry those line items, because occ-acc isn't part of the state workers' comp system. It's a small number — usually 2–3% of premium — but it adds up.</p>
+
+        <p>Add those three together and you land somewhere around 30%. Some plans do better, some worse, depending on industry and claims experience.</p>
+
+        <h2>Where occ-acc breaks: the catastrophic claim</h2>
+
+        <p>Every occ-acc broker will sell you the upside. Almost none will walk you through what happens when a claim blows past the schedule cap. So we will.</p>
+
+        <p>Imagine a $1 million lifetime medical cap. A 34-year-old field tech falls from a ladder, suffers a T6 spinal cord injury with paraplegia. Initial trauma care plus the first three months of rehab burn through $400K. Lifetime medical needs — wheelchair, home modifications, attendant care, episodic surgery, durable medical equipment — easily run $3–5 million across 40 years of life expectancy.</p>
+
+        <p>Workers' comp pays all of it.</p>
+
+        <p>Occ-acc pays the first $1 million.</p>
+
+        <p>The remaining $2–4 million is the <strong>employer's direct liability</strong>. And remember from the <a href="/blog/texas-non-subscriber-vs-workers-comp">non-subscriber piece</a>: non-subscribers lose contributory negligence, assumption of risk, and the fellow-servant defenses. The plaintiff's bar knows this. Catastrophic non-subscriber cases settle in the seven figures with regularity, and the schedule cap on the occ-acc plan does nothing to cap the lawsuit.</p>
+
+        <div class="callout callout--warning">
+          <div class="label">The math that should keep you up at night</div>
+          <p>If you save $12,000/year in premium by going occ-acc instead of workers' comp, you have about 167 years before you've banked enough savings to self-fund a single $2M lawsuit. The 30% premium savings is real. It's also small relative to one bad claim. That's not an argument against occ-acc — it's an argument for layering the right protection behind it.</p>
+        </div>
+
+        <h2>The fix: employers liability stop-gap</h2>
+
+        <p>The piece almost nobody talks about is the second policy that has to ride next to occ-acc to make the structure defensible: an <strong>employers liability (EL) stop-gap</strong>.</p>
+
+        <p>An EL stop-gap is a standalone liability policy that pays defense costs and judgments when an injured employee sues a non-subscriber employer for negligence. It is the legal-exposure half of the equation:</p>
+
+        <ul>
+          <li><strong>Occupational accident</strong> pays the injured worker's medical and disability benefits (up to schedule).</li>
+          <li><strong>Employers liability stop-gap</strong> pays your defense and any judgment if the worker sues.</li>
+        </ul>
+
+        <p>The two together replicate (imperfectly) what a single workers' comp policy delivers: indemnity and defense. EL stop-gap limits are typically written at $1M / $1M / $1M (per accident / disease policy / disease per employee), but $2M and $5M limits are widely available and usually advisable for any employer with field labor.</p>
+
+        <p>If your current occ-acc setup doesn't include an EL stop-gap, you have a half-built program. We see this with disturbing regularity when we review existing non-subscriber arrangements from previous agents.</p>
+
+        <h2>The 1099 classification trap</h2>
+
+        <p>The single most common reason Texas employers buy occ-acc is to cover 1099 independent contractors — specifically owner-operator truck drivers, field service techs, and gig-economy field roles. Workers' comp generally cannot cover 1099 contractors as employees, so occ-acc fills the gap.</p>
+
+        <p>This works. Until it doesn't.</p>
+
+        <p>The trap: if the <a href="https://www.irs.gov/businesses/small-businesses-self-employed/independent-contractor-self-employed-or-employee" target="_blank" rel="noopener">IRS</a> or the Texas Workforce Commission later audits your 1099 relationships and reclassifies them as W-2 employees, every assumption in your insurance program collapses simultaneously:</p>
+
+        <ul>
+          <li>You owe back payroll taxes plus penalties.</li>
+          <li>You may owe unpaid workers' comp premium for the years they were misclassified.</li>
+          <li>Your occ-acc plan may have covered them as 1099s but excluded employees — leaving recent injury claims unprotected.</li>
+          <li>You become a non-subscriber retroactively without ever filing as one, and you don't have the legal protections of either system.</li>
+        </ul>
+
+        <p>The defense isn't insurance — it's contracts and controls. Independent-contractor agreements that pass the IRS 20-factor test. No prescribed schedules. Real independent business indicators (own equipment, own insurance, multiple customers). And occ-acc plan documents that are drafted specifically for 1099 use rather than off-the-shelf employee plans pressed into service.</p>
+
+        <p>If you're using occ-acc for 1099 workers, the question to ask your agent isn't "do I have occ-acc" — it's "does the plan document define eligibility correctly for my actual workforce."</p>
+
+        <h2>PEO occupational accident programs vs. standalone</h2>
+
+        <p>A lot of Texas employers end up on occ-acc by accident, because they joined a Professional Employer Organization (PEO) that included it in the master service agreement. PEO occ-acc has real upsides:</p>
+
+        <ul>
+          <li><strong>Group purchasing power.</strong> PEOs spread claims across thousands of co-employed workers, which usually beats what a small employer can negotiate alone.</li>
+          <li><strong>Centralized compliance.</strong> Plan documents, ERISA filings, claim handling are all the PEO's responsibility.</li>
+          <li><strong>Bundled with payroll.</strong> One vendor, one bill, one HR portal.</li>
+        </ul>
+
+        <p>And real downsides:</p>
+
+        <ul>
+          <li><strong>No customization.</strong> The schedule is what the PEO negotiated, not what fits your industry.</li>
+          <li><strong>You don't own the relationship.</strong> If you leave the PEO, you lose the plan.</li>
+          <li><strong>EL stop-gap is sometimes inadequate or absent.</strong> Many PEO programs include a low-limit stop-gap (often $1M) that's reasonable for office work but thin for trucking or field trades.</li>
+          <li><strong>Carrier transparency is limited.</strong> You usually can't see the underlying policy or modify exclusions.</li>
+        </ul>
+
+        <p>Standalone occ-acc — purchased through an independent agent rather than bundled into a PEO — gives you control over plan design, schedule limits, EL stop-gap layering, and carrier choice. It's almost always more work and sometimes a touch more expensive at the headline number. For employers with more than a handful of W-2s or any 1099 field workforce, that control usually pays for itself.</p>
+
+        <h2>The owner-operator trucking use case</h2>
+
+        <p>If you want to see occupational accident insurance done right, look at owner-operator trucking. It's the single biggest occ-acc market in Texas, and the industry has had decades to refine the structure.</p>
+
+        <p>The typical motor-carrier setup looks like this:</p>
+
+        <ol>
+          <li><strong>Owner-operators sign a written lease</strong> with the motor carrier as 1099 independent contractors. The lease references <a href="https://www.fmcsa.dot.gov/regulations" target="_blank" rel="noopener">49 CFR Part 376</a> leasing rules.</li>
+          <li><strong>The carrier sponsors an occ-acc plan</strong> available to leased owner-operators, often with the premium deducted from settlements.</li>
+          <li><strong>The carrier carries contingent liability coverage</strong> for the lessor's exposure if a leased operator is hurt in a way the occ-acc doesn't cover.</li>
+          <li><strong>Catastrophic claims are layered</strong> with excess medical or supplemental disability programs.</li>
+        </ol>
+
+        <p>It works because the workforce is genuinely independent (owns the truck, controls dispatch acceptance, can lease to other carriers), the plan documents are purpose-built for trucking, and the catastrophic-claim layers are real. Hot shot and dry-van fleets without this structure get into trouble fast.</p>
+
+        <p>If you run an owner-operator fleet, this is also where the <a href="/blog/hot-shot-trucking-insurance-texas">hot shot trucking insurance</a> conversation overlaps with occ-acc — the same drivers carrying the same MCS-90 and physical damage policies are the ones you're insuring under the plan.</p>
+
+        <h2>Plan documents matter more than premium</h2>
+
+        <p>The boring secret about occupational accident insurance is that the <strong>plan document is where lawsuits are won and lost</strong>. Two carriers can sell you "occ-acc" with the same headline schedule and very different real-world outcomes, because the plan document defines:</p>
+
+        <ul>
+          <li>Eligibility (who is and isn't covered — 1099 vs W-2 vs leased)</li>
+          <li>Definition of "accident" and "injury" (does occupational disease count? Heart attack on shift?)</li>
+          <li>Exclusions (intoxication, off-premises, commuting, pre-existing conditions)</li>
+          <li>Pre-existing condition look-back periods</li>
+          <li>Standard of medical proof for benefits</li>
+          <li>Claim filing windows and appeal procedures</li>
+          <li>Choice-of-law clauses (some plans intentionally domicile in non-Texas states)</li>
+        </ul>
+
+        <p>An employer comparing two occ-acc quotes on premium alone is comparing two different products. When we review existing non-subscriber programs for prospective clients, the first document we ask for isn't the dec page — it's the Summary Plan Description and the master policy. The plan document tells us whether the program will pay claims in the way the broker described.</p>
+
+        <h2>When occupational accident is the right answer</h2>
+
+        <p>Pulling all of this together, occ-acc with an EL stop-gap is the right call for Texas employers who can answer "yes" to most of these:</p>
+
+        <ul>
+          <li>Your industry has frequent minor claims but rare catastrophic ones (sprains, lacerations, repetitive strain — not falls from height or vehicle ejections).</li>
+          <li>Your workforce is either genuinely 1099 (with documentation to back it up) or stable W-2 with strong safety records.</li>
+          <li>You have an EL stop-gap of at least $1M layered behind the occ-acc, ideally $2–5M for any field exposure.</li>
+          <li>Your plan documents are reviewed by counsel and tailored to your workforce (not pulled off a PEO shelf).</li>
+          <li>You can absorb a worst-case lawsuit settlement somewhere in the seven-figure range without bankrupting the business — through the stop-gap, an umbrella, or balance-sheet liquidity.</li>
+          <li>You re-quote both the occ-acc plan AND the underlying workers' comp comparison <a href="/blog/re-quote-texas-business-insurance-annually">every single year</a>, because carrier appetite shifts and the math you ran in 2024 isn't the math for 2026.</li>
+        </ul>
+
+        <p>If you can't answer yes to most of those, you're not buying occupational accident insurance — you're buying a discount on a problem that's going to find you eventually.</p>
+
+        <div class="callout">
+          <div class="label">Already on occ-acc? Get a structural review</div>
+          <p>If you're a Texas non-subscriber on an existing occupational accident program, the most valuable thing we can do is review your plan documents — not your premium. Send us the Summary Plan Description, the dec page, and (if you have one) the EL stop-gap policy. We'll come back inside 48 hours with a one-page assessment: where the schedule has gaps, whether your stop-gap matches your exposure, and whether your 1099 classification is documented in a way that survives an audit. <a href="/contact">Email us</a> or <a href="tel:+18772378167">call (877) 237-8167</a>.</p>
+        </div>
+
+        <h2>Common questions</h2>
+
+      </article>
+
+      <div class="faq-section">
+
+        <details class="faq-item" open>
+          <summary>What is occupational accident insurance in Texas?</summary>
+          <p>Occupational accident insurance is an ERISA-governed employee benefit plan that Texas non-subscriber employers buy to cover on-the-job injuries. It pays scheduled benefits for medical care, disability income, and accidental death — typically capped between $500,000 and $1 million per claim. It is not workers' compensation; it does not provide exclusive-remedy lawsuit protection, and it must be paired with a separate employers liability stop-gap policy to cover negligence lawsuits.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How much does occupational accident insurance cost compared to workers' comp in Texas?</summary>
+          <p>Industry trade groups and PEO publications report occupational accident plans typically run about 30% less than equivalent Texas workers' compensation premiums. The savings come from three places: scheduled benefit caps (not unlimited medical), ERISA administration (cheaper than state-regulated claims), and no Texas Department of Insurance maintenance tax or Subsequent Injury Fund assessment. Actual savings vary by industry classification, payroll, and claims history.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What happens if an occupational accident claim exceeds the policy limit?</summary>
+          <p>Anything above the scheduled cap is the employer's direct liability. A catastrophic injury — paralysis, severe burns, brain injury — can easily exceed a $1 million occ-acc limit in medical and rehabilitation costs alone. The fix is layering an employers liability (EL) stop-gap policy on top of the occ-acc plan to bridge from the schedule cap to a defensible legal limit, typically $1M to $5M depending on industry exposure.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I put 1099 contractors on an occupational accident plan?</summary>
+          <p>Yes, and many owner-operator trucking and field service models do exactly this. But it creates a worker-classification trap: if the IRS or Texas Workforce Commission later reclassifies your 1099s as W-2 employees, the occ-acc plan may not have covered them properly, and you could owe back payroll taxes, unpaid workers' comp premium, and unprotected injury claims. The plan documents need to be drafted carefully for 1099 use and your contracts need to support independent-contractor status independently.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are PEO occupational accident programs better than standalone plans?</summary>
+          <p>Sometimes. PEO master plans benefit from group purchasing and centralized administration, which can lower per-employee cost and simplify compliance. But you give up plan-document customization, and the PEO usually controls the carrier relationship. Standalone occ-acc gives you more flexibility on benefit schedules, exclusions, and the ability to add an employers liability stop-gap directly. Comparing both side-by-side is the right move, not defaulting to either.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does ERISA preempt Texas state law on occupational accident claims?</summary>
+          <p>Generally yes — ERISA, the federal employee benefit law, governs how plan disputes are handled and preempts most conflicting state laws. This is why occupational accident administration is cheaper than state-regulated workers' comp. But ERISA preemption does not block an injured worker from filing a separate negligence lawsuit against the employer; that remains a state-law tort claim. The plan pays scheduled benefits; the lawsuit is a separate exposure that requires an employers liability stop-gap to defend.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What is an employers liability stop-gap policy?</summary>
+          <p>Employers liability stop-gap is a standalone liability policy that pays defense costs and judgments when an injured employee sues a non-subscriber employer for negligence. It is the legal-exposure counterpart to occupational accident insurance — occ-acc pays benefits, stop-gap pays lawsuits. The standard Texas non-subscriber package is occ-acc plus an EL stop-gap limit of $1M to $5M. Buying occ-acc without a stop-gap leaves the negligence side of the exposure wide open.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>When does occupational accident make more sense than workers' comp for Texas trucking?</summary>
+          <p>Owner-operator trucking is the single biggest occ-acc market in Texas. When a motor carrier leases on owner-operators classified as 1099 independent contractors, occ-acc plus contingent liability is the standard structure because workers' comp would re-cast those operators as employees. For company drivers on W-2 payroll in trucking, workers' comp is almost always the right call because the catastrophic-injury exposure exceeds typical occ-acc schedule caps.</p>
+        </details>
+
+      </div>
+
+      <div class="author-bio">
+        <div class="author-bio__avatar"></div>
+        <div>
+          <h3>About the Intac Advisory Team</h3>
+          <p>Intac Advisory is an independent Texas insurance agency. We don't work for any one carrier — we shop the market on your behalf, every year. We're licensed in Texas and serve clients across commercial trucking, construction, professional services, and personal lines. <a href="/about" style="color: var(--coral-600); text-decoration: underline;">Learn more about our team</a>.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-band" style="background: var(--coral-500); color: var(--white); padding: 72px 0; margin-top: 80px;">
+    <div class="container" style="display:grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;">
+      <div>
+        <h2 style="color:var(--white); margin: 0 0 8px;">Already on occ-acc? Get a structural review.</h2>
+        <p style="color: rgba(255,255,255,0.9); margin: 0;">Send us your plan documents. We'll come back inside 48 hours with a one-page assessment — schedule gaps, stop-gap fit, and 1099 documentation. No commitment.</p>
+      </div>
+      <div style="display:flex; gap:12px; flex-wrap: wrap;">
+        <a href="/quote?line=commercial" class="btn btn--dark btn--lg">Get a quote →</a>
+      </div>
+    </div>
+  </section>
+
+  <div data-slot="footer"></div>
+  <script src="../assets/site.js?v=9"></script>
+</body>
+</html>
