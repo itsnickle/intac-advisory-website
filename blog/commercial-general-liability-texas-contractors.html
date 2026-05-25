@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+
+  <title>Commercial General Liability for Texas Contractors: What $300K vs. $1M Actually Buys You | Intac Advisory</title>
+  <meta name="description" content="A plain-English guide to commercial general liability for Texas contractors — per-occurrence vs. aggregate limits, products & completed operations, the CG 20 10 vs. CG 20 37 additional insured endorsements, and the customer COI requirements that drive most coverage decisions.">
+  <link rel="canonical" href="https://intacadvisory.com/blog/commercial-general-liability-texas-contractors">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://intacadvisory.com/blog/commercial-general-liability-texas-contractors">
+  <meta property="og:title" content="Commercial General Liability for Texas Contractors: What $300K vs. $1M Actually Buys You">
+  <meta property="og:description" content="Per-occurrence vs. aggregate limits, products & completed operations, CG 20 10 vs. CG 20 37 additional insured endorsements, and the COI requirements that drive coverage decisions.">
+  <meta property="og:site_name" content="Intac Advisory">
+  <meta property="og:image" content="https://intacadvisory.com/assets/surety-contractors.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Commercial General Liability for Texas Contractors: What $300K vs. $1M Actually Buys You">
+  <meta name="twitter:description" content="Per-occurrence vs. aggregate limits, products & completed operations, and the additional insured endorsements that drive contractor coverage.">
+  <meta name="twitter:image" content="https://intacadvisory.com/assets/surety-contractors.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css?v=9" />
+
+  <style>
+    .article-hero { max-width: 760px; margin: 0 auto; }
+    .article-hero h1 { font-size: clamp(36px, 4.5vw, 56px); line-height: 1.05; margin: 16px 0 20px; }
+    .article-hero h1 em { font-style: italic; color: var(--coral-600); }
+    .article-meta { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; font-size: 14px; color: var(--ink-500); margin-top: 28px; }
+    .article-meta .author { display: flex; align-items: center; gap: 10px; }
+    .article-meta .author-bubble { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--teal-100), var(--coral-100)); }
+
+    .article-body { max-width: 760px; margin: 48px auto 0; }
+    .article-body p { font-size: 17px; line-height: 1.7; color: var(--ink-700); margin: 0 0 20px; }
+    .article-body h2 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 32px; line-height: 1.15; margin: 48px 0 16px; color: var(--ink-900); }
+    .article-body h3 { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 600; font-size: 20px; margin: 32px 0 12px; color: var(--ink-900); }
+    .article-body ul, .article-body ol { font-size: 17px; line-height: 1.7; color: var(--ink-700); padding-left: 24px; margin: 0 0 20px; }
+    .article-body li { margin-bottom: 8px; }
+    .article-body a { color: var(--coral-600); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--coral-500); }
+    .article-body strong { color: var(--ink-900); font-weight: 600; }
+    .article-body blockquote { border-left: 3px solid var(--coral-500); padding: 4px 0 4px 20px; margin: 28px 0; color: var(--ink-700); font-size: 18px; font-style: italic; }
+
+    .tldr { background: var(--cream-deep); border-radius: var(--radius); padding: 24px 28px; margin: 32px 0 8px; }
+    .tldr .label { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--coral-500); }
+    .tldr p { font-size: 17px; line-height: 1.6; color: var(--ink-900); margin: 8px 0 0; font-weight: 500; }
+
+    .compare-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; }
+    .compare-table th, .compare-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--ink-100); vertical-align: top; }
+    .compare-table thead th { background: var(--teal-900); color: var(--cream); font-weight: 600; font-size: 13px; letter-spacing: 0.04em; }
+    .compare-table tbody tr:nth-child(even) { background: var(--cream); }
+    .compare-table td:first-child { font-weight: 600; color: var(--ink-900); }
+
+    .callout { background: var(--white); border: 1px solid var(--ink-100); border-left: 4px solid var(--teal-900); border-radius: var(--radius-sm); padding: 20px 24px; margin: 28px 0; }
+    .callout .label { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-900); }
+    .callout p:last-child { margin-bottom: 0; }
+    .callout--warning { border-left-color: var(--coral-500); }
+    .callout--warning .label { color: var(--coral-500); }
+
+    .faq-section { max-width: 760px; margin: 64px auto 0; }
+    .faq-item { border-bottom: 1px solid var(--ink-100); padding: 22px 0; }
+    .faq-item:first-of-type { border-top: 1px solid var(--ink-100); }
+    .faq-item summary { list-style: none; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 18px; color: var(--ink-900); cursor: pointer; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; font-size: 28px; color: var(--coral-500); font-weight: 300; transition: transform 0.2s var(--ease); }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p { margin: 14px 0 0; color: var(--ink-700); font-size: 16px; line-height: 1.6; }
+
+    .author-bio { max-width: 760px; margin: 56px auto 0; padding: 28px; background: var(--cream); border-radius: var(--radius); display: grid; grid-template-columns: 56px 1fr; gap: 18px; align-items: start; }
+    .author-bio__avatar { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--teal-100), var(--coral-100)); }
+    .author-bio h3 { font-size: 17px; font-weight: 600; margin: 0 0 6px; }
+    .author-bio p { margin: 0; color: var(--ink-500); font-size: 14px; line-height: 1.5; }
+
+    @media (max-width: 760px) {
+      .article-body h2 { font-size: 26px; }
+      .compare-table { font-size: 14px; }
+      .compare-table th, .compare-table td { padding: 10px 12px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Commercial General Liability for Texas Contractors: What $300K vs. $1M Actually Buys You",
+        "description": "A plain-English guide to commercial general liability for Texas contractors — per-occurrence vs. aggregate limits, products & completed operations, the CG 20 10 vs. CG 20 37 additional insured endorsements, and the customer COI requirements that drive most coverage decisions.",
+        "author": { "@type": "Organization", "name": "Intac Advisory", "url": "https://intacadvisory.com/" },
+        "publisher": { "@type": "Organization", "name": "Intac Advisory", "logo": { "@type": "ImageObject", "url": "https://intacadvisory.com/assets/intac-logo-full.png" } },
+        "datePublished": "2026-05-25",
+        "dateModified": "2026-05-25",
+        "mainEntityOfPage": "https://intacadvisory.com/blog/commercial-general-liability-texas-contractors",
+        "image": "https://intacadvisory.com/assets/surety-contractors.jpg",
+        "articleSection": "Commercial",
+        "keywords": "commercial general liability texas contractor, contractor general liability insurance, CG 20 10 vs CG 20 37, additional insured endorsement, certificate of insurance contractor"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://intacadvisory.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://intacadvisory.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Commercial General Liability for Texas Contractors" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much general liability insurance does a Texas contractor need?",
+            "acceptedAnswer": { "@type": "Answer", "text": "It depends on your trade, your customers, and any licensing requirements. Texas does not impose a single statewide GL minimum on all contractors, but specific licenses do — for example, TDLR-licensed air conditioning and refrigeration contractors must carry minimum general liability limits. Beyond any license floor, the real driver is what your customers require in their contracts: many commercial general contractors and property managers require $1M per occurrence / $2M aggregate before they'll let you on the job." }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between per-occurrence and aggregate limits?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The per-occurrence limit is the most the policy pays for any single claim. The aggregate limit is the most it pays for all claims combined during the policy term. A common contractor policy reads $1M per occurrence / $2M aggregate — meaning up to $1M for one claim, but no more than $2M total for the year. If you have multiple claims in a bad year, the aggregate is what can leave you exposed, which is why higher aggregates and umbrella coverage matter for active contractors." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does $300K/$600K vs. $1M/$2M actually buy a contractor?",
+            "acceptedAnswer": { "@type": "Answer", "text": "$300K per occurrence / $600K aggregate is a lower-cost limit that may satisfy a license minimum or a small residential job, but it's often too thin for commercial work — a single serious bodily-injury or property-damage claim can blow past $300K. $1M/$2M is the de facto standard most commercial customers require and is usually only modestly more expensive. For active contractors, the jump from $300K to $1M typically costs far less than the protection it adds." }
+          },
+          {
+            "@type": "Question",
+            "name": "What are products and completed operations coverage?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Products-completed operations coverage protects you against claims arising from your finished work after you've left the job site. For a contractor, this is critical: if a roof you installed leaks two years later and causes water damage, that's a completed-operations claim. Make sure your GL policy includes products-completed operations coverage and that its aggregate is adequate — some policies have a separate, lower completed-operations aggregate." }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the difference between the CG 20 10 and CG 20 37 additional insured endorsements?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Both are standard ISO endorsements that add a customer (like a general contractor) as an additional insured on your policy. The CG 20 10 covers the additional insured for liability arising from your ongoing operations — work in progress. The CG 20 37 covers them for completed operations — your finished work. Because each covers a different phase, contractors are frequently required to carry both, so the customer is protected during the job and after it's done." }
+          },
+          {
+            "@type": "Question",
+            "name": "Why do my customers require a certificate of insurance (COI)?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A certificate of insurance is proof that you carry the coverage your contract requires. General contractors, property owners, and managers collect COIs before letting you on site to confirm your limits, your additional-insured endorsements, and often a waiver of subrogation. If your COI doesn't match the contract — wrong limits, missing CG 20 37, no additional insured — you can be pulled off the job until it's corrected, which is why aligning your policy to your customers' requirements matters." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does general liability cover my employees or my tools?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. General liability covers third-party bodily injury and property damage — it does not cover injuries to your own employees (that's workers' comp or a non-subscriber plan) or damage to your own tools and equipment (that's inland marine / contractor's equipment coverage). GL is one piece of a contractor's program, alongside commercial auto, workers' comp or occupational accident, and equipment coverage. A complete program fits these together without gaps." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="blog">
+  <div data-slot="header"></div>
+
+  <section class="page-head">
+    <div class="container">
+      <div class="crumbs"><a href="/">Home</a> <span>›</span> <a href="/blog">Resources</a> <span>›</span> <span>Commercial General Liability for Texas Contractors</span></div>
+      <div class="article-hero">
+        <span class="tag">Texas-specific · Commercial</span>
+        <h1>Commercial general liability for Texas contractors: what $300K vs. $1M <em>actually</em> buys you.</h1>
+        <p class="lead" style="font-size: 19px; line-height: 1.5;">Most contractors buy the limit their license requires, or the limit the cheapest quote offered — and then a general contractor hands them a contract demanding more. Here's what GL limits really mean, why the jump to $1M is usually cheaper than you think, and the two endorsements that decide whether you stay on the job.</p>
+        <div class="article-meta">
+          <div class="author">
+            <div class="author-bubble"></div>
+            <div>
+              <div style="font-weight: 600; color: var(--ink-900); font-size: 14px;">The Intac Advisory Team</div>
+              <div>Independent Texas Insurance Agents</div>
+            </div>
+          </div>
+          <span>·</span>
+          <span>May 25, 2026</span>
+          <span>·</span>
+          <span>10 min read</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="container">
+      <article class="article-body">
+
+        <img src="/assets/surety-contractors.jpg" alt="Texas contractors on a commercial job site reviewing general liability coverage" class="article-hero-img" style="width:100%; max-width:760px; aspect-ratio:16/9; object-fit:cover; border-radius: var(--radius-lg); margin: 32px auto 0; display:block;" />
+
+        <div class="tldr">
+          <div class="label">The short answer</div>
+          <p>$300K/$600K general liability is a thin limit that may clear a license minimum but rarely satisfies commercial customers. $1M per occurrence / $2M aggregate is the de facto standard most general contractors and property managers require — and the upgrade usually costs far less than the protection it adds. Beyond the limit, two things decide whether you keep the job: products-completed operations coverage, and the right additional insured endorsements (CG 20 10 for ongoing work, CG 20 37 for completed work). Match your policy to your contracts, not to the cheapest quote.</p>
+        </div>
+
+        <h2>The number on your policy isn't the number that matters</h2>
+
+        <p>Ask most Texas contractors what their general liability limit is and you'll hear "a million" or "three hundred." Ask <em>why</em> that limit, and the answers thin out fast. Usually it's whatever the license required, or whatever the cheapest quote came back with. Neither is a coverage decision — it's an accident.</p>
+
+        <p>The limit that actually matters is the one your <strong>customers</strong> require. A general contractor, property owner, or facility manager will hand you a contract with specific insurance requirements baked in: a per-occurrence limit, an aggregate, named additional insureds, often a waiver of subrogation and completed-operations coverage. If your policy doesn't match, you don't get on the job — or you get pulled off it.</p>
+
+        <p>So the real question isn't "how much GL do I want to buy?" It's "what do my contracts demand, and does my policy deliver it?" Let's translate the jargon.</p>
+
+        <h2>Per-occurrence vs. aggregate: the two numbers on every GL policy</h2>
+
+        <p>Every commercial general liability policy carries two core limits, and confusing them is the most common contractor coverage mistake we see.</p>
+
+        <ul>
+          <li><strong>Per-occurrence limit</strong> — the most the policy pays for any single claim. If a customer's property is damaged by your work, this is the ceiling for that one incident.</li>
+          <li><strong>Aggregate limit</strong> — the most the policy pays for <em>all</em> claims combined during the policy term (usually one year). Once you exhaust the aggregate, the policy is done for the year, even if you're paying premium.</li>
+        </ul>
+
+        <p>A typical contractor policy reads <strong>$1,000,000 per occurrence / $2,000,000 aggregate</strong>. That means up to $1M for any one claim, but no more than $2M total across the year. For a busy contractor with multiple jobs running, the aggregate is the quiet exposure — two or three claims in a bad year can erode it. That's why active contractors often layer an umbrella policy on top to extend both limits.</p>
+
+        <h2>$300K/$600K vs. $1M/$2M: what each one really buys</h2>
+
+        <table class="compare-table">
+          <thead>
+            <tr><th>Limit</th><th>What it's good for</th><th>Where it falls short</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>$300K / $600K</td>
+              <td>Clearing a license minimum; very small residential jobs; lowest premium</td>
+              <td>A single serious bodily-injury or property-damage claim can blow past $300K; most commercial customers won't accept it</td>
+            </tr>
+            <tr>
+              <td>$1M / $2M</td>
+              <td>The de facto commercial standard — accepted by most GCs, owners, and property managers</td>
+              <td>High-hazard or large projects may require $2M occurrence or umbrella layers on top</td>
+            </tr>
+            <tr>
+              <td>$1M / $2M + umbrella</td>
+              <td>Large commercial work, prime contracts, customers requiring $5M+ total</td>
+              <td>Costs more, but extends both per-occurrence and aggregate affordably</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Here's the part contractors underestimate: <strong>the jump from $300K to $1M is usually far cheaper than the protection it adds.</strong> General liability rating isn't linear — doubling or tripling your limit doesn't double or triple your premium, because catastrophic claims are statistically rare. For most trades, moving from a $300K limit to the $1M/$2M standard is a modest premium increase that unlocks the entire commercial market and dramatically raises your ceiling. It's one of the best value upgrades in a contractor's program.</p>
+
+        <p>For TDLR-licensed trades, there may also be a regulatory floor. Texas air conditioning and refrigeration contractors, for example, carry state-mandated GL minimums — we broke that down in our <a href="/blog/hvac-contractor-insurance-texas">Texas HVAC contractor insurance guide</a> (Class A vs. Class B license requirements). Your license sets the floor; your contracts set the real target.</p>
+
+        <h2>Products & completed operations: the claim that finds you two years later</h2>
+
+        <p>General liability isn't only about accidents while you're on the job. The coverage that protects you <em>after</em> you leave is called <strong>products-completed operations</strong>, and for contractors it's non-negotiable.</p>
+
+        <p>Picture it: you install a roof, finish the job, get paid, move on. Two years later the flashing fails, water gets in, and the owner has a five-figure damage claim — against you. That's a completed-operations claim, and only products-completed operations coverage responds to it. Two things to check on your policy:</p>
+
+        <ul>
+          <li><strong>Is completed-operations coverage included?</strong> It usually is on a standard contractor GL form, but confirm it — don't assume.</li>
+          <li><strong>What's the completed-operations aggregate?</strong> Some policies carry a separate, lower aggregate specifically for completed operations. If yours does, make sure it's adequate for your volume.</li>
+        </ul>
+
+        <div class="callout">
+          <div class="label">The plain-English version</div>
+          <p>Ongoing operations = claims while the work is in progress. Completed operations = claims after the work is done. A roof that leaks on install day is one; a roof that leaks two years later is the other. A real contractor policy covers both.</p>
+        </div>
+
+        <h2>Additional insured endorsements: CG 20 10 vs. CG 20 37</h2>
+
+        <p>This is where contracts get won and lost. When a general contractor hires you, they almost always require you to name <strong>them</strong> as an "additional insured" on <strong>your</strong> GL policy — so your coverage protects them if your work causes a claim. There are two standard ISO endorsements that do this, and the distinction matters:</p>
+
+        <ul>
+          <li><strong>CG 20 10</strong> — adds the additional insured for liability arising out of your <em>ongoing operations</em> (work in progress).</li>
+          <li><strong>CG 20 37</strong> — adds them for your <em>completed operations</em> (finished work).</li>
+        </ul>
+
+        <p>Each endorsement covers a different phase of the job, which is why contracts frequently require <strong>both</strong> — so the GC is protected while you're working <em>and</em> after you've finished. The industry reference firm IRMI has a thorough explainer on how these forms work and why the ongoing/completed split exists, in its <a href="https://www.irmi.com/articles/expert-commentary/2013-iso-additional-insured-endorsements-putting-the-changes-into-context-for-the-construction-industry" target="_blank" rel="noopener">analysis of the ISO additional insured endorsements for the construction industry</a>.</p>
+
+        <p>The trap: a contract requires completed-operations additional insured status (CG 20 37), but the contractor's policy only carries the ongoing-operations form (CG 20 10). On paper they look similar; in a claim, the gap is total. This is exactly the kind of mismatch an independent agent catches when reviewing your customer contracts against your policy.</p>
+
+        <blockquote>The cheapest GL policy that doesn't carry the endorsements your contract requires isn't cheap. It's a job you're about to lose.</blockquote>
+
+        <h2>The certificate of insurance (COI): where it all comes together</h2>
+
+        <p>You'll rarely hand a customer your actual policy. What they want is a <strong>certificate of insurance</strong> — a one-page summary proving you carry what the contract requires. Before you set foot on a commercial site, the GC or property manager collects your COI to verify:</p>
+
+        <ul>
+          <li><strong>Your limits</strong> — usually $1M/$2M, sometimes more.</li>
+          <li><strong>Additional insured status</strong> — them, named, with the right endorsements (CG 20 10 and/or CG 20 37).</li>
+          <li><strong>Waiver of subrogation</strong> — often required, so your carrier can't come after them later.</li>
+          <li><strong>Products-completed operations</strong> — confirmed as included.</li>
+        </ul>
+
+        <p>If your COI doesn't match the contract, you can be held off the job until it's fixed — and fixing it mid-project, mid-week, is exactly when you don't want to discover your policy is short. The fix is upstream: align your GL program to your customers' typical requirements <em>before</em> you bid, not after you've won.</p>
+
+        <h2>GL is one piece — not the whole program</h2>
+
+        <p>General liability covers third-party bodily injury and property damage. It does <strong>not</strong> cover:</p>
+
+        <ul>
+          <li><strong>Your own employees' injuries</strong> — that's workers' comp, or in Texas, a non-subscriber / occupational accident program. See <a href="/blog/texas-non-subscriber-vs-workers-comp">non-subscriber vs. workers' comp</a>.</li>
+          <li><strong>Your own tools and equipment</strong> — that's inland marine / contractor's equipment coverage.</li>
+          <li><strong>Your vehicles and driving exposure</strong> — that's commercial auto, including hired and non-owned auto for employees running errands or driving personal vehicles for work. See <a href="/blog/hired-non-owned-auto-texas">hired &amp; non-owned auto coverage</a>.</li>
+        </ul>
+
+        <p>A contractor's insurance program fits these pieces together so there are no gaps between them — and re-checks them every year as your work and contracts change. (We make the case for that here: <a href="/blog/re-quote-texas-business-insurance-annually">why Texas businesses should re-quote annually</a>.) Getting the pieces to interlock is the whole job of a good independent agent — which is also why it's worth knowing <a href="/blog/sugar-land-independent-insurance-agent">how to pick one that actually works for you</a>.</p>
+
+        <div class="callout">
+          <div class="label">If you want a quick second opinion</div>
+          <p>Send us your current GL declarations page and a sample of the insurance requirements from a customer contract. We'll tell you inside 48 hours whether your limits and endorsements actually match what you're being asked to carry — and shop the market if they don't. No pressure, no commission unless you decide we earned it. <a href="/contact">Email us</a> or <a href="tel:+18772378167">call (877) 237-8167</a>.</p>
+        </div>
+
+        <h2>Common questions</h2>
+
+      </article>
+
+      <div class="faq-section">
+
+        <details class="faq-item" open>
+          <summary>How much general liability insurance does a Texas contractor need?</summary>
+          <p>It depends on your trade, your customers, and any licensing requirements. Texas does not impose a single statewide GL minimum on all contractors, but specific licenses do — for example, TDLR-licensed air conditioning and refrigeration contractors must carry minimum general liability limits. Beyond any license floor, the real driver is what your customers require in their contracts: many commercial general contractors and property managers require $1M per occurrence / $2M aggregate before they'll let you on the job.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What's the difference between per-occurrence and aggregate limits?</summary>
+          <p>The per-occurrence limit is the most the policy pays for any single claim. The aggregate limit is the most it pays for all claims combined during the policy term. A common contractor policy reads $1M per occurrence / $2M aggregate — meaning up to $1M for one claim, but no more than $2M total for the year. If you have multiple claims in a bad year, the aggregate is what can leave you exposed, which is why higher aggregates and umbrella coverage matter for active contractors.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What does $300K/$600K vs. $1M/$2M actually buy a contractor?</summary>
+          <p>$300K per occurrence / $600K aggregate is a lower-cost limit that may satisfy a license minimum or a small residential job, but it's often too thin for commercial work — a single serious bodily-injury or property-damage claim can blow past $300K. $1M/$2M is the de facto standard most commercial customers require and is usually only modestly more expensive. For active contractors, the jump from $300K to $1M typically costs far less than the protection it adds.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What are products and completed operations coverage?</summary>
+          <p>Products-completed operations coverage protects you against claims arising from your finished work after you've left the job site. For a contractor, this is critical: if a roof you installed leaks two years later and causes water damage, that's a completed-operations claim. Make sure your GL policy includes products-completed operations coverage and that its aggregate is adequate — some policies have a separate, lower completed-operations aggregate.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What's the difference between the CG 20 10 and CG 20 37 additional insured endorsements?</summary>
+          <p>Both are standard ISO endorsements that add a customer (like a general contractor) as an additional insured on your policy. The CG 20 10 covers the additional insured for liability arising from your ongoing operations — work in progress. The CG 20 37 covers them for completed operations — your finished work. Because each covers a different phase, contractors are frequently required to carry both, so the customer is protected during the job and after it's done.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why do my customers require a certificate of insurance (COI)?</summary>
+          <p>A certificate of insurance is proof that you carry the coverage your contract requires. General contractors, property owners, and managers collect COIs before letting you on site to confirm your limits, your additional-insured endorsements, and often a waiver of subrogation. If your COI doesn't match the contract — wrong limits, missing CG 20 37, no additional insured — you can be pulled off the job until it's corrected, which is why aligning your policy to your customers' requirements matters.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does general liability cover my employees or my tools?</summary>
+          <p>No. General liability covers third-party bodily injury and property damage — it does not cover injuries to your own employees (that's workers' comp or a non-subscriber plan) or damage to your own tools and equipment (that's inland marine / contractor's equipment coverage). GL is one piece of a contractor's program, alongside commercial auto, workers' comp or occupational accident, and equipment coverage. A complete program fits these together without gaps.</p>
+        </details>
+
+      </div>
+
+      <div class="author-bio">
+        <div class="author-bio__avatar"></div>
+        <div>
+          <h3>About the Intac Advisory Team</h3>
+          <p>Intac Advisory is an independent Texas insurance agency serving contractors across the trades — HVAC, electrical, plumbing, roofing, framing, and general construction. We read your customer contracts, match your coverage to what they require, and shop the market on your behalf. <a href="/about" style="color: var(--coral-600); text-decoration: underline;">Learn more about our team</a>.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-band" style="background: var(--coral-500); color: var(--white); padding: 72px 0; margin-top: 80px;">
+    <div class="container" style="display:grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;">
+      <div>
+        <h2 style="color:var(--white); margin: 0 0 8px;">Does your GL match your contracts?</h2>
+        <p style="color: rgba(255,255,255,0.9); margin: 0;">Send your dec page and a customer's insurance requirements. We'll tell you in 48 hours. No pressure.</p>
+      </div>
+      <div style="display:flex; gap:12px; flex-wrap: wrap;">
+        <a href="/quote?line=commercial" class="btn btn--dark btn--lg">Get a quote →</a>
+      </div>
+    </div>
+  </section>
+
+  <div data-slot="footer"></div>
+  <script src="../assets/site.js?v=9"></script>
+</body>
+</html>
