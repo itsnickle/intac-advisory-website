@@ -668,6 +668,22 @@
       else if (v.length >= 1) v = `(${v}`;
       e.target.value = v;
     });
+
+    // Pre-select coverage + capture lead source from URL (e.g. /quote/jessica?coverage=cyber&src=fiduciary-cyber-lp)
+    try {
+      const params = new URLSearchParams(location.search);
+      const cov = (params.get('coverage') || '').toLowerCase();
+      const covMap = { cyber: 'cov-cyber', auto: 'cov-auto', home: 'cov-home', trucking: 'cov-trucking', gl: 'cov-gl', wc: 'cov-wc', bond: 'cov-bond', group: 'cov-group' };
+      if (covMap[cov]) {
+        const radio = document.getElementById(covMap[cov]);
+        if (radio) { radio.checked = true; radio.dispatchEvent(new Event('change', { bubbles: true })); }
+      }
+      const src = params.get('src');
+      if (src) {
+        const form = document.getElementById('quoteForm');
+        if (form) { const h = document.createElement('input'); h.type = 'hidden'; h.name = 'lead_source'; h.value = src.slice(0, 80); form.appendChild(h); }
+      }
+    } catch (e) { /* non-fatal */ }
   </script>
 </body>
 </html>
