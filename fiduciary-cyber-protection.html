@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="canonical" href="https://intacadvisory.com/fiduciary-cyber-protection">
+  <title>Fiduciary Cyber Protection for Bankruptcy Trustees | Intac Advisory</title>
+  <meta name="description" content="Bankruptcy trustees are prime targets for wire fraud and email compromise — and a fidelity bond or E&O often won't respond. Intac Advisory reviews Chapter 7, Subchapter V, and Chapter 11 trustees' coverage for the gaps. Free coverage review.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://intacadvisory.com/fiduciary-cyber-protection">
+  <meta property="og:title" content="Fiduciary Cyber Protection for Bankruptcy Trustees">
+  <meta property="og:description" content="Your bond may not cover a wire-fraud loss. See where Chapter 7, Subchapter V, and Chapter 11 trustees are exposed — and how to close the gap. Free coverage review.">
+  <meta property="og:site_name" content="Intac Advisory">
+  <meta property="og:image" content="https://intacadvisory.com/assets/houston-skyline.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fiduciary Cyber Protection for Bankruptcy Trustees">
+  <meta name="twitter:description" content="Your bond may not cover a wire-fraud loss. See where trustees are exposed — and how to close the gap.">
+  <meta name="twitter:image" content="https://intacadvisory.com/assets/houston-skyline.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=9" />
+  <style>
+    /* ===== Fiduciary cyber landing page ===== */
+    .lp-hero { background: var(--cream); padding: clamp(48px, 6.5vw, 88px) 0 clamp(40px, 5vw, 64px); }
+    .lp-hero h1 {
+      font-size: clamp(40px, 5.6vw, 76px);
+      line-height: 1.03;
+      letter-spacing: -0.02em;
+      margin: 24px 0 20px;
+      max-width: 18ch;
+    }
+    .lp-hero h1 em { font-style: italic; color: var(--coral-600); }
+    .lp-hero .sub { font-size: 19px; color: var(--ink-500); max-width: 58ch; margin-bottom: 32px; }
+    .lp-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .lp-stats {
+      display: flex; gap: 48px; margin-top: 52px; padding-top: 32px;
+      border-top: 1px solid rgba(32, 32, 48, 0.12); flex-wrap: wrap;
+    }
+    .lp-stats .num { font-family: "Instrument Serif", serif; font-size: 40px; color: var(--teal-900); line-height: 1; }
+    .lp-stats .lbl { font-size: 13px; color: var(--ink-500); margin-top: 6px; max-width: 22ch; }
+
+    .lp-section { padding: clamp(56px, 7vw, 96px) 0; }
+    .lp-section--white { background: var(--white); }
+    .lp-section--cream { background: var(--cream); }
+    .lp-head { max-width: 60ch; margin-bottom: 44px; }
+    .lp-head h2 { margin: 12px 0 16px; }
+    .lp-head .lead { margin: 0; }
+
+    .lp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .lp-card {
+      background: var(--white); border: 1px solid var(--ink-100);
+      border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow);
+    }
+    .lp-section--white .lp-card { background: var(--cream); box-shadow: none; }
+    .lp-card__icon {
+      width: 46px; height: 46px; border-radius: 12px;
+      background: var(--teal-900); color: var(--cream);
+      display: grid; place-items: center; margin-bottom: 18px;
+    }
+    .lp-card h3 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 24px; margin: 0 0 8px; color: var(--ink-900); }
+    .lp-card p { font-size: 15px; color: var(--ink-500); margin: 0; line-height: 1.55; }
+
+    /* The gap callout (teal) */
+    .lp-gap { background: var(--teal-900); color: var(--cream); }
+    .lp-gap .eyebrow { color: var(--coral-500); }
+    .lp-gap h2 { color: var(--cream); }
+    .lp-gap .lead { color: #b8cccc; }
+    .lp-gap-list { list-style: none; padding: 0; margin: 40px 0 0; display: grid; gap: 0; }
+    .lp-gap-list li {
+      display: flex; gap: 20px; padding: 24px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .lp-gap-list li:last-child { border-bottom: 0; }
+    .lp-gap-list .k { font-family: "Instrument Serif", serif; font-size: 22px; color: var(--cream); min-width: 168px; }
+    .lp-gap-list .v { color: #c7d6d6; font-size: 16px; line-height: 1.55; }
+    .lp-gap-list .v strong { color: var(--white); }
+
+    /* How it works (steps) */
+    .lp-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; counter-reset: step; }
+    .lp-step { background: var(--cream); border: 1px solid var(--ink-100); border-radius: var(--radius); padding: 28px; }
+    .lp-step::before {
+      counter-increment: step; content: "0" counter(step);
+      font-family: "Instrument Serif", serif; font-size: 44px; color: var(--coral-600);
+      line-height: 1; display: block; margin-bottom: 16px;
+    }
+    .lp-step h4 { font-size: 19px; margin: 0 0 8px; color: var(--ink-900); font-weight: 600; }
+    .lp-step p { font-size: 15px; color: var(--ink-500); margin: 0; line-height: 1.55; }
+
+    /* FAQ */
+    .lp-faq { max-width: 760px; margin: 40px auto 0; }
+    .lp-faq-item { border-bottom: 1px solid var(--ink-100); padding: 4px 0; }
+    .lp-faq-item summary {
+      cursor: pointer; list-style: none; padding: 20px 0;
+      font-size: 18px; font-weight: 600; color: var(--ink-900);
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    }
+    .lp-faq-item summary::-webkit-details-marker { display: none; }
+    .lp-faq-item summary::after { content: "+"; font-size: 24px; color: var(--coral-600); line-height: 1; }
+    .lp-faq-item[open] summary::after { content: "–"; }
+    .lp-faq-item p { margin: 0 0 20px; color: var(--ink-500); font-size: 16px; line-height: 1.6; }
+
+    /* CTA band */
+    .lp-cta-band { background: var(--coral-500); color: var(--white); }
+    .lp-cta-band h2 { color: var(--white); }
+    .lp-cta-band__grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; }
+    .lp-cta-band .btn--dark { background: var(--teal-900); color: var(--cream); }
+    .lp-cta-band .btn--dark:hover { background: var(--ink-900); }
+    .lp-cta-band .btn--ghost { color: var(--white); border-color: rgba(255, 255, 255, 0.4); }
+    .lp-cta-band .btn--ghost:hover { background: var(--white); color: var(--coral-600); border-color: var(--white); }
+
+    .lp-disclaimer { font-size: 13px; color: var(--ink-400); max-width: 760px; margin: 0 auto; text-align: center; line-height: 1.6; }
+
+    @media (max-width: 900px) {
+      .lp-steps { grid-template-columns: 1fr; gap: 14px; margin-top: 32px; }
+      .lp-cta-band__grid { grid-template-columns: 1fr; gap: 28px; }
+      .lp-cta-band__grid > div:last-child .btn { width: 100%; justify-content: center; }
+      .lp-hero h1 { font-size: clamp(34px, 9vw, 50px); }
+      .lp-stats { gap: 24px; }
+      .lp-gap-list li { flex-direction: column; gap: 6px; }
+      .lp-gap-list .k { min-width: 0; }
+    }
+  </style>
+</head>
+<body data-page="cyber">
+  <div data-slot="header"></div>
+
+  <!-- HERO -->
+  <section class="lp-hero">
+    <div class="container">
+      <span class="pill pill--coral" style="margin-bottom:8px">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--coral-500)"></span>
+        For Chapter 7, Subchapter V &amp; Chapter 11 Trustees
+      </span>
+      <h1>Your bond may not cover a <em>wire&#8209;fraud loss.</em></h1>
+      <p class="sub">Bankruptcy trustees are prime targets for email&#8209;compromise and wire&#8209;fraud scams that drain estate accounts — and a fidelity bond or E&amp;O policy often won't respond. Fiduciary cyber protection closes that gap. We'll review your current coverage and show you exactly where you're exposed.</p>
+      <div class="lp-cta">
+        <a href="quote?line=cyber" class="btn btn--primary btn--lg">Get a free coverage review <span class="arr">→</span></a>
+        <a href="tel:+18772378167" class="btn btn--ghost btn--lg">Call (877) 237&#8209;8167</a>
+      </div>
+      <div class="lp-stats">
+        <div class="stat"><div class="num">$2.7B+</div><div class="lbl">Reported email&#8209;compromise &amp; wire&#8209;fraud losses in 2024 (FBI)</div></div>
+        <div class="stat"><div class="num">Ch. 7 · V · 11</div><div class="lbl">Trustee appointments we work with</div></div>
+        <div class="stat"><div class="num">$0</div><div class="lbl">Cost of a coverage review</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY TRUSTEES ARE TARGETS -->
+  <section class="lp-section lp-section--white">
+    <div class="container">
+      <div class="lp-head">
+        <span class="eyebrow">Why trustees are in the crosshairs</span>
+        <h2>You hold the money <em>and</em> the data.</h2>
+        <p class="lead">A bankruptcy trustee sits on exactly what a cyber criminal wants — estate funds moving by wire and a file full of sensitive debtor information. That makes the fiduciary, not just the estate, the target.</p>
+      </div>
+      <div class="lp-grid">
+        <div class="lp-card">
+          <div class="lp-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></svg>
+          </div>
+          <h3>You move estate funds</h3>
+          <p>Distributions, settlements, and vendor payments go out by wire. One spoofed email with new "banking instructions" can reroute estate money to a criminal in minutes.</p>
+        </div>
+        <div class="lp-card">
+          <div class="lp-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V8a5 5 0 0 1 10 0v3"/></svg>
+          </div>
+          <h3>You hold debtor data</h3>
+          <p>Social Security numbers, account details, and financial records live in your files. A breach triggers notification duties, liability, and real cost — even on a small estate.</p>
+        </div>
+        <div class="lp-card">
+          <div class="lp-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <h3>You run lean and fast</h3>
+          <p>Deadlines, a small team, and high transaction volume are exactly the conditions social engineers exploit. The attack usually looks like a routine request.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE GAP -->
+  <section class="lp-section lp-gap">
+    <div class="container">
+      <div class="lp-head">
+        <span class="eyebrow">The gap most trustees don't know they have</span>
+        <h2>The policies you already carry may not respond.</h2>
+        <p class="lead">It's a fair assumption that your bond or E&amp;O has you covered for a cyber loss. In practice, the policy language often says otherwise — and you find out at claim time.</p>
+      </div>
+      <ul class="lp-gap-list">
+        <li>
+          <div class="k">Fidelity bond</div>
+          <div class="v">Built to cover <strong>employee dishonesty</strong> — not your office being <strong>tricked</strong> into authorizing a fraudulent wire. Social-engineering loss frequently falls outside it.</div>
+        </li>
+        <li>
+          <div class="k">Professional liability (E&amp;O)</div>
+          <div class="v">Responds to claims of <strong>professional negligence</strong> — not the criminal theft of funds or a third&#8209;party data breach.</div>
+        </li>
+        <li>
+          <div class="k">Standard cyber policy</div>
+          <div class="v">Many policies <strong>sublimit or exclude</strong> social-engineering and fraudulent-instruction loss unless it's specifically endorsed and properly limited.</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHAT FIDUCIARY CYBER PROTECTION COVERS -->
+  <section class="lp-section lp-section--cream">
+    <div class="container">
+      <div class="lp-head">
+        <span class="eyebrow">What fiduciary cyber protection covers</span>
+        <h2>The right policy, with the right endorsements.</h2>
+        <p class="lead">"Fiduciary cyber protection" isn't one product — it's making sure the pieces below are actually in place, so a loss is covered instead of absorbed by you or the estate. Exact terms depend on the policy we build for you.</p>
+      </div>
+      <div class="lp-grid">
+        <div class="lp-card">
+          <div class="lp-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Social-engineering &amp; funds-transfer fraud</h3>
+          <p>The core exposure: coverage when your office is deceived into sending estate funds to a fraudulent account.</p>
+        </div>
+        <div class="lp-card">
+          <div class="lp-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H4z"/><path d="M4 20h16"/><path d="M9 9h6M9 12h4"/></svg>
+          </div>
+          <h3>Breach response &amp; data liability</h3>
+          <p>Notification, credit monitoring, legal defense, and liability when debtor data is exposed.</p>
+        </div>
+        <div class="lp-card">
+          <div class="lp-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><path d="M12 15v2"/></svg>
+          </div>
+          <h3>Ransomware &amp; cyber extortion</h3>
+          <p>Response to a system lockout — extortion handling, recovery, and the experts to manage it.</p>
+        </div>
+        <div class="lp-card">
+          <div class="lp-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-6"/></svg>
+          </div>
+          <h3>Business interruption &amp; restoration</h3>
+          <p>Lost time and the cost of restoring systems and data after an incident.</p>
+        </div>
+        <div class="lp-card">
+          <div class="lp-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 4-9 4-9-4 9-4z"/><path d="M3 12l9 4 9-4"/></svg>
+          </div>
+          <h3>Regulatory &amp; defense costs</h3>
+          <p>Defense and covered costs tied to a covered privacy or security event.</p>
+        </div>
+        <div class="lp-card">
+          <div class="lp-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Breach coach &amp; incident team</h3>
+          <p>Access to specialists the moment something goes wrong — the difference between a scare and a loss.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW A REVIEW WORKS -->
+  <section class="lp-section lp-section--white">
+    <div class="container">
+      <div class="lp-head">
+        <span class="eyebrow">How a coverage review works</span>
+        <h2>See your gaps before a criminal does.</h2>
+        <p class="lead">No sales pressure. We read the actual policy language so you know where you stand — and what it would take to close the gap.</p>
+      </div>
+      <div class="lp-steps">
+        <div class="lp-step">
+          <h4>Send us your policies</h4>
+          <p>Your current fidelity bond, E&amp;O, and any cyber policy. That's all we need to start.</p>
+        </div>
+        <div class="lp-step">
+          <h4>We review the language</h4>
+          <p>We check for funds-transfer, social-engineering, and breach gaps — line by line, against how trustees actually get hit.</p>
+        </div>
+        <div class="lp-step">
+          <h4>You get a plain-English report</h4>
+          <p>Exactly where you're exposed, and your options to fix it. No cost, no obligation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="lp-section lp-section--cream">
+    <div class="container">
+      <div class="lp-head" style="margin: 0 auto 8px; text-align: center;">
+        <span class="eyebrow">Common questions</span>
+        <h2>What trustees ask us.</h2>
+      </div>
+      <div class="lp-faq">
+        <details class="lp-faq-item">
+          <summary>Doesn't my fidelity bond already cover this?</summary>
+          <p>Usually not. A fidelity bond is built to cover dishonest acts by your own employees — not a situation where your office is deceived by an outsider into authorizing a legitimate-looking wire. That social-engineering loss commonly falls outside the bond, which is why a dedicated cyber policy (with the right funds-transfer and social-engineering endorsements) matters.</p>
+        </details>
+        <details class="lp-faq-item">
+          <summary>We're a small trustee office — are we really a target?</summary>
+          <p>Yes — arguably more so. Criminals target the workflow, not the size of the firm. A lean office moving estate funds under deadline pressure is exactly the setup these scams are designed to exploit, and a smaller operation often has fewer internal checks to catch a fraudulent request.</p>
+        </details>
+        <details class="lp-faq-item">
+          <summary>What does a coverage review cost?</summary>
+          <p>Nothing. Send us your current bond, E&amp;O, and any cyber policy and we'll review the language and show you where the gaps are. There's no cost and no obligation to move your coverage.</p>
+        </details>
+        <details class="lp-faq-item">
+          <summary>Do you work with Subchapter V and Chapter 11 trustees too?</summary>
+          <p>Yes. We work with Chapter 7, Subchapter V, and Chapter 11 trustees. The fiduciary cyber exposure is similar across appointments — anywhere you're moving estate funds and holding debtor data.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="lp-section lp-cta-band">
+    <div class="container">
+      <div class="lp-cta-band__grid">
+        <div>
+          <span class="eyebrow" style="color:var(--teal-900)">No cost, no obligation</span>
+          <h2 style="margin-top:12px">Find your coverage gaps<br/>before a criminal does.</h2>
+          <p style="color:rgba(255,255,255,0.92); font-size:18px; max-width:48ch; margin-top:16px">Send us your current coverage and we'll show you exactly where a wire-fraud or breach loss would land — and how to close the gap.</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px; align-items:flex-start">
+          <a href="quote?line=cyber" class="btn btn--dark btn--lg">Get a free coverage review <span class="arr">→</span></a>
+          <a href="tel:+18772378167" class="btn btn--ghost btn--lg">Or call (877) 237&#8209;8167</a>
+          <div style="font-size:13px; color:rgba(255,255,255,0.85); margin-top:8px">Mon–Fri 8am–6pm CT</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section style="background: var(--cream); padding: 32px 0 56px;">
+    <div class="container">
+      <p class="lp-disclaimer">Coverage varies by policy, carrier, and endorsement. This page is general information about insurance concepts and is not a statement of coverage, legal advice, or a guarantee that any particular loss will be covered. We'll review your specific policies and confirm terms in writing.</p>
+    </div>
+  </section>
+
+  <div data-slot="footer"></div>
+  <script src="assets/site.js?v=9"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://intacadvisory.com/fiduciary-cyber-protection#webpage",
+        "url": "https://intacadvisory.com/fiduciary-cyber-protection",
+        "name": "Fiduciary Cyber Protection for Bankruptcy Trustees | Intac Advisory",
+        "description": "Bankruptcy trustees are prime targets for wire fraud and email compromise — and a fidelity bond or E&O often won't respond. Intac Advisory reviews Chapter 7, Subchapter V, and Chapter 11 trustees' coverage for the gaps.",
+        "isPartOf": { "@id": "https://intacadvisory.com/#website" },
+        "about": { "@type": "Service", "serviceType": "Cyber liability insurance for bankruptcy trustees", "provider": { "@type": "Organization", "name": "Intac Advisory" } }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://intacadvisory.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Fiduciary Cyber Protection", "item": "https://intacadvisory.com/fiduciary-cyber-protection" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Doesn't my fidelity bond already cover this?", "acceptedAnswer": { "@type": "Answer", "text": "Usually not. A fidelity bond is built to cover dishonest acts by your own employees — not a situation where your office is deceived by an outsider into authorizing a legitimate-looking wire. That social-engineering loss commonly falls outside the bond, which is why a dedicated cyber policy with the right funds-transfer and social-engineering endorsements matters." } },
+          { "@type": "Question", "name": "We're a small trustee office — are we really a target?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Criminals target the workflow, not the size of the firm. A lean office moving estate funds under deadline pressure is exactly the setup these scams are designed to exploit, and a smaller operation often has fewer internal checks to catch a fraudulent request." } },
+          { "@type": "Question", "name": "What does a coverage review cost?", "acceptedAnswer": { "@type": "Answer", "text": "Nothing. Send us your current bond, E&O, and any cyber policy and we'll review the language and show you where the gaps are. There is no cost and no obligation to move your coverage." } },
+          { "@type": "Question", "name": "Do you work with Subchapter V and Chapter 11 trustees too?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with Chapter 7, Subchapter V, and Chapter 11 trustees. The fiduciary cyber exposure is similar across appointments — anywhere you're moving estate funds and holding debtor data." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
