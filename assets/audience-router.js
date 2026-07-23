@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var STORAGE_KEY = 'intac-audience-choice-v1';
+  var STORAGE_KEY = 'intac-audience-choice-v2';
   var VALID_FOR_MS = 30 * 24 * 60 * 60 * 1000;
   var FIDUCIARY_URL = 'https://trusteeinsuranceagency.com/';
   var GENERAL_URL = 'https://intacadvisory.com/';
@@ -74,24 +74,24 @@
     router.innerHTML =
       '<section class="intac-audience-router__dialog" role="dialog" aria-modal="true" aria-labelledby="intac-audience-title" aria-describedby="intac-audience-description">' +
         '<button class="intac-audience-router__close" type="button" aria-label="Continue on this website">&times;</button>' +
-        '<p class="intac-audience-router__eyebrow">Let&rsquo;s get you to the right place</p>' +
-        '<h2 class="intac-audience-router__title" id="intac-audience-title">Are you a fiduciary or bankruptcy professional?</h2>' +
-        '<p class="intac-audience-router__intro" id="intac-audience-description">We keep our specialist fiduciary services separate from business and personal insurance so you can reach the right team without confusion.</p>' +
+        '<p class="intac-audience-router__eyebrow">Welcome &mdash; we&rsquo;ll guide you</p>' +
+        '<h2 class="intac-audience-router__title" id="intac-audience-title">Which best describes you?</h2>' +
+        '<p class="intac-audience-router__intro" id="intac-audience-description">Choose the option that fits your needs and we&rsquo;ll take you to the right team.</p>' +
         '<div class="intac-audience-router__choices">' +
           '<button class="intac-audience-router__choice intac-audience-router__choice--fiduciary" type="button" data-audience-choice="fiduciary">' +
-            '<span class="intac-audience-router__choice-kicker">Yes</span>' +
-            '<span class="intac-audience-router__choice-title">Fiduciary &amp; bankruptcy services</span>' +
+            '<span class="intac-audience-router__choice-kicker">Fiduciary services</span>' +
+            '<span class="intac-audience-router__choice-title">I&rsquo;m a fiduciary or bankruptcy professional</span>' +
             '<span class="intac-audience-router__choice-copy">For trustees, receivers, fiduciaries, and insolvency professionals.</span>' +
             '<span class="intac-audience-router__choice-arrow" aria-hidden="true">&rarr;</span>' +
           '</button>' +
           '<button class="intac-audience-router__choice intac-audience-router__choice--general" type="button" data-audience-choice="general">' +
-            '<span class="intac-audience-router__choice-kicker">No</span>' +
-            '<span class="intac-audience-router__choice-title">Business &amp; personal insurance</span>' +
+            '<span class="intac-audience-router__choice-kicker">Business &amp; personal</span>' +
+            '<span class="intac-audience-router__choice-title">I need business or personal insurance</span>' +
             '<span class="intac-audience-router__choice-copy">For companies, property owners, families, and individuals.</span>' +
             '<span class="intac-audience-router__choice-arrow" aria-hidden="true">&rarr;</span>' +
           '</button>' +
         '</div>' +
-        '<p class="intac-audience-router__note">Your selection is remembered for 30 days on this website.</p>' +
+        '<p class="intac-audience-router__note">We&rsquo;ll remember your choice for 30 days.</p>' +
       '</section>';
 
     var previousFocus = document.activeElement;

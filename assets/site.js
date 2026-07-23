@@ -4,13 +4,13 @@
     if (!document.querySelector('link[data-intac-audience-router]')) {
       const stylesheet = document.createElement("link");
       stylesheet.rel = "stylesheet";
-      stylesheet.href = "/assets/audience-router.css";
+      stylesheet.href = "/assets/audience-router.css?v=2";
       stylesheet.dataset.intacAudienceRouter = "true";
       document.head.appendChild(stylesheet);
     }
     if (!document.querySelector('script[data-intac-audience-router]')) {
       const script = document.createElement("script");
-      script.src = "/assets/audience-router.js";
+      script.src = "/assets/audience-router.js?v=2";
       script.dataset.intacAudienceRouter = "true";
       document.head.appendChild(script);
     }

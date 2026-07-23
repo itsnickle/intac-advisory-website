@@ -9,15 +9,20 @@
 }
 
 .intac-audience-router {
+  --audience-ink: #211f26;
+  --audience-muted: #625e67;
+  --audience-brand: #761d32;
+  --audience-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   position: fixed;
   z-index: 2147483000;
   inset: 0;
   display: grid;
   place-items: center;
   padding: 24px;
-  background: rgba(21, 18, 28, 0.72);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background: rgba(21, 18, 28, 0.68);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  font-family: var(--audience-font) !important;
   opacity: 0;
   transition: opacity 220ms ease;
 }
@@ -28,17 +33,28 @@
 
 .intac-audience-router__dialog {
   position: relative;
-  width: min(760px, 100%);
+  width: min(720px, 100%);
   max-height: calc(100vh - 48px);
   overflow: auto;
-  padding: 46px;
-  border: 1px solid rgba(100, 25, 40, 0.14);
-  border-radius: 20px;
+  padding: 44px;
+  border: 1px solid rgba(118, 29, 50, 0.12);
+  border-radius: 24px;
   background: #fffdf9;
-  color: #24212b;
-  box-shadow: 0 30px 90px rgba(16, 13, 20, 0.28);
+  color: var(--audience-ink);
+  box-shadow: 0 30px 90px rgba(16, 13, 20, 0.32);
   transform: translateY(16px) scale(0.985);
   transition: transform 260ms cubic-bezier(0.2, 0.72, 0.3, 1);
+}
+
+.intac-audience-router__dialog::before {
+  position: absolute;
+  top: 0;
+  right: 44px;
+  left: 44px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: linear-gradient(90deg, #761d32, #a33a51 55%, #d79a88);
+  content: "";
 }
 
 .intac-audience-router.is-visible .intac-audience-router__dialog {
@@ -56,11 +72,11 @@
   padding: 0;
   border: 1px solid rgba(36, 33, 43, 0.14);
   border-radius: 50%;
-  background: transparent;
-  color: #24212b;
+  background: #fff;
+  color: var(--audience-ink);
   cursor: pointer;
-  font: 500 24px/1 Arial, sans-serif;
-  transition: border-color 160ms ease, background 160ms ease;
+  font: 500 23px/1 var(--audience-font) !important;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
 }
 
 .intac-audience-router__close:hover,
@@ -68,29 +84,40 @@
   border-color: rgba(100, 25, 40, 0.45);
   background: rgba(100, 25, 40, 0.06);
   outline: none;
+  transform: rotate(3deg);
 }
 
 .intac-audience-router__eyebrow {
-  margin: 0 0 12px;
-  color: #761d32;
-  font: 700 12px/1.4 Arial, sans-serif;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  margin: 0 0 14px !important;
+  color: var(--audience-brand) !important;
+  font-family: var(--audience-font) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
 }
 
 .intac-audience-router__title {
-  max-width: 620px;
-  margin: 0;
-  color: #24212b;
-  font: 600 clamp(30px, 4vw, 43px)/1.12 Georgia, "Times New Roman", serif;
-  letter-spacing: -0.025em;
+  max-width: 600px;
+  margin: 0 !important;
+  color: var(--audience-ink) !important;
+  font-family: var(--audience-font) !important;
+  font-size: clamp(31px, 4vw, 40px) !important;
+  font-weight: 650 !important;
+  line-height: 1.13 !important;
+  letter-spacing: -0.035em !important;
+  text-transform: none !important;
 }
 
 .intac-audience-router__intro {
   max-width: 650px;
-  margin: 16px 0 28px;
-  color: #625d68;
-  font: 400 16px/1.65 Arial, sans-serif;
+  margin: 14px 0 26px !important;
+  color: var(--audience-muted) !important;
+  font-family: var(--audience-font) !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
 }
 
 .intac-audience-router__choices {
@@ -101,14 +128,14 @@
 
 .intac-audience-router__choice {
   position: relative;
-  min-height: 170px;
-  padding: 24px;
+  min-height: 176px;
+  padding: 24px 52px 24px 24px;
   border: 1px solid rgba(36, 33, 43, 0.14);
-  border-radius: 14px;
+  border-radius: 16px;
   background: #fff;
-  color: #24212b;
+  color: var(--audience-ink);
   cursor: pointer;
-  font: inherit;
+  font-family: var(--audience-font) !important;
   text-align: left;
   transition: border-color 170ms ease, box-shadow 170ms ease, transform 170ms ease;
 }
@@ -126,44 +153,74 @@
 }
 
 .intac-audience-router__choice--general {
-  background: linear-gradient(145deg, #fff, #f4f5fa);
+  background: linear-gradient(145deg, #fff, #f6f5f7);
 }
 
 .intac-audience-router__choice-kicker {
   display: block;
-  margin-bottom: 10px;
-  color: #761d32;
-  font: 700 11px/1.3 Arial, sans-serif;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  margin-bottom: 11px;
+  color: var(--audience-brand) !important;
+  font-family: var(--audience-font) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0.11em !important;
+  text-transform: uppercase !important;
 }
 
 .intac-audience-router__choice-title {
   display: block;
-  padding-right: 30px;
-  color: #24212b;
-  font: 700 19px/1.28 Arial, sans-serif;
+  color: var(--audience-ink) !important;
+  font-family: var(--audience-font) !important;
+  font-size: 17px !important;
+  font-weight: 650 !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.015em !important;
+  text-transform: none !important;
 }
 
 .intac-audience-router__choice-copy {
   display: block;
   margin-top: 10px;
-  color: #6a6570;
-  font: 400 14px/1.55 Arial, sans-serif;
+  color: #6a6570 !important;
+  font-family: var(--audience-font) !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
 }
 
 .intac-audience-router__choice-arrow {
   position: absolute;
-  top: 24px;
-  right: 22px;
-  color: #761d32;
-  font: 700 22px/1 Arial, sans-serif;
+  top: 22px;
+  right: 20px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(118, 29, 50, 0.08);
+  color: var(--audience-brand) !important;
+  font-family: var(--audience-font) !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  transition: background 170ms ease, color 170ms ease, transform 170ms ease;
+}
+
+.intac-audience-router__choice:hover .intac-audience-router__choice-arrow,
+.intac-audience-router__choice:focus-visible .intac-audience-router__choice-arrow {
+  background: var(--audience-brand);
+  color: #fff !important;
+  transform: translateX(2px);
 }
 
 .intac-audience-router__note {
-  margin: 20px 0 0;
-  color: #77717c;
-  font: 400 12px/1.5 Arial, sans-serif;
+  margin: 18px 0 0 !important;
+  color: #77717c !important;
+  font-family: var(--audience-font) !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
   text-align: center;
 }
 
@@ -196,7 +253,17 @@
     width: 100%;
     max-height: calc(100vh - 24px);
     padding: 38px 22px 24px;
-    border-radius: 18px;
+    border-radius: 20px;
+  }
+
+  .intac-audience-router__dialog::before {
+    right: 22px;
+    left: 22px;
+  }
+
+  .intac-audience-router__title {
+    padding-right: 22px;
+    font-size: 29px !important;
   }
 
   .intac-audience-router__choices {
@@ -205,7 +272,7 @@
 
   .intac-audience-router__choice {
     min-height: 0;
-    padding: 20px;
+    padding: 20px 50px 20px 20px;
   }
 }
 
