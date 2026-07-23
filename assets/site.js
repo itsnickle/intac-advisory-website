@@ -1,5 +1,23 @@
 // Shared header + footer for Intac Advisory site
 (function () {
+  function loadAudienceRouter() {
+    if (!document.querySelector('link[data-intac-audience-router]')) {
+      const stylesheet = document.createElement("link");
+      stylesheet.rel = "stylesheet";
+      stylesheet.href = "/assets/audience-router.css";
+      stylesheet.dataset.intacAudienceRouter = "true";
+      document.head.appendChild(stylesheet);
+    }
+    if (!document.querySelector('script[data-intac-audience-router]')) {
+      const script = document.createElement("script");
+      script.src = "/assets/audience-router.js";
+      script.dataset.intacAudienceRouter = "true";
+      document.head.appendChild(script);
+    }
+  }
+
+  loadAudienceRouter();
+
   const pages = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },

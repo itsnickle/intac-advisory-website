@@ -1,0 +1,218 @@
+/* Shared visitor-routing modal for Intac Advisory and Trustee Insurance Agency. */
+.intac-audience-lock {
+  overflow: hidden !important;
+}
+
+.intac-audience-router,
+.intac-audience-router * {
+  box-sizing: border-box;
+}
+
+.intac-audience-router {
+  position: fixed;
+  z-index: 2147483000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(21, 18, 28, 0.72);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.intac-audience-router.is-visible {
+  opacity: 1;
+}
+
+.intac-audience-router__dialog {
+  position: relative;
+  width: min(760px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+  padding: 46px;
+  border: 1px solid rgba(100, 25, 40, 0.14);
+  border-radius: 20px;
+  background: #fffdf9;
+  color: #24212b;
+  box-shadow: 0 30px 90px rgba(16, 13, 20, 0.28);
+  transform: translateY(16px) scale(0.985);
+  transition: transform 260ms cubic-bezier(0.2, 0.72, 0.3, 1);
+}
+
+.intac-audience-router.is-visible .intac-audience-router__dialog {
+  transform: translateY(0) scale(1);
+}
+
+.intac-audience-router__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(36, 33, 43, 0.14);
+  border-radius: 50%;
+  background: transparent;
+  color: #24212b;
+  cursor: pointer;
+  font: 500 24px/1 Arial, sans-serif;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.intac-audience-router__close:hover,
+.intac-audience-router__close:focus-visible {
+  border-color: rgba(100, 25, 40, 0.45);
+  background: rgba(100, 25, 40, 0.06);
+  outline: none;
+}
+
+.intac-audience-router__eyebrow {
+  margin: 0 0 12px;
+  color: #761d32;
+  font: 700 12px/1.4 Arial, sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.intac-audience-router__title {
+  max-width: 620px;
+  margin: 0;
+  color: #24212b;
+  font: 600 clamp(30px, 4vw, 43px)/1.12 Georgia, "Times New Roman", serif;
+  letter-spacing: -0.025em;
+}
+
+.intac-audience-router__intro {
+  max-width: 650px;
+  margin: 16px 0 28px;
+  color: #625d68;
+  font: 400 16px/1.65 Arial, sans-serif;
+}
+
+.intac-audience-router__choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.intac-audience-router__choice {
+  position: relative;
+  min-height: 170px;
+  padding: 24px;
+  border: 1px solid rgba(36, 33, 43, 0.14);
+  border-radius: 14px;
+  background: #fff;
+  color: #24212b;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition: border-color 170ms ease, box-shadow 170ms ease, transform 170ms ease;
+}
+
+.intac-audience-router__choice:hover,
+.intac-audience-router__choice:focus-visible {
+  border-color: #761d32;
+  box-shadow: 0 14px 34px rgba(70, 30, 43, 0.11);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.intac-audience-router__choice--fiduciary {
+  background: linear-gradient(145deg, #fff, #fbf4f5);
+}
+
+.intac-audience-router__choice--general {
+  background: linear-gradient(145deg, #fff, #f4f5fa);
+}
+
+.intac-audience-router__choice-kicker {
+  display: block;
+  margin-bottom: 10px;
+  color: #761d32;
+  font: 700 11px/1.3 Arial, sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.intac-audience-router__choice-title {
+  display: block;
+  padding-right: 30px;
+  color: #24212b;
+  font: 700 19px/1.28 Arial, sans-serif;
+}
+
+.intac-audience-router__choice-copy {
+  display: block;
+  margin-top: 10px;
+  color: #6a6570;
+  font: 400 14px/1.55 Arial, sans-serif;
+}
+
+.intac-audience-router__choice-arrow {
+  position: absolute;
+  top: 24px;
+  right: 22px;
+  color: #761d32;
+  font: 700 22px/1 Arial, sans-serif;
+}
+
+.intac-audience-router__note {
+  margin: 20px 0 0;
+  color: #77717c;
+  font: 400 12px/1.5 Arial, sans-serif;
+  text-align: center;
+}
+
+/* Prevent the archived Services tax image from appearing vertically stretched. */
+#row-unique-8 .uncode-single-media-wrapper {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+#row-unique-8 img.wp-image-85 {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* The legacy theme applies a dark strong-tag color over the white footer text. */
+#colophon .uncode_text_column strong {
+  color: #fff !important;
+}
+
+@media (max-width: 680px) {
+  .intac-audience-router {
+    align-items: end;
+    padding: 12px;
+  }
+
+  .intac-audience-router__dialog {
+    width: 100%;
+    max-height: calc(100vh - 24px);
+    padding: 38px 22px 24px;
+    border-radius: 18px;
+  }
+
+  .intac-audience-router__choices {
+    grid-template-columns: 1fr;
+  }
+
+  .intac-audience-router__choice {
+    min-height: 0;
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intac-audience-router,
+  .intac-audience-router__dialog,
+  .intac-audience-router__choice {
+    transition: none;
+  }
+}
