@@ -88,6 +88,10 @@
                 <li><a href="/contact">Contact us</a></li>
                 <li><a href="tel:+18772378167">(877) 237‑8167</a></li>
               </ul>
+              <div class="footer-offices">
+                <p><strong>Michigan Office</strong><br>P.O. Box 190<br>Vicksburg, MI 49097</p>
+                <p><strong>Texas Office</strong><br>14090 Southwest Fwy<br>Sugar Land, TX 77478</p>
+              </div>
             </div>
           </div>
           <div class="footer-bottom">
